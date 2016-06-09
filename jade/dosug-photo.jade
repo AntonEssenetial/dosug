@@ -1,0 +1,293 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header.jade
+      include filters.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content
+            .main-content
+              .main-content__catalog-header
+                .catalog-header
+                  h1.catalog-header__title Все проститутки Москвы 
+                  .catalog-header__catalog-view
+                    .catalog-view
+                      .catalog-view__title Отображать:
+                      a(href="index.html").catalog-view__item.catalog-view__item_tiles
+                        span.catalog-view__text Плиткой
+                      a(href="dosug-spiskom.html").catalog-view__item.catalog-view__item_list
+                        span.catalog-view__text Списком
+                      a(href="dosug-photo.html").catalog-view__item.catalog-view__item_frame.catalog-view__item_active
+                        span.catalog-view__text Только фото
+              .main-content__catalog
+                .catalog.catalog_only-photo
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl1.jpg", alt="Елизаветочка")
+                          .catalog-item-only-photo__price 3000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Елизавет</a>
+                            .catalog-item-only-photo__phone +7 908-659-65-95
+                            a(href="#").catalog-item-only-photo__metro Проспект Генерала Ушакова
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl2.jpg", alt="Натали")
+                          .catalog-item-only-photo__price 4500
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Натали
+                            .catalog-item-only-photo__phone +7 965-385-47-38
+                            a(href="#").catalog-item-only-photo__metro Волгоградский проспект
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl3.jpg", alt="Стэлла")
+                          .catalog-item-only-photo__price 10000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Стэлла
+                            .catalog-item-only-photo__phone +7 908-381-09-35
+                            a(href="#").catalog-item-only-photo__metro Новые Черемушки
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl4.jpg", alt="Дельфина")
+                          .catalog-item-only-photo__price 3000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Дельфина
+                            .catalog-item-only-photo__phone +7 845-673-08-26
+                            a(href="#").catalog-item-only-photo__metro Третьяковская
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl5.jpg", alt="Марго")
+                          .catalog-item-only-photo__price 4500
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Марго
+                            .catalog-item-only-photo__phone +7 956-158-87-24
+                            a(href="#").catalog-item-only-photo__metro Театральная
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl6.jpg", alt="Лидочка")
+                          .catalog-item-only-photo__price 10000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Лидочка
+                            .catalog-item-only-photo__phone +7 908-659-65-95
+                            a(href="#").catalog-item-only-photo__metro Киевская
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl7.jpg", alt="Анжела")
+                          .catalog-item-only-photo__price 3000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Анжела
+                            .catalog-item-only-photo__phone +7 908-659-65-95
+                            a(href="#").catalog-item-only-photo__metro Технологический институт
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl8.jpg", alt="Карина")
+                          .catalog-item-only-photo__price 4500
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Карина
+                            .catalog-item-only-photo__phone +7 908-381-09-35
+                            a(href="#").catalog-item-only-photo__metro Арбатская
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl9.jpg", alt="Стэлла")
+                          .catalog-item-only-photo__price 10000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Стэлла
+                            .catalog-item-only-photo__phone +7 908-381-09-35
+                            a(href="#").catalog-item-only-photo__metro Новые Черемушки
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl10.jpg", alt="Дельфина")
+                          .catalog-item-only-photo__price 3000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Дельфина
+                            .catalog-item-only-photo__phone +7 845-673-08-26
+                            a(href="#").catalog-item-only-photo__metro Третьяковская
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl11.jpg", alt="Марго")
+                          .catalog-item-only-photo__price 4500
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Марго
+                            .catalog-item-only-photo__phone +7 956-158-87-24
+                            a(href="#").catalog-item-only-photo__metro Театральная
+                  .catalog__item
+                    .catalog-item.catalog-item_only-photo
+                      .catalog-item__only-photo
+                        .catalog-item-only-photo
+                          a(href="#").catalog-item-only-photo__image
+                            img(src="img/catalog/girl12.jpg", alt="Лидочка")
+                          .catalog-item-only-photo__price 10000
+                            .rouble.rouble_white
+                          .catalog-item-only-photo__bottom
+                            a(href="#").catalog-item-only-photo__name Лидочка
+                            .catalog-item-only-photo__phone +7 908-659-65-95
+                            a(href="#").catalog-item-only-photo__metro Киевская
+              .main-content__pagination
+                nav.pagination
+                  ul
+                    li.pagination__item.pagination__item_first.pagination__item_active
+                      a(href="#").pagination__link 1
+                    li.pagination__item
+                      a(href="#").pagination__link 2
+                    li.pagination__item
+                      a(href="#").pagination__link 3
+                    li.pagination__item
+                      a(href="#").pagination__link 4
+                    li.pagination__item
+                      a(href="#").pagination__link 5
+                    li.pagination__item.pagination__item_spacer
+                      .pagination__link ...
+                    li.pagination__item
+                      a(href="#", aria-label="Last").pagination__link 24
+                    li.pagination__item.pagination__arrow.pagination__arrow_next
+                      a(href="#", aria-label="Next").pagination__link
+          .layout__sidebar
+            aside.sidebar
+              .sidebar__section
+                .small-girls
+                  .small-girls__item
+                    a(href="#").small-girls-item
+                      .small-girls-item__image
+                        img(src="img/sidebar/girl1.jpg" alt="Елизавета")
+                      .small-girls-item__name Елизавета
+                      .small-girls-item__price
+                        <b>3000</b>
+                        .rouble 
+                        | /час
+                  .small-girls__item
+                    a(href="#").small-girls-item
+                      .small-girls-item__image
+                        img(src="img/sidebar/girl2.jpg" alt="Наташа")
+                      .small-girls-item__name Наташа
+                      .small-girls-item__price
+                        <b>3500</b>
+                        .rouble 
+                        | /час
+                  .small-girls__item
+                    a(href="#").small-girls-item
+                      .small-girls-item__image
+                        img(src="img/sidebar/girl3.jpg" alt="Стэлла")
+                      .small-girls-item__name Стэлла
+                      .small-girls-item__price
+                        <b>5000</b>
+                        .rouble 
+                        | /час
+                  .small-girls__item
+                    a(href="#").small-girls-item
+                      .small-girls-item__image
+                        img(src="img/sidebar/girl4.jpg" alt="Кристина")
+                      .small-girls-item__name Кристина
+                      .small-girls-item__price
+                        <b>2000</b>
+                        .rouble 
+                        | /час
+                  .small-girls__item
+                    a(href="#").small-girls-item
+                      .small-girls-item__image
+                        img(src="img/sidebar/girl5.jpg" alt="Карина")
+                      .small-girls-item__name Карина
+                      .small-girls-item__price
+                        <b>3000</b>
+                        .rouble 
+                        | /час
+                  .small-girls__item
+                    a(href="#").small-girls-item
+                     .small-girls-item__image
+                        img(src="img/sidebar/girl6.jpg" alt="Марго")
+                     .small-girls-item__name Марго
+                     .small-girls-item__price
+                        <b>4500</b>
+                        .rouble 
+                        | /час
+              a(href="#").sidebar__section.sidebar__section_banner
+                img(src="img/sidebar/banner1.jpg" alt="Баннер")
+              a(href="#").sidebar__section.sidebar__section_banner
+                img(src="img/sidebar/banner2.jpg" alt="Баннер")
+      .page__footer
+        footer.footer
+          .footer__inner
+            .footer__menu
+              .footer-menu
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Индивидуалки
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Массажистки
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Салоны
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Интим-карта
+            .footer__button
+              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
+            .clear
+    include popup.jade
+    script(src="js/plugins.min.js")
+    script(src="js/main.min.js")
+    script(src="js/all.js")

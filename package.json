@@ -1,0 +1,32 @@
+{
+  "name": "dosug",
+  "version": "1.0.0",
+  "description": "dosug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murat",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-inline-css": "^3.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-stylus": "^2.3.0",
+    "gulp-svg-sprites": "^3.0.0",
+    "gulp-watch": "^4.3.5",
+    "gulp.spritesmith": "^6.2.0",
+    "nib": "^1.1.0",
+    "vivus": "^0.3.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonEssenetial/dosug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AntonEssenetial/dosug/issues"
+  },
+  "homepage": "https://github.com/AntonEssenetial/dosug#readme"
+}

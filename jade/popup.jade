@@ -1,0 +1,11 @@
+//- jade/popup.jade
+.b-popup-wrapper.row
+  .b-popup__content.b-popup__content_login.animated.fadeInUp
+    .popup__close
+    h2.popup__h2 Вход в кабинет
+    form(action="")
+      input(type="text",placeholder='E-mail').form__input
+      input(type="text",placeholder='Пароль').form__input
+      .row.between.center
+        a(href="").recover__password Восстоновить пароль
+        a(href="").button.button_style_rounded.button__pink Войти

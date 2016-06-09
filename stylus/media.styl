@@ -1,0 +1,604 @@
+// if $media-enable-debug
+// 	// Стили для отладки @media
+// 	body:before
+// 		display block
+// 		position fixed
+// 		left 0
+// 		bottom 0
+// 		background #fff
+// 		z-index 101
+// 		color #000
+// 		padding 10px
+// 		border 1px solid silver
+// 		border-radius 2px
+
+
+// @media only screen
+// 	// Cтили для более разумных, но все еще мобильных устройств.
+// 	// Android, iPhone  и так далее.
+// 	@media (min-width: $media-screen-xs)
+// 		if $media-enable-debug
+// 			body:before
+// 				content 'min-width: $media-screen-xs'
+
+
+
+// 	// Планшеты в режиме portrait.
+// 	@media (min-width: $media-screen-sm)
+// 		if $media-enable-debug
+// 			body:before
+// 				content 'min-width: $media-screen-sm'
+
+
+
+// 	// Планшеты в режиме landscape, нетбуки, ноутбуки, десктоп.
+// 	@media (min-width: $media-screen-md)
+// 		if $media-enable-debug
+// 			body:before
+// 				content 'min-width: $media-screen-md'
+
+
+
+// 	// Десктоп с большими разрешениями, телевизоры.
+// 	@media (min-width: $media-screen-lg)
+// 		if $media-enable-debug
+// 			body:before
+// 				content 'min-width: $media-screen-lg'
+
+@media (max-width: 1180px)
+  .header-login_fav 
+    width 20%
+  .header__login_reset
+    top 23px
+    .header-login__item:first-child
+      margin-bottom: 2px;
+  .catalog-header__tabs
+    margin: 15px 10px 30px 0;
+  .catalog-header__salons
+    margin-right 10px
+  .catalog_salons .catalog__item
+    margin: 0 1% 20px 0;
+    width: 48.6%;
+  .catalog_salons
+    margin 0px
+  .catalog_list .catalog__item
+    width 98.3%
+  .catalog-item-top_list .catalog-item-top__info
+    margin-left 75%
+  .catalog-item-top_list .catalog-item-top__image
+    width 73%
+  .catalog-item-top__image
+    width 48%
+  .catalog-item-top__info
+    margin-left 51%
+  .layout__content
+  body .layout__content_reset
+    width 77%
+  .layout_sidebar_right .layout__sidebar
+    width 22%
+  .catalog
+    width 100%
+  .page__main:before
+    margin-left: 26.3%;
+    width auto
+  .filters 
+    padding-bottom: 1px;
+    padding-top: 15px;
+  .catalog-item-info__phone
+    font-size 21px
+  .page__main
+  .footer
+  .filters
+  .header__bottom
+  .header__top
+    padding-left: 10px;
+    padding-right: 10px;
+  .catalog_tiles .catalog__item
+    margin 0 0 20px 0
+    width 50%
+  .catalog_tiles
+    margin 0px
+  .catalog-header__catalog-view
+    position relative
+  .footer-menu__item
+    display block
+    margin-bottom 8px
+  .footer__inner
+    padding-top 25px
+    background-position: 0 23px;
+  .footer__menu
+    margin-top 0px
+  .footer-menu__link
+    font-size 16px
+  .filters__row__tab
+    float none
+    .filters__item 
+      width 50%
+      margin-bottom 15px
+    &:last-child .filters__item 
+      margin 0px
+  .filters__row__coll__left
+    width 404px
+    .filters__row__tab:last-child
+      .filters__item
+        float right
+  .main-menu__link
+    padding 12px 0
+    width 100%
+  .filters__row
+    margin-top: 7px
+  .main-menu__item
+    display: inline-block;
+    width: 24%;
+    float none
+    text-align: center
+  .header__menu
+    width 80%
+  .header__add-profile-button
+    text-align: right
+    width 20%
+    .button 
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      height: 33px;
+      line-height: 33px;
+  .filters__row__checkbox-1
+    position: absolute;
+    right: 15px;
+    top: 61px;
+  .filters__row_advanced
+    .filters__item_right
+      clear: both;
+      float: none;
+      padding-top: 9px;
+  .header-login .header-login__item
+    display block
+  .header-login__item:first-child
+    margin-bottom 15px
+  .header__login
+    margin-top 0px
+  .icon_user
+    position relative 
+    left 3px
+  .catalog_only-photo
+    margin 0px
+    width 98.5%
+    .catalog__item:nth-child(3n+3)
+      margin-right 0px
+    .catalog__item:nth-child(3n+1)
+      margin-left 0px
+  .catalog_only-photo .catalog__item
+    margin: 1.5%;
+    width: 31.32%;
+  .catalog_list
+    margin 0px 
+    .catalog__item
+      margin 0px
+      margin-bottom 30px
+    .catalog-item 
+      padding 0px
+  .catalog-item_tiles:hover 
+  .catalog-item_list:hover
+    border 1px solid transparent
+  .catalog_only-photo
+    .catalog__item
+      margin-top 0px
+      margin-bottom 3%
+  .catalog-item-info__favorite .button 
+    width 100%
+  .catalog_rev_col1
+    width 78.4%
+@media (max-width: 1020px)
+  body .layout__content_75
+    width 100%
+  .catalog_rev_col1
+    width: 79.4%;
+  .catalog-header__tabs
+    margin: 15px 0px 30px 0;
+  .catalog-header__salons
+    margin-right 0px
+  .catalog_salons .catalog__item
+    margin: 0 1% 20px 0;
+    width: 49.4%;
+  .catalog_salons .catalog__item:nth-child(even)
+    margin 0 0 20px 0
+  .pseudo-dropdown__list_services
+    left: 0px;
+    width 100%
+  .services-list__col + .services-list__col
+    margin 20px 0 0 0
+  .pseudo-dropdown__list_services:before
+    left 0px;
+  .catalog_only-photo
+    width 100%
+  .filters__item_reset
+    margin-top 10px
+    .filters__input
+      width: 259px;
+      margin-left: 83px;
+    .filters__label_services
+      width: 66px;
+  .float__none 
+    float none
+  .layout__sidebar
+    display none
+  .layout__content
+  body .layout__content_reset
+    width 100%
+  .page__main:before
+    display none
+  .catalog-item_tiles, .catalog-item_list
+    padding 0px
+  .catalog_tiles 
+    .catalog__item
+      width 48%
+      &:nth-child(odd)
+        margin-right: 4%;
+        margin-bottom: 6%;
+  .header-login
+    position relative
+    right 27px
+  .header__metro
+    margin-left 27px
+  .pseudo-dropdown_desktop
+    .pseudo-dropdown__title
+      display block
+    .pseudo-dropdown__trigger-checkbox
+      margin-left 0px
+  .pseudo-dropdown_desktop
+    .pseudo-dropdown__top:after
+      top 27px
+  .filters__row__coll__left
+    .filters__row__tab
+      &:first-child
+        .filters__item
+          &:first-child
+            width 39%
+      &:last-child
+        .filters__item
+          &:first-child
+            margin-right 33px
+          &:last-child 
+            width: 39%;
+  .filters__row__tab .filters__item
+    width 52%
+  .filters__row 
+    .form-item_type_checkbox
+      padding-left 26px
+    .filters__item_checkbox
+      margin-left: 18px;
+  .filters__row__coll__left
+    width 370px
+  .filters__input_small
+    width 78px
+  .filters__item_right .filters__show-button
+  .filters__hide-button
+    margin-right 62px
+  .catalog-item-info__favorite
+    display none
+  .catalog_list .catalog__item
+    width 100%
+  .add__favorite
+    display inline-block
+@media (max-width: 767px)
+  .header-login_fav
+    display none
+  .header__menu 
+    display: inline-flex;
+    justify-content: space-between;
+  .search__button-wrapper
+    margin-left auto
+  .catalog_tiles .catalog__item:nth-child(odd)
+    margin-right 0px
+  .catalog-item_tiles, 
+  .catalog-item_list
+    padding 0px
+  .catalog_only-photo
+    .catalog-item-only-photo__metro
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+  .catalog-item-only-photo__bottom
+    padding 10px
+  .catalog_list
+    margin 0px
+  .catalog_list
+    .catalog-item-info__phone
+      font-size 20px
+  .filters__values
+    display block
+    margin-top 15px
+    margin-bottom 25px
+    position relative
+    .filters__sep 
+      display inline-block
+      margin 0 10px
+    .filters__input_label-large
+      width 100px
+    input 
+      padding-left: 27px !important;
+    .filters__value-1
+      position absolute
+      top 5px
+      left 3px
+    .filters__value-2
+      position absolute
+      top 5px
+      left 137px
+  .catalog_tiles .catalog__item
+    width 100%
+  .filters__row__coll__left
+    width 100%
+    float none
+    .filters__input_small
+      width 100px
+    .filters__row__tab .filters__item
+      width 134px
+  .filters__item_right
+    float none
+    margin 25px 0 15px 0
+  .filters__row__checkbox-1
+    position relative
+    right 0px 
+    top 0px 
+    float none
+    .filters__item_checkbox
+      display block
+      float none
+      margin-left 0px
+      margin-bottom 15px
+  .filters__row__checkbox-2
+    margin 20px 0 0 0
+    .filters__submit-button
+      display block
+      margin 25px 0 30px 0
+  .filters__row__coll__left
+    .filters__label
+      position relative
+      text-align: left
+    .filters__input
+      margin-left 0px
+  .filters__row__tab .filters__item
+    width 143px
+  .filters__row_advanced
+    margin-bottom 20px
+    .filters__label
+      position relative
+      width 100%
+      text-align: left
+    .filters__input_large
+    .filters__input_services
+      width 100%
+      margin-left 0px
+    .filters__item
+      float none
+      margin: 26px 0;
+    .filters__item_right
+      margin 0px
+      padding 0px
+  .filters__inner
+    width 300px
+    margin 0px
+  .pseudo-dropdown__list_services
+    width 100%
+    left 0px
+  .services-list__col
+    margin 20px 0 0 0px !important
+  .pseudo-dropdown__list_services:before
+    left 0px
+  .main-menu__item
+    display block
+  .main-menu__item:after
+  .main-menu__item:before
+    display none !important
+  .header__add-profile-button,
+  .header-login
+    display none
+  .main-menu
+    display none
+    position absolute
+    background: color7
+    z-index 3
+    width 100%
+    margin 0 -10px
+    top 40px
+    left 0px
+    .main-menu__item
+      padding 0 10px
+      width 100%
+      border-bottom 1px solid color16
+      text-align left
+      background: color7
+      a 
+        border none
+        padding-left 70px
+        box-sizing border-box
+  .header__menu
+    width 100%
+  .filters 
+    display none
+  body .toggle-menu
+    display inline-block
+    vertical-align: middle
+    float left
+  .main-menu.active 
+    display block
+  .header__metro
+    display none
+  .catalog-item-top__image img:hover
+    opacity 1
+  .pseudo-dropdown_mobile 
+    float left
+    display block
+    width 213px
+    vertical-align: middle
+    height 40px
+    line-height @height 
+    &:after
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 40px
+      background: linear-gradient(-90deg, #610538 19%, #5f0236 58%, rgba(97, 5, 56, 0.06) 100%);
+    .ps-container .ps-scrollbar-x, 
+    .ps-container .ps-scrollbar-y
+      background: color16
+    .ps-container .ps-scrollbar-x-rail, 
+    .ps-container .ps-scrollbar-y-rail
+      background: color30
+    .pseudo-dropdown__top
+      padding-left 10px
+      &:after 
+        background-image none
+        left 84%
+        top 17px
+        z-index 1
+  .pseudo-dropdown_mobile.pseudo-dropdown_dropdown_open .form-item__label
+    color white
+  .pseudo-dropdown_mobile .pseudo-dropdown__list_checkbox
+    left: -52px;
+    margin-top: 0px;
+  .pseudo-dropdown_mobile.pseudo-dropdown_dropdown_open 
+    > div 
+      background: color7
+      border none 
+    &:after 
+      content: '';
+      background: linear-gradient(-90deg, #7D1E58 19%, #7D1E58 58%, rgba(97,5,56,0.06) 100%);
+  .footer__menu
+    margin-left 0px
+    margin-top: 112px;
+  .footer__button
+    position absolute
+    top 90px
+  .footer__inner
+    position relative
+  .footer-menu__item
+    margin 0 40px 8px 0
+  .search__button-wrapper,
+  .log__button-wrapper
+    display block
+  .filters.active
+    display block
+    padding-top 20px
+  .logo
+    retinaSprite($sprite_logo_group) 
+    img 
+      display none
+  .footer__inner
+    background: none
+    &:after 
+      display block
+      content ''
+      position: absolute;
+      top: 23px;
+  .filters__row__coll__left .filters__row__tab:last-child .filters__item:first-child
+  .filters__row__coll__left .filters__row__tab:last-child .filters__item:last-child
+  .filters__row__coll__left .filters__row__tab:first-child .filters__item:first-child
+    margin-right 0px
+    width: 50%
+  .add__favorite
+    display none
+  .catalog-item-info__favorite
+    display block
+@media (max-width: 753px)
+  .product-offers-list__item
+    width 48%
+  .product-info__left
+    width 100% 
+    float none
+  .product-info__right
+    width 100% 
+    float none
+    margin 20px 0 0 0
+  .product-info__offers
+    margin-top 30px
+@media (max-width: 700px)
+  .catalog_rev_col1
+    width: 60.4%;
+  .catalog_rev_col2
+    width 32%
+@media (max-width: 574px)
+  .main-content__articles-col2 a
+    font-size 19px
+  .main-content__articles-col1
+    width 100%
+    margin-bottom 15px
+  .main-content__articles-col2
+    width 100%
+    margin 0px
+  .catalog-header__tabs.column-r
+    flex-direction column
+  .catalog-header__link:hover
+    border-radius 2px
+  .catalog-header__link.active
+    border-radius 2px 
+    margin-bottom 1px
+    box-shadow none
+  .catalog-item__text
+    height auto
+  .catalog_salons .catalog__item
+    margin: 0 0 20px 0;
+    width: 100%;
+@media (max-width: 500px)
+  .filters__inner
+    width 100%
+  .catalog_only-photo
+    margin 0px
+    .catalog__item:nth-child(3n+3)
+      margin-right 1.5%
+    .catalog__item:nth-child(3n+1)
+      margin-left 1.5%
+    .catalog__item:nth-child(odd)
+      margin-left 0px
+    .catalog__item:nth-child(even)
+      margin-right 0px
+  .catalog_only-photo .catalog__item
+    margin: 1.5%;
+    width: 48.4%;
+  .catalog-view__item:nth-child(2)
+    margin-left 0px
+  .catalog-item-info__phone
+    font-size 20px
+  .catalog-header__title
+    font-size 25px
+  .catalog-item_tiles, .catalog-item_list
+    padding 0px
+  .header__login
+  .catalog-view__title
+  .catalog-view__item_list
+    display none
+  .catalog-item-parameters__item
+    height 31px
+  .catalog-item-top__image
+    width 41%
+  .catalog-item-top__info
+    margin-left 44%
+  .catalog-item_tiles:hover, .catalog-item_list:hover
+    border 1px solid transparent
+  .recover__password
+    width 100%
+  .b-popup__content_login
+    padding 20px 20px 30px 20px
+@media (max-width: 490px)
+  .catalog-header__controls
+    position relative 
+    .catalog-header-controls__button
+      margin-left 0px !important
+@media (max-width: 415px)
+  .pseudo-dropdown_mobile
+    width 100%
+  .catalog-item-middle__parameters_reset
+    display block
+    margin-bottom 0px
+  .catalog-item__middle
+    display none
+@media(max-width: 320px)
+  .catalog_only-photo .catalog__item
+    margin: 1.5%;
+    width: 100%;
+    margin-left 0px
+    margin-right 0px  

@@ -1,0 +1,637 @@
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+$sprite_ac_name = 'sprite-ac';
+$sprite_ac_x = 53px;
+$sprite_ac_y = 95px;
+$sprite_ac_offset_x = -53px;
+$sprite_ac_offset_y = -95px;
+$sprite_ac_width = 25px;
+$sprite_ac_height = 25px;
+$sprite_ac_total_width = 260px;
+$sprite_ac_total_height = 145px;
+$sprite_ac_image = 'sprite.png';
+$sprite_ac = 53px 95px -53px -95px 25px 25px 260px 145px 'sprite.png' 'sprite-ac';
+$sprite_building_name = 'sprite-building';
+$sprite_building_x = 0px;
+$sprite_building_y = 122px;
+$sprite_building_offset_x = 0px;
+$sprite_building_offset_y = -122px;
+$sprite_building_width = 14px;
+$sprite_building_height = 23px;
+$sprite_building_total_width = 260px;
+$sprite_building_total_height = 145px;
+$sprite_building_image = 'sprite.png';
+$sprite_building = 0px 122px 0px -122px 14px 23px 260px 145px 'sprite.png' 'sprite-building';
+$sprite_car_name = 'sprite-car';
+$sprite_car_x = 123px;
+$sprite_car_y = 95px;
+$sprite_car_offset_x = -123px;
+$sprite_car_offset_y = -95px;
+$sprite_car_width = 26px;
+$sprite_car_height = 13px;
+$sprite_car_total_width = 260px;
+$sprite_car_total_height = 145px;
+$sprite_car_image = 'sprite.png';
+$sprite_car = 123px 95px -123px -95px 26px 13px 260px 145px 'sprite.png' 'sprite-car';
+$sprite_chat_name = 'sprite-chat';
+$sprite_chat_x = 14px;
+$sprite_chat_y = 122px;
+$sprite_chat_offset_x = -14px;
+$sprite_chat_offset_y = -122px;
+$sprite_chat_width = 16px;
+$sprite_chat_height = 14px;
+$sprite_chat_total_width = 260px;
+$sprite_chat_total_height = 145px;
+$sprite_chat_image = 'sprite.png';
+$sprite_chat = 14px 122px -14px -122px 16px 14px 260px 145px 'sprite.png' 'sprite-chat';
+$sprite_close_name = 'sprite-close';
+$sprite_close_x = 103px;
+$sprite_close_y = 95px;
+$sprite_close_offset_x = -103px;
+$sprite_close_offset_y = -95px;
+$sprite_close_width = 20px;
+$sprite_close_height = 20px;
+$sprite_close_total_width = 260px;
+$sprite_close_total_height = 145px;
+$sprite_close_image = 'sprite.png';
+$sprite_close = 103px 95px -103px -95px 20px 20px 260px 145px 'sprite.png' 'sprite-close';
+$sprite_fhover_name = 'sprite-fhover';
+$sprite_fhover_x = 46px;
+$sprite_fhover_y = 122px;
+$sprite_fhover_offset_x = -46px;
+$sprite_fhover_offset_y = -122px;
+$sprite_fhover_width = 16px;
+$sprite_fhover_height = 13px;
+$sprite_fhover_total_width = 260px;
+$sprite_fhover_total_height = 145px;
+$sprite_fhover_image = 'sprite.png';
+$sprite_fhover = 46px 122px -46px -122px 16px 13px 260px 145px 'sprite.png' 'sprite-fhover';
+$sprite_footer_name = 'sprite-footer';
+$sprite_footer_x = 0px;
+$sprite_footer_y = 0px;
+$sprite_footer_offset_x = 0px;
+$sprite_footer_offset_y = 0px;
+$sprite_footer_width = 260px;
+$sprite_footer_height = 52px;
+$sprite_footer_total_width = 260px;
+$sprite_footer_total_height = 145px;
+$sprite_footer_image = 'sprite.png';
+$sprite_footer = 0px 0px 0px 0px 260px 52px 260px 145px 'sprite.png' 'sprite-footer';
+$sprite_frame_name = 'sprite-frame';
+$sprite_frame_x = 30px;
+$sprite_frame_y = 122px;
+$sprite_frame_offset_x = -30px;
+$sprite_frame_offset_y = -122px;
+$sprite_frame_width = 16px;
+$sprite_frame_height = 13px;
+$sprite_frame_total_width = 260px;
+$sprite_frame_total_height = 145px;
+$sprite_frame_image = 'sprite.png';
+$sprite_frame = 30px 122px -30px -122px 16px 13px 260px 145px 'sprite.png' 'sprite-frame';
+$sprite_lhover_name = 'sprite-lhover';
+$sprite_lhover_x = 219px;
+$sprite_lhover_y = 95px;
+$sprite_lhover_offset_x = -219px;
+$sprite_lhover_offset_y = -95px;
+$sprite_lhover_width = 16px;
+$sprite_lhover_height = 12px;
+$sprite_lhover_total_width = 260px;
+$sprite_lhover_total_height = 145px;
+$sprite_lhover_image = 'sprite.png';
+$sprite_lhover = 219px 95px -219px -95px 16px 12px 260px 145px 'sprite.png' 'sprite-lhover';
+$sprite_list_name = 'sprite-list';
+$sprite_list_x = 203px;
+$sprite_list_y = 95px;
+$sprite_list_offset_x = -203px;
+$sprite_list_offset_y = -95px;
+$sprite_list_width = 16px;
+$sprite_list_height = 12px;
+$sprite_list_total_width = 260px;
+$sprite_list_total_height = 145px;
+$sprite_list_image = 'sprite.png';
+$sprite_list = 203px 95px -203px -95px 16px 12px 260px 145px 'sprite.png' 'sprite-list';
+$sprite_logo_name = 'sprite-logo';
+$sprite_logo_x = 0px;
+$sprite_logo_y = 52px;
+$sprite_logo_offset_x = 0px;
+$sprite_logo_offset_y = -52px;
+$sprite_logo_width = 235px;
+$sprite_logo_height = 43px;
+$sprite_logo_total_width = 260px;
+$sprite_logo_total_height = 145px;
+$sprite_logo_image = 'sprite.png';
+$sprite_logo = 0px 52px 0px -52px 235px 43px 260px 145px 'sprite.png' 'sprite-logo';
+$sprite_metor_name = 'sprite-metor';
+$sprite_metor_x = 185px;
+$sprite_metor_y = 95px;
+$sprite_metor_offset_x = -185px;
+$sprite_metor_offset_y = -95px;
+$sprite_metor_width = 18px;
+$sprite_metor_height = 12px;
+$sprite_metor_total_width = 260px;
+$sprite_metor_total_height = 145px;
+$sprite_metor_image = 'sprite.png';
+$sprite_metor = 185px 95px -185px -95px 18px 12px 260px 145px 'sprite.png' 'sprite-metor';
+$sprite_mhover_name = 'sprite-mhover';
+$sprite_mhover_x = 149px;
+$sprite_mhover_y = 95px;
+$sprite_mhover_offset_x = -149px;
+$sprite_mhover_offset_y = -95px;
+$sprite_mhover_width = 18px;
+$sprite_mhover_height = 12px;
+$sprite_mhover_total_width = 260px;
+$sprite_mhover_total_height = 145px;
+$sprite_mhover_image = 'sprite.png';
+$sprite_mhover = 149px 95px -149px -95px 18px 12px 260px 145px 'sprite.png' 'sprite-mhover';
+$sprite_mwhite_name = 'sprite-mwhite';
+$sprite_mwhite_x = 167px;
+$sprite_mwhite_y = 95px;
+$sprite_mwhite_offset_x = -167px;
+$sprite_mwhite_offset_y = -95px;
+$sprite_mwhite_width = 18px;
+$sprite_mwhite_height = 12px;
+$sprite_mwhite_total_width = 260px;
+$sprite_mwhite_total_height = 145px;
+$sprite_mwhite_image = 'sprite.png';
+$sprite_mwhite = 167px 95px -167px -95px 18px 12px 260px 145px 'sprite.png' 'sprite-mwhite';
+$sprite_photo_name = 'sprite-photo';
+$sprite_photo_x = 235px;
+$sprite_photo_y = 77px;
+$sprite_photo_offset_x = -235px;
+$sprite_photo_offset_y = -77px;
+$sprite_photo_width = 18px;
+$sprite_photo_height = 14px;
+$sprite_photo_total_width = 260px;
+$sprite_photo_total_height = 145px;
+$sprite_photo_image = 'sprite.png';
+$sprite_photo = 235px 77px -235px -77px 18px 14px 260px 145px 'sprite.png' 'sprite-photo';
+$sprite_phover_name = 'sprite-phover';
+$sprite_phover_x = 62px;
+$sprite_phover_y = 122px;
+$sprite_phover_offset_x = -62px;
+$sprite_phover_offset_y = -122px;
+$sprite_phover_width = 13px;
+$sprite_phover_height = 13px;
+$sprite_phover_total_width = 260px;
+$sprite_phover_total_height = 145px;
+$sprite_phover_image = 'sprite.png';
+$sprite_phover = 62px 122px -62px -122px 13px 13px 260px 145px 'sprite.png' 'sprite-phover';
+$sprite_plitka_name = 'sprite-plitka';
+$sprite_plitka_x = 75px;
+$sprite_plitka_y = 122px;
+$sprite_plitka_offset_x = -75px;
+$sprite_plitka_offset_y = -122px;
+$sprite_plitka_width = 13px;
+$sprite_plitka_height = 13px;
+$sprite_plitka_total_width = 260px;
+$sprite_plitka_total_height = 145px;
+$sprite_plitka_image = 'sprite.png';
+$sprite_plitka = 75px 122px -75px -122px 13px 13px 260px 145px 'sprite.png' 'sprite-plitka';
+$sprite_search_name = 'sprite-search';
+$sprite_search_x = 28px;
+$sprite_search_y = 95px;
+$sprite_search_offset_x = -28px;
+$sprite_search_offset_y = -95px;
+$sprite_search_width = 25px;
+$sprite_search_height = 25px;
+$sprite_search_total_width = 260px;
+$sprite_search_total_height = 145px;
+$sprite_search_image = 'sprite.png';
+$sprite_search = 28px 95px -28px -95px 25px 25px 260px 145px 'sprite.png' 'sprite-search';
+$sprite_shover_name = 'sprite-shover';
+$sprite_shover_x = 235px;
+$sprite_shover_y = 52px;
+$sprite_shover_offset_x = -235px;
+$sprite_shover_offset_y = -52px;
+$sprite_shover_width = 25px;
+$sprite_shover_height = 25px;
+$sprite_shover_total_width = 260px;
+$sprite_shover_total_height = 145px;
+$sprite_shover_image = 'sprite.png';
+$sprite_shover = 235px 52px -235px -52px 25px 25px 260px 145px 'sprite.png' 'sprite-shover';
+$sprite_star_name = 'sprite-star';
+$sprite_star_x = 0px;
+$sprite_star_y = 95px;
+$sprite_star_offset_x = 0px;
+$sprite_star_offset_y = -95px;
+$sprite_star_width = 28px;
+$sprite_star_height = 27px;
+$sprite_star_total_width = 260px;
+$sprite_star_total_height = 145px;
+$sprite_star_image = 'sprite.png';
+$sprite_star = 0px 95px 0px -95px 28px 27px 260px 145px 'sprite.png' 'sprite-star';
+$sprite_userpic_name = 'sprite-userpic';
+$sprite_userpic_x = 78px;
+$sprite_userpic_y = 95px;
+$sprite_userpic_offset_x = -78px;
+$sprite_userpic_offset_y = -95px;
+$sprite_userpic_width = 25px;
+$sprite_userpic_height = 25px;
+$sprite_userpic_total_width = 260px;
+$sprite_userpic_total_height = 145px;
+$sprite_userpic_image = 'sprite.png';
+$sprite_userpic = 78px 95px -78px -95px 25px 25px 260px 145px 'sprite.png' 'sprite-userpic';
+$sprite_ac_2x_name = 'sprite-ac-2x';
+$sprite_ac_2x_x = 106px;
+$sprite_ac_2x_y = 190px;
+$sprite_ac_2x_offset_x = -106px;
+$sprite_ac_2x_offset_y = -190px;
+$sprite_ac_2x_width = 50px;
+$sprite_ac_2x_height = 50px;
+$sprite_ac_2x_total_width = 520px;
+$sprite_ac_2x_total_height = 290px;
+$sprite_ac_2x_image = 'sprite-2x.png';
+$sprite_ac_2x = 106px 190px -106px -190px 50px 50px 520px 290px 'sprite-2x.png' 'sprite-ac-2x';
+$sprite_building_2x_name = 'sprite-building-2x';
+$sprite_building_2x_x = 0px;
+$sprite_building_2x_y = 244px;
+$sprite_building_2x_offset_x = 0px;
+$sprite_building_2x_offset_y = -244px;
+$sprite_building_2x_width = 28px;
+$sprite_building_2x_height = 46px;
+$sprite_building_2x_total_width = 520px;
+$sprite_building_2x_total_height = 290px;
+$sprite_building_2x_image = 'sprite-2x.png';
+$sprite_building_2x = 0px 244px 0px -244px 28px 46px 520px 290px 'sprite-2x.png' 'sprite-building-2x';
+$sprite_car_2x_name = 'sprite-car-2x';
+$sprite_car_2x_x = 246px;
+$sprite_car_2x_y = 190px;
+$sprite_car_2x_offset_x = -246px;
+$sprite_car_2x_offset_y = -190px;
+$sprite_car_2x_width = 52px;
+$sprite_car_2x_height = 26px;
+$sprite_car_2x_total_width = 520px;
+$sprite_car_2x_total_height = 290px;
+$sprite_car_2x_image = 'sprite-2x.png';
+$sprite_car_2x = 246px 190px -246px -190px 52px 26px 520px 290px 'sprite-2x.png' 'sprite-car-2x';
+$sprite_chat_2x_name = 'sprite-chat-2x';
+$sprite_chat_2x_x = 28px;
+$sprite_chat_2x_y = 244px;
+$sprite_chat_2x_offset_x = -28px;
+$sprite_chat_2x_offset_y = -244px;
+$sprite_chat_2x_width = 32px;
+$sprite_chat_2x_height = 28px;
+$sprite_chat_2x_total_width = 520px;
+$sprite_chat_2x_total_height = 290px;
+$sprite_chat_2x_image = 'sprite-2x.png';
+$sprite_chat_2x = 28px 244px -28px -244px 32px 28px 520px 290px 'sprite-2x.png' 'sprite-chat-2x';
+$sprite_close_2x_name = 'sprite-close-2x';
+$sprite_close_2x_x = 206px;
+$sprite_close_2x_y = 190px;
+$sprite_close_2x_offset_x = -206px;
+$sprite_close_2x_offset_y = -190px;
+$sprite_close_2x_width = 40px;
+$sprite_close_2x_height = 40px;
+$sprite_close_2x_total_width = 520px;
+$sprite_close_2x_total_height = 290px;
+$sprite_close_2x_image = 'sprite-2x.png';
+$sprite_close_2x = 206px 190px -206px -190px 40px 40px 520px 290px 'sprite-2x.png' 'sprite-close-2x';
+$sprite_fhover_2x_name = 'sprite-fhover-2x';
+$sprite_fhover_2x_x = 92px;
+$sprite_fhover_2x_y = 244px;
+$sprite_fhover_2x_offset_x = -92px;
+$sprite_fhover_2x_offset_y = -244px;
+$sprite_fhover_2x_width = 32px;
+$sprite_fhover_2x_height = 26px;
+$sprite_fhover_2x_total_width = 520px;
+$sprite_fhover_2x_total_height = 290px;
+$sprite_fhover_2x_image = 'sprite-2x.png';
+$sprite_fhover_2x = 92px 244px -92px -244px 32px 26px 520px 290px 'sprite-2x.png' 'sprite-fhover-2x';
+$sprite_footer_2x_name = 'sprite-footer-2x';
+$sprite_footer_2x_x = 0px;
+$sprite_footer_2x_y = 0px;
+$sprite_footer_2x_offset_x = 0px;
+$sprite_footer_2x_offset_y = 0px;
+$sprite_footer_2x_width = 520px;
+$sprite_footer_2x_height = 104px;
+$sprite_footer_2x_total_width = 520px;
+$sprite_footer_2x_total_height = 290px;
+$sprite_footer_2x_image = 'sprite-2x.png';
+$sprite_footer_2x = 0px 0px 0px 0px 520px 104px 520px 290px 'sprite-2x.png' 'sprite-footer-2x';
+$sprite_frame_2x_name = 'sprite-frame-2x';
+$sprite_frame_2x_x = 60px;
+$sprite_frame_2x_y = 244px;
+$sprite_frame_2x_offset_x = -60px;
+$sprite_frame_2x_offset_y = -244px;
+$sprite_frame_2x_width = 32px;
+$sprite_frame_2x_height = 26px;
+$sprite_frame_2x_total_width = 520px;
+$sprite_frame_2x_total_height = 290px;
+$sprite_frame_2x_image = 'sprite-2x.png';
+$sprite_frame_2x = 60px 244px -60px -244px 32px 26px 520px 290px 'sprite-2x.png' 'sprite-frame-2x';
+$sprite_lhover_2x_name = 'sprite-lhover-2x';
+$sprite_lhover_2x_x = 438px;
+$sprite_lhover_2x_y = 190px;
+$sprite_lhover_2x_offset_x = -438px;
+$sprite_lhover_2x_offset_y = -190px;
+$sprite_lhover_2x_width = 32px;
+$sprite_lhover_2x_height = 24px;
+$sprite_lhover_2x_total_width = 520px;
+$sprite_lhover_2x_total_height = 290px;
+$sprite_lhover_2x_image = 'sprite-2x.png';
+$sprite_lhover_2x = 438px 190px -438px -190px 32px 24px 520px 290px 'sprite-2x.png' 'sprite-lhover-2x';
+$sprite_list_2x_name = 'sprite-list-2x';
+$sprite_list_2x_x = 406px;
+$sprite_list_2x_y = 190px;
+$sprite_list_2x_offset_x = -406px;
+$sprite_list_2x_offset_y = -190px;
+$sprite_list_2x_width = 32px;
+$sprite_list_2x_height = 24px;
+$sprite_list_2x_total_width = 520px;
+$sprite_list_2x_total_height = 290px;
+$sprite_list_2x_image = 'sprite-2x.png';
+$sprite_list_2x = 406px 190px -406px -190px 32px 24px 520px 290px 'sprite-2x.png' 'sprite-list-2x';
+$sprite_logo_2x_name = 'sprite-logo-2x';
+$sprite_logo_2x_x = 0px;
+$sprite_logo_2x_y = 104px;
+$sprite_logo_2x_offset_x = 0px;
+$sprite_logo_2x_offset_y = -104px;
+$sprite_logo_2x_width = 470px;
+$sprite_logo_2x_height = 86px;
+$sprite_logo_2x_total_width = 520px;
+$sprite_logo_2x_total_height = 290px;
+$sprite_logo_2x_image = 'sprite-2x.png';
+$sprite_logo_2x = 0px 104px 0px -104px 470px 86px 520px 290px 'sprite-2x.png' 'sprite-logo-2x';
+$sprite_metor_2x_name = 'sprite-metor-2x';
+$sprite_metor_2x_x = 370px;
+$sprite_metor_2x_y = 190px;
+$sprite_metor_2x_offset_x = -370px;
+$sprite_metor_2x_offset_y = -190px;
+$sprite_metor_2x_width = 36px;
+$sprite_metor_2x_height = 24px;
+$sprite_metor_2x_total_width = 520px;
+$sprite_metor_2x_total_height = 290px;
+$sprite_metor_2x_image = 'sprite-2x.png';
+$sprite_metor_2x = 370px 190px -370px -190px 36px 24px 520px 290px 'sprite-2x.png' 'sprite-metor-2x';
+$sprite_mhover_2x_name = 'sprite-mhover-2x';
+$sprite_mhover_2x_x = 298px;
+$sprite_mhover_2x_y = 190px;
+$sprite_mhover_2x_offset_x = -298px;
+$sprite_mhover_2x_offset_y = -190px;
+$sprite_mhover_2x_width = 36px;
+$sprite_mhover_2x_height = 24px;
+$sprite_mhover_2x_total_width = 520px;
+$sprite_mhover_2x_total_height = 290px;
+$sprite_mhover_2x_image = 'sprite-2x.png';
+$sprite_mhover_2x = 298px 190px -298px -190px 36px 24px 520px 290px 'sprite-2x.png' 'sprite-mhover-2x';
+$sprite_mwhite_2x_name = 'sprite-mwhite-2x';
+$sprite_mwhite_2x_x = 334px;
+$sprite_mwhite_2x_y = 190px;
+$sprite_mwhite_2x_offset_x = -334px;
+$sprite_mwhite_2x_offset_y = -190px;
+$sprite_mwhite_2x_width = 36px;
+$sprite_mwhite_2x_height = 24px;
+$sprite_mwhite_2x_total_width = 520px;
+$sprite_mwhite_2x_total_height = 290px;
+$sprite_mwhite_2x_image = 'sprite-2x.png';
+$sprite_mwhite_2x = 334px 190px -334px -190px 36px 24px 520px 290px 'sprite-2x.png' 'sprite-mwhite-2x';
+$sprite_photo_2x_name = 'sprite-photo-2x';
+$sprite_photo_2x_x = 470px;
+$sprite_photo_2x_y = 154px;
+$sprite_photo_2x_offset_x = -470px;
+$sprite_photo_2x_offset_y = -154px;
+$sprite_photo_2x_width = 36px;
+$sprite_photo_2x_height = 28px;
+$sprite_photo_2x_total_width = 520px;
+$sprite_photo_2x_total_height = 290px;
+$sprite_photo_2x_image = 'sprite-2x.png';
+$sprite_photo_2x = 470px 154px -470px -154px 36px 28px 520px 290px 'sprite-2x.png' 'sprite-photo-2x';
+$sprite_phover_2x_name = 'sprite-phover-2x';
+$sprite_phover_2x_x = 124px;
+$sprite_phover_2x_y = 244px;
+$sprite_phover_2x_offset_x = -124px;
+$sprite_phover_2x_offset_y = -244px;
+$sprite_phover_2x_width = 26px;
+$sprite_phover_2x_height = 26px;
+$sprite_phover_2x_total_width = 520px;
+$sprite_phover_2x_total_height = 290px;
+$sprite_phover_2x_image = 'sprite-2x.png';
+$sprite_phover_2x = 124px 244px -124px -244px 26px 26px 520px 290px 'sprite-2x.png' 'sprite-phover-2x';
+$sprite_pritka_2x_name = 'sprite-pritka-2x';
+$sprite_pritka_2x_x = 150px;
+$sprite_pritka_2x_y = 244px;
+$sprite_pritka_2x_offset_x = -150px;
+$sprite_pritka_2x_offset_y = -244px;
+$sprite_pritka_2x_width = 26px;
+$sprite_pritka_2x_height = 26px;
+$sprite_pritka_2x_total_width = 520px;
+$sprite_pritka_2x_total_height = 290px;
+$sprite_pritka_2x_image = 'sprite-2x.png';
+$sprite_pritka_2x = 150px 244px -150px -244px 26px 26px 520px 290px 'sprite-2x.png' 'sprite-pritka-2x';
+$sprite_search_2x_name = 'sprite-search-2x';
+$sprite_search_2x_x = 56px;
+$sprite_search_2x_y = 190px;
+$sprite_search_2x_offset_x = -56px;
+$sprite_search_2x_offset_y = -190px;
+$sprite_search_2x_width = 50px;
+$sprite_search_2x_height = 50px;
+$sprite_search_2x_total_width = 520px;
+$sprite_search_2x_total_height = 290px;
+$sprite_search_2x_image = 'sprite-2x.png';
+$sprite_search_2x = 56px 190px -56px -190px 50px 50px 520px 290px 'sprite-2x.png' 'sprite-search-2x';
+$sprite_shover_2x_name = 'sprite-shover-2x';
+$sprite_shover_2x_x = 470px;
+$sprite_shover_2x_y = 104px;
+$sprite_shover_2x_offset_x = -470px;
+$sprite_shover_2x_offset_y = -104px;
+$sprite_shover_2x_width = 50px;
+$sprite_shover_2x_height = 50px;
+$sprite_shover_2x_total_width = 520px;
+$sprite_shover_2x_total_height = 290px;
+$sprite_shover_2x_image = 'sprite-2x.png';
+$sprite_shover_2x = 470px 104px -470px -104px 50px 50px 520px 290px 'sprite-2x.png' 'sprite-shover-2x';
+$sprite_star_2x_name = 'sprite-star-2x';
+$sprite_star_2x_x = 0px;
+$sprite_star_2x_y = 190px;
+$sprite_star_2x_offset_x = 0px;
+$sprite_star_2x_offset_y = -190px;
+$sprite_star_2x_width = 56px;
+$sprite_star_2x_height = 54px;
+$sprite_star_2x_total_width = 520px;
+$sprite_star_2x_total_height = 290px;
+$sprite_star_2x_image = 'sprite-2x.png';
+$sprite_star_2x = 0px 190px 0px -190px 56px 54px 520px 290px 'sprite-2x.png' 'sprite-star-2x';
+$sprite_userpic_2x_name = 'sprite-userpic-2x';
+$sprite_userpic_2x_x = 156px;
+$sprite_userpic_2x_y = 190px;
+$sprite_userpic_2x_offset_x = -156px;
+$sprite_userpic_2x_offset_y = -190px;
+$sprite_userpic_2x_width = 50px;
+$sprite_userpic_2x_height = 50px;
+$sprite_userpic_2x_total_width = 520px;
+$sprite_userpic_2x_total_height = 290px;
+$sprite_userpic_2x_image = 'sprite-2x.png';
+$sprite_userpic_2x = 156px 190px -156px -190px 50px 50px 520px 290px 'sprite-2x.png' 'sprite-userpic-2x';
+$spritesheet_width = 260px;
+$spritesheet_height = 145px;
+$spritesheet_image = 'sprite.png';
+$spritesheet_sprites = $sprite_ac $sprite_building $sprite_car $sprite_chat $sprite_close $sprite_fhover $sprite_footer $sprite_frame $sprite_lhover $sprite_list $sprite_logo $sprite_metor $sprite_mhover $sprite_mwhite $sprite_photo $sprite_phover $sprite_plitka $sprite_search $sprite_shover $sprite_star $sprite_userpic;
+$spritesheet = 260px 145px 'sprite.png' $spritesheet_sprites;
+$retina_spritesheet_width = 520px;
+$retina_spritesheet_height = 290px;
+$retina_spritesheet_image = 'sprite-2x.png';
+$retina_spritesheet_sprites = $sprite_ac_2x $sprite_building_2x $sprite_car_2x $sprite_chat_2x $sprite_close_2x $sprite_fhover_2x $sprite_footer_2x $sprite_frame_2x $sprite_lhover_2x $sprite_list_2x $sprite_logo_2x $sprite_metor_2x $sprite_mhover_2x $sprite_mwhite_2x $sprite_photo_2x $sprite_phover_2x $sprite_pritka_2x $sprite_search_2x $sprite_shover_2x $sprite_star_2x $sprite_userpic_2x;
+$retina_spritesheet = 520px 290px 'sprite-2x.png' $retina_spritesheet_sprites;
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retinaSprite` and `retinaSprites`.
+*/
+$sprite_ac_group_name = 'sprite-ac';
+$sprite_ac_group = 'sprite-ac' $sprite_ac $sprite_ac_2x;
+$sprite_building_group_name = 'sprite-building';
+$sprite_building_group = 'sprite-building' $sprite_building $sprite_building_2x;
+$sprite_car_group_name = 'sprite-car';
+$sprite_car_group = 'sprite-car' $sprite_car $sprite_car_2x;
+$sprite_chat_group_name = 'sprite-chat';
+$sprite_chat_group = 'sprite-chat' $sprite_chat $sprite_chat_2x;
+$sprite_close_group_name = 'sprite-close';
+$sprite_close_group = 'sprite-close' $sprite_close $sprite_close_2x;
+$sprite_fhover_group_name = 'sprite-fhover';
+$sprite_fhover_group = 'sprite-fhover' $sprite_fhover $sprite_fhover_2x;
+$sprite_footer_group_name = 'sprite-footer';
+$sprite_footer_group = 'sprite-footer' $sprite_footer $sprite_footer_2x;
+$sprite_frame_group_name = 'sprite-frame';
+$sprite_frame_group = 'sprite-frame' $sprite_frame $sprite_frame_2x;
+$sprite_lhover_group_name = 'sprite-lhover';
+$sprite_lhover_group = 'sprite-lhover' $sprite_lhover $sprite_lhover_2x;
+$sprite_list_group_name = 'sprite-list';
+$sprite_list_group = 'sprite-list' $sprite_list $sprite_list_2x;
+$sprite_logo_group_name = 'sprite-logo';
+$sprite_logo_group = 'sprite-logo' $sprite_logo $sprite_logo_2x;
+$sprite_metor_group_name = 'sprite-metor';
+$sprite_metor_group = 'sprite-metor' $sprite_metor $sprite_metor_2x;
+$sprite_mhover_group_name = 'sprite-mhover';
+$sprite_mhover_group = 'sprite-mhover' $sprite_mhover $sprite_mhover_2x;
+$sprite_mwhite_group_name = 'sprite-mwhite';
+$sprite_mwhite_group = 'sprite-mwhite' $sprite_mwhite $sprite_mwhite_2x;
+$sprite_photo_group_name = 'sprite-photo';
+$sprite_photo_group = 'sprite-photo' $sprite_photo $sprite_photo_2x;
+$sprite_phover_group_name = 'sprite-phover';
+$sprite_phover_group = 'sprite-phover' $sprite_phover $sprite_phover_2x;
+$sprite_plitka_group_name = 'sprite-plitka';
+$sprite_plitka_group = 'sprite-plitka' $sprite_plitka $sprite_pritka_2x;
+$sprite_search_group_name = 'sprite-search';
+$sprite_search_group = 'sprite-search' $sprite_search $sprite_search_2x;
+$sprite_shover_group_name = 'sprite-shover';
+$sprite_shover_group = 'sprite-shover' $sprite_shover $sprite_shover_2x;
+$sprite_star_group_name = 'sprite-star';
+$sprite_star_group = 'sprite-star' $sprite_star $sprite_star_2x;
+$sprite_userpic_group_name = 'sprite-userpic';
+$sprite_userpic_group = 'sprite-userpic' $sprite_userpic $sprite_userpic_2x;
+$retina_groups = $sprite_ac_group $sprite_building_group $sprite_car_group $sprite_chat_group $sprite_close_group $sprite_fhover_group $sprite_footer_group $sprite_frame_group $sprite_lhover_group $sprite_list_group $sprite_logo_group $sprite_metor_group $sprite_mhover_group $sprite_mwhite_group $sprite_photo_group $sprite_phover_group $sprite_plitka_group $sprite_search_group $sprite_shover_group $sprite_star_group $sprite_userpic_group;
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+spriteWidth($sprite) {
+  width: $sprite[4];
+}
+
+spriteHeight($sprite) {
+  height: $sprite[5];
+}
+
+spritePosition($sprite) {
+  background-position: $sprite[2] $sprite[3];
+}
+
+spriteImage($sprite) {
+  background-image: url($sprite[8]);
+}
+
+sprite($sprite) {
+  spriteImage($sprite)
+  spritePosition($sprite)
+  spriteWidth($sprite)
+  spriteHeight($sprite)
+}
+
+/*
+The `retinaSprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon_home_group = 'icon-home' $icon_home $icon_home_2x;
+
+.icon-home {
+  retinaSprite($icon_home_group)
+}
+*/
+spriteBackgroundSize($sprite) {
+  background-size: $sprite[6] $sprite[7];
+}
+
+retinaSprite($retina_group) {
+  $normal_sprite = $retina_group[1];
+  $retina_sprite = $retina_group[2];
+  sprite($normal_sprite)
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    spriteImage($retina_sprite)
+    spriteBackgroundSize($normal_sprite)
+  }
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of Stylus
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+sprites($spritesheet_sprites);
+*/
+sprites($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+    .{$sprite_name} {
+      sprite($sprite);
+    }
+  }
+}
+
+/*
+The `retinaSprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in Stylus
+
+retinaSprites($retina_groups);
+*/
+retinaSprites($retina_groups) {
+  for $retina_group in $retina_groups {
+    $sprite_name = $retina_group[0];
+    .{$sprite_name} {
+      retinaSprite($retina_group);
+    }
+  }
+}

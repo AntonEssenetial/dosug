@@ -1,0 +1,80 @@
+@import 'reset.css'
+@import 'animate.css'
+@import 'sprite'
+@import 'mixins'
+@import nib
+@import 'flex'
+// Project variables
+@import '../stylus/variables'
+// Project mixins
+@import '../stylus/components/mixins'
+// Svg icons
+@import '../stylus/icons-template'
+// Components
+@import '../stylus/components/index'
+// Plugins
+// @import 'plugins/**/*.styl'
+@import '../stylus/plugins/perfect-scrolbar'
+@import '../stylus/plugins/slick'
+@import '../stylus/plugins/photoswipe/photoswipe'
+@import '../stylus/plugins/photoswipe/default-skin'
+// Modules
+@import '../stylus/modules'
+// @import '../../modules/**/*.styl'
+// Common
+@import '../stylus/common'
+// Media
+@import '../stylus/media'
+
+.toggle-menu
+  background: none
+  border none
+  outline none
+  display none
+  border-right 1px solid #7d1e58
+  padding-right 10px
+  padding-left 10px
+  margin-left -10px
+  height 40px
+.sandwitch
+  width 31px
+  height 31px
+  top 8px
+  bottom 0
+  left 0
+  right 0
+  margin auto
+  z-index 200
+  > span
+    width 31px
+    height 4px
+    background #ae819b
+    border none
+    border-radius 0px
+    display block
+    position relative
+.sw-topper
+  top 5px
+  transition: transform 0.5s, top 0.2s
+  display block 
+.sw-bottom 
+  top: 10px
+  transition: transform 0.5s, top 0.2s
+  transition-delay: 0.2s, 0s 
+.sw-footer 
+  top: 15px
+  transition: all 0.5s
+  transition-delay: 0.1s 
+.toggle-menu.active .sw-topper 
+  background color6
+  top: 13px
+  transform: rotate(-45deg) 
+.toggle-menu.active .sw-bottom 
+  background color6
+  top: 10px
+  transform: rotate(45deg) 
+.toggle-menu.active .sw-footer 
+  background color6
+  opacity: 0
+  top: 0
+  transform: rotate(180deg)

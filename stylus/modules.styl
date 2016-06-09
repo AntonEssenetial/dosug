@@ -1,0 +1,3202 @@
+* {font-size 0px}
+.accordion
+	ul-reset()
+
+	&__item
+		padding 0
+		list-style none
+		margin-bottom 4px
+
+	&__header
+		position relative
+		color #3d3d3d
+		font-size 18px
+		line-height 20px
+		padding 15px 50px 15px 20px
+		background-color #F9F9F9
+		cursor pointer
+		transition 150ms all ease-in-out 0s
+		&:hover
+			box-shadow 0 1px 5px rgba(22, 20, 17, 0.16)
+
+		&:after
+			transition 150ms all ease-in-out 0s
+			position absolute
+			right 20px
+			top 22px
+			content ''
+			display inline-block
+			vertical-align middle
+			width 0
+			height 0
+			border 4px solid transparent
+			border-top-color #535353
+			margin-left 4px
+			border-bottom none
+
+	&__content
+		display none
+		padding 20px 10px
+
+	&__item_active &__header
+		box-shadow 0 1px 5px rgba(22, 20, 17, 0.16)
+
+	&__item_active &__header:after
+		transform rotate(180deg)
+
+// Mixins
+alert-style( color )
+	border 1px solid color + 50%
+	background color + 90%
+	.alert
+		&__title
+		&__close
+		&__body
+			color color - 20%
+
+		&__close
+			svg
+				fill color
+			&:hover
+				svg
+					fill color - 40%
+
+.alert
+	display block
+	padding 10px 15px
+	border-radius 2px
+	position relative
+	margin-bottom $base-line-height
+
+	&__title
+		font-weight bold
+		font-size 16px
+		padding-bottom 8px
+
+	&__body
+		font-size 14px
+
+	&__close
+		font-weight bold
+		text-align center
+		position absolute
+		right 5px
+		top 5px
+		cursor pointer
+		size 16px
+		padding 3px
+		line-height 1
+		&:hover
+			border-radius 2px
+		svg
+			size 10px
+
+
+
+
+
+.alert_type_error
+.alert_color_red
+	alert-style(color = #e74c3c)
+
+.alert_type_success
+.alert_color_green
+	alert-style(color = #187818)
+
+.alert_type_info
+.alert_style_blue
+	alert-style(color = #00529c)
+
+.alert_type_message
+.alert_color_grey
+	alert-style(color = #000)
+
+.bread-crumbs
+	line-height normal
+	ul-reset()
+
+	&__item
+	&__separator
+		display inline-block
+		vertical-align middle
+
+	&__item
+		list-style none
+		padding 0
+		font-weight: 700
+
+	&__link
+		&
+		&:visited
+			color color25
+			font-weight: 400
+
+		&:hover
+			color color25
+			text-decoration none
+
+	&__separator
+		padding 0
+		font-weight: 400
+
+.browsehappy
+	margin 0
+	background #ffe983
+	color #333
+	padding 0.5em 0 0.7em
+	text-align center
+	a
+		&
+		&:visited
+			text-decoration underline
+		&:hover
+			text-decoration none
+
+//- Mixins
+button-color(color, color-hover, background, background-hover, border, border-hover)
+	&
+	&:visited
+		color color
+		background-color background
+		if border
+			border-color border
+
+	&:focus
+	&:hover
+	&:active
+		if color-hover
+			color color-hover
+		else
+			color color
+
+		if background-hover
+			background-color background-hover
+		else
+			background-color background - 13%
+
+		if border-hover
+			border-color border-hover
+		else
+			border-color border - 25%
+
+	&:active
+		background-image none
+
+	&.button
+		&_disabled
+		&[disabled]
+			&
+			&:hover
+			&:focus
+			&:active
+				color color
+				background-color background
+				border-color border
+
+button-size(padding, font-size, line-height)
+	padding padding
+	font-size font-size
+	if line-height
+		line-height line-height
+
+//- Base style
+.button
+	display inline-block
+	margin-bottom 0
+	font-weight normal
+	text-align center
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	background-image none
+	vertical-align middle
+	border: none
+	white-space nowrap
+	line-height normal
+	-webkit-user-drag none
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	box-sizing border-box
+	text-decoration none
+	background-color transparent
+	padding 0
+	transition 125ms all ease-in-out
+	color color8
+
+	&__icon
+	&__text
+		display inline-block
+		vertical-align middle
+		margin-right 8px
+		line-height 1
+
+	&:focus
+	&:active:focus
+		outline none
+
+	&:hover
+	&:focus
+		color #333333
+		text-decoration none
+
+	&:active
+		outline 0
+		background-image none
+		box-shadow inset 0 3px 5px rgba(0 0 0 0.125)
+
+	&_disabled
+	&[disabled]
+		&
+		&:hover
+		&:focus
+		&:active
+			opacity 0.65
+			box-shadow none
+			outline none
+
+	a&_disabled
+		pointer-events none
+
+//- Block button
+.button_block
+	display: block;
+	width: 100%;
+
+	& + &
+		margin-top: 5px;
+
+	input[type="submit"]&
+	input[type="reset"]&
+	input[type="button"]&
+		width: 100%;
+
+//- Button sizes
+.button
+.button_size_default
+	box-shadow: 0px 1px 0px 0px rgba(136, 160, 24, 0.75)
+	button-size(
+		padding: 6px 12px,
+		font-size: 18px,
+		line-height: 1.4
+	)
+
+.button_size_lg
+	font-weight: 700
+	button-size(
+		padding: 5px 36px,
+		font-size: 18px,
+		line-height: 1.3333333
+	)
+
+.button_size_sm
+	button-size(
+		padding: 5px 15px,
+		font-size: 14px,
+		line-height: 1.5
+	)
+
+.button_size_xs
+	button-size(
+		padding: 3px 8px,
+		font-size: 10px,
+		line-height: 1.5
+	)
+
+// Styles and colors
+.button_style_pill
+	border-radius 100px
+
+.button_style_ghost.button_color_white
+	button-color(
+		color: #fff,
+		color-hover: #333,
+		background: transparent,
+		background-hover: #fff,
+		border: #fff,
+		border-hover: #fff
+	)
+	border-radius 2px
+
+.button_style_ghost.button_color_red
+	button-color(
+		color: #f05050,
+		color-hover: #fff,
+		background: transparent,
+		background-hover: #f05050,
+		border: #f05050,
+		border-hover: #f05050
+	)
+
+.button_style_rounded
+	border-radius 3px
+
+.button_style_rounded2
+	border-radius 20px
+	box-shadow none
+
+.button_style_bold
+	font-weight: 700
+
+.button_style_rounded2.button_color_yellow
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: color6,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_grey
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: #fff,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_blue
+	button-color(
+		color: #fff,
+		color-hover: false,
+		background: #47a2de,
+		background-hover: false,
+		border: #47a2de,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_yellow
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: color6,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_green
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: color13,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_violet
+	button-color(
+		color: white,
+		color-hover: false,
+		background: color24,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.catalog
+	font-size: 0
+	width: 103%
+	&__item
+		display: inline-block
+		font-size: 16px
+		vertical-align: top
+
+	&_tiles
+		margin: -.5% -1.5%
+	&_tiles &__item
+		width: 47%
+		margin: .5% 1.5%
+
+	&_only-photo
+		margin: -1.5%
+	&_only-photo &__item
+		margin: 1.5%
+		width: 30.33%
+
+	&_list
+		margin: -.5% -1.5%
+	&_list &__item
+		margin: .5% 1.5%
+		width: 97%
+
+	&_salons
+		margin: -1.5%
+	&_salons &__item
+		width: 47%
+		margin: 1.5%
+
+.catalog-item
+	&_tiles
+	&_list
+		border: 1px solid transparent
+		padding: 17px
+		&:hover
+			border-color: color18
+			transition .3s $ease-in-quad
+	&__middle
+		margin-top: 9px
+	&__bottom
+		margin-top: 9px
+		&_salons
+			margin-top: 23px
+	&__text
+		margin-top: 13px
+		min-height: 104px
+		overflow: hidden
+		text-align: justify
+
+.catalog-item-top
+	&__image
+		float: left
+		width: 194px
+		img
+			width: 100%
+			-webkit-backface-visibility: hidden
+			opacity-hover(.87)
+
+	&_list &__image
+		width: 602px
+		font-size: 0
+		img
+			width: 32.2%
+			display: inline-block
+			margin-left: 1.7%
+			&:first-child
+				margin-left: 0
+
+	&__info
+		margin-left: 214px
+
+	&_list &__info
+		margin-left: 622px
+
+.catalog-item-middle
+	//
+
+.catalog-item-parameters
+	width: 100%
+	&__icon
+		display: table-cell
+		vertical-align: middle
+		&:before
+			content: ''
+			display: inline-block
+	&__item
+		display: table-cell
+		vertical-align: middle
+		height: 40px
+		&_camera
+			width: 194px
+			.catalog-item-parameters__icon
+				&:before
+					retinaSprite($sprite_photo_group)
+		&_auto
+			width: 145px
+			.catalog-item-parameters__icon
+				&:before
+					retinaSprite($sprite_car_group)
+		&_comment
+			color: color11
+			.catalog-item-parameters__icon
+				&:before
+					retinaSprite($sprite_chat_group)
+		&_building
+			padding-right: 10px
+			.catalog-item-parameters__icon
+				&:before
+					retinaSprite($sprite_building_group)
+	&__text
+		display: table-cell
+		vertical-align: middle
+		padding-left: 10px
+		line-height: 17px
+
+.catalog-item-bottom
+	padding: 4px 22px
+	background-image: url(../img/catalog/bottom-pattern.png)
+	&_list &__parameters
+		float: left
+		width: 47%
+	&_list &__time-price
+		float: left
+		width: 53%
+		padding-left: 50px
+		box-sizing border-box
+
+.catalog-item-time-price
+	&__item
+		float: left
+		width: 33.33%
+		&:nth-child(2)
+			text-align: center
+		&:nth-child(3)
+			text-align: right
+	&__item-inner
+		display: inline-block
+		text-align: left
+	&__price
+		b
+			font-size: 18px
+			font-weight: 700
+			color: color15
+			font-style: italic
+
+.catalog-item-info
+	&__name
+		font-size: 22px
+		color: color14
+		line-height: 18px
+		overflow(ellipsis)
+		text-decoration: none
+	&__phone
+		font-size: 21px
+		color: color15
+		overflow(ellipsis)
+		margin-top: 14px
+	&_product-page &__phone
+		margin-top: 0
+	&__metro
+		overflow(whiteend)
+		display: block
+		margin-top: 9px
+		&:before
+			content: ''
+			display: inline-block
+			retinaSprite($sprite_mhover_group)
+			margin-right: 8px
+	&__attributes
+		margin-top: 12px
+	&_product-page &__attributes
+		margin-top: 18px
+	&__favorite
+		margin-top: 7px
+	&__address
+		margin-top: 16px
+		margin-bottom: 26px
+		color: color9
+
+.catalog-item-attributes
+	tr
+		background: url(../img/content/dot.png) top repeat-x
+	td
+		padding: 8px 3px
+		padding-top: 9px
+		&:first-child
+			color: color9
+			white-space: nowrap
+			vertical-align: top
+		&:last-child
+			color: color8
+			text-align: right
+			font-weight: 700
+
+
+.catalog-item-only-photo
+	position: relative
+	&__image
+		display: block
+		opacity-hover(.87)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 169px
+			background: linear-gradient(0deg, #ffffff 0%, rgba(0, 0, 0, 0.99) 1%, rgba(0, 0, 0, 0) 100%);
+		img
+			width: 100%
+			display: block
+			//-webkit-backface-visibility: hidden
+
+	&__price
+		position: absolute
+		top: 0
+		left: 0
+		white-space: nowrap
+		font-size: 18px
+		font-weight: 700
+		color: white
+		font-style: italic
+		padding: 6px 12px
+		padding-right: 20px
+		border-radius: 0 20px 20px 0
+		background-color: rgba(0, 0, 0, 0.5)
+	&__bottom
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 15px 18px
+	&__name
+		font-size: 22px
+		color: white
+		margin-bottom: 6px
+		text-decoration: none
+	&__phone
+		font-weight: 700
+		font-size: 20px
+		color: color6
+		margin-bottom: 4px
+	&__metro
+		color: white
+		display: block
+		&:hover
+			color white
+		&:before
+			content: ''
+			display: inline-block
+			retinaSprite($sprite_mwhite_group)
+			margin-right: 8px
+
+
+.catalog-header
+	position: relative
+	&__title
+		font-size: 30px
+		font-style: italic
+		font-family: ptserif
+		font-weight: 400
+		margin: 0
+	&__catalog-view
+		position: absolute
+		top: 0
+		right: 0
+		margin-top: 14px
+		margin-right: 5px
+	&__controls
+		position: absolute
+		top: 0
+		right: 0
+		margin-top: 10px
+		margin-right: 5px
+
+.catalog-header-controls
+	&__photo
+	&__button
+	&__caution
+		display: inline-block
+		vertical-align: middle
+		margin-left: 15px
+
+	&__photo
+		&:before
+			content: ''
+			display: inline-block
+			sprite($camera)
+			margin-right: 10px
+
+
+.controls-caution
+	width: 28px
+	height: 28px
+	border-radius 50%
+	font-size: 22px
+	color: white
+	font-weight: 700
+	background-color: color15
+	text-align: center
+	box-sizing border-box
+	padding-right: 2px
+
+.catalog-view
+	&__title
+		display: inline-block
+		font-style: italic
+		color: color17
+	&__text
+		display: inline-block
+	&__item
+		&
+		&:visited
+			text-decoration: none
+			color: color11
+			margin-left: 13px
+		&:hover
+		&_active
+		&_active:visited
+			color: color15
+		
+		&:before
+			content: ''
+			display: inline-block
+			margin-right: 4px;
+			position: relative;
+			top: 1px;
+		&_tiles
+			&:before
+				retinaSprite($sprite_plitka_group)
+			&:hover:before
+			&.catalog-view__item_active:before
+				retinaSprite($sprite_phover_group)
+		&_list
+			&:before
+				retinaSprite($sprite_frame_group)
+			&:hover:before
+			&.catalog-view__item_active:before
+				retinaSprite($sprite_fhover_group)
+		&_frame
+			&:before
+				retinaSprite($sprite_list_group)
+			&:hover:before
+			&.catalog-view__item_active:before
+				retinaSprite($sprite_lhover_group)
+
+.content-title
+	font-size: 24px
+	&_line
+		padding-bottom: 9px
+		border-bottom 2px solid color24
+
+.copyright
+	color #000
+	font-size 14px
+
+.filters
+	font-size: 16px
+	padding: 24px 0
+	background-color: color12
+	padding-bottom: 15px
+	position: relative
+	&__values
+		display inline-block
+	&__inner
+		max-width $content-width
+		margin 0 auto
+	&__row
+		margin-top: 24px
+		&:first-child
+			margin-top: 0
+		&_advanced
+			display: none
+	&__row__tab
+		clearfix()
+		float left
+	&__row__coll__left
+		float left
+	&__item
+		float: left
+		position: relative
+		&_right
+			float: right
+
+		&_checkbox
+			margin-left: 30px
+			margin-top: 6px
+		&_checkbox:first-child
+			margin-left: 0
+	&__sep
+		display inline-block 
+		display none
+	&__label
+		position: absolute
+		width: 66px
+		line-height: 18px
+		text-align: right
+		top: 50%
+		transform translateY(-50%)
+		vertical-align: middle
+		&_large
+			width auto
+			position: static
+			display: inline-block
+			margin-top: 0
+			transform translateY(0)
+		&_services
+			width: 94px
+		b
+			font-size: 18px
+	&__input
+		margin-left: 83px
+		display: inline-block
+		&_small
+			width: 88px
+		&_large
+			width: 259px
+		&_label-large
+			margin-left: 0
+			width: 78px
+		&_services
+			width: 290px
+			margin-left: 111px
+	&__value
+		display: inline-block
+		margin: 0 5px
+		color: color9
+		vertical-align: middle
+	&__submit-button
+		display: inline-block
+		.button
+			width: 155px
+	&__hide-button
+	&__show-button
+		&
+		&:visited
+			display: inline-block
+			color: color14
+			text-decoration: none
+			margin-right: 74px
+			border-bottom 1px dashed
+			position: relative
+			opacity-hover()
+			&:after
+				content: ''
+				border: 4px solid transparent
+				border-top: 7px solid color10
+				position: absolute
+				left: 100%
+				top: 50%
+				margin-left: 14px
+				transform-origin 50% 25%
+				transform rotate(180deg)
+
+	&__hide-button
+		display: none
+
+	&__show-button
+		&
+		&:visited
+			&:after
+				transform rotate(0)
+
+	&__global-hide-button
+		font-weight: 700
+		text-transform: uppercase
+		color: white
+		padding-left 16px
+		padding-right 23px
+		padding-bottom: 7px
+		display: inline-block
+		border-radius 0 0 7px 7px
+		background-color: color29
+		position: absolute
+		top: 100%
+		left: 370px
+		text-decoration: none
+		padding-top: 3px
+		z-index: 10
+		display none
+		opacity-hover()
+		&:hover
+			color: white
+		&:before
+			content: ''
+			sprite($filters_zoom)
+			display: inline-block
+			margin-right: 8px
+			margin-bottom: -3px
+
+
+.footer
+
+	&__inner
+		padding 40px 0
+		max-width $content-width
+		margin 0 auto
+		background-image: url(../img/footer/logo.png)
+		background-position: 0 35px
+		background-repeat: no-repeat
+
+	&__menu
+		float: left
+		margin-left: 300px
+		margin-top: 9px
+	&__button
+		float: right
+
+.footer-menu
+	font-size: 0
+	&__item
+		font-size: 16px
+		display: inline-block
+		margin-left: 40px
+	&__link
+		font-size: 18px
+		font-weight: 700
+		color: color9
+		text-decoration: none
+	&__tab
+		float left
+
+.form
+	&__section
+		//
+
+	&__item
+		padding-bottom 21px
+
+	&__item-left
+	&__item-right
+		width persentSize(411px, 182px)
+		float left
+
+	&__item-right
+		float right
+
+//- Helpers
+form-focus-style($color)
+	border-color rgba(0,0,0 1)
+	box-shadow 0 0 1px rgba(0,0,0 1)
+	// box-shadow inset 0 0 0 1px $color
+	{block}
+
+//- Base styles
+.form-item
+	display block
+	line-height normal
+	m-cf()
+	// padding-bottom 10px
+	&__label
+		display block
+		padding-bottom 4px
+		font-family $form-base-font-family
+		span
+			color $form-input-error-color
+
+	&__input
+		input
+		textarea
+		select
+			box-sizing border-box
+			width 100%
+			font-family $form-base-font-family
+			padding 0 9px
+
+
+		textarea
+			height 100px
+			min-height 100px
+			padding 9px
+			resize vertical
+			line-height normal !important
+
+
+	&__helpers
+		padding-top 4px
+		padding-bottom 4px
+		font-family $form-base-font-family
+
+	&__errors
+		margin 0
+		padding 0
+		li
+			padding 0
+			margin 0
+			list-style none
+			background none
+			font-family $form-base-font-family
+			font-size $form-input-error-font-size
+			color $form-input-error-color
+
+	&__hint
+		font-size $form-input-hint-font-size
+		color $form-input-hint-font-color
+
+	&_type_captcha &__input-image
+		width 137px
+		float left
+		margin-right 10px
+
+	&_type_captcha &__input
+		width 142px
+		float left
+
+	&_type_radio
+	&_type_checkbox
+		padding-left 32px
+		position relative
+		opacity-hover()
+
+	&_type_checkbox &__label
+	&_type_radio &__label
+	&_type_checkbox &__input
+	&_type_radio &__input
+		cursor pointer
+		display inline-block
+
+	&_type_radio &__label
+	&_type_checkbox &__label
+		display inline
+		padding 0
+		padding-bottom 0 !important
+		user-select-none()
+
+	&_type_radio &__input
+	&_type_checkbox &__input
+		position absolute
+		left 0
+		top 0
+
+	&_type_multiselect select
+		height auto
+
+	&_type_password input
+		font-family arial
+
+
+//- Default style
+.form-item_style_default
+	// padding-bottom 17px
+	.form-item
+		&__label
+			color color8
+			font-size 16px
+			font-weight 300
+			padding-bottom 9px
+
+		&__input
+			input
+			select
+			textarea
+				background-color #fff
+				min-height 29px
+				line-height 29px
+				border 1px solid color3
+				color #333
+				padding 0 12px
+
+				&:invalid
+					border-color $form-input-error-color
+
+				&:invalid:focus
+					border-color $form-input-error-color
+					form-focus-style($form-input-error-color)
+
+				+placeholder()
+					color #d3d3d3
+					// font-size 12px
+				&:focus
+					outline none
+					border-color: #CFADD4
+					box-shadow: 0 0 1px #CFADD4;
+
+			textarea
+				padding 8px 18px
+				height 132px
+				min-height 132px
+				line-height $base-line-height
+				display: block
+
+
+	&.form-item_type_multiselect
+		select
+			padding 0 !important
+			min-height 40px
+			height auto
+
+		option
+			padding 0.5em 1em
+
+	&.form-item_status_error .form-item__input
+		input
+		textarea
+		select
+			border-color $form-input-error-color
+			&:focus
+				form-focus-style($form-input-error-color)
+
+
+	&.form-item_big
+		input
+		select
+		textarea
+			min-height 35px
+			line-height 35px
+
+	&.form-item_no-border
+		input
+		select
+		textarea
+			border-color transparent
+
+//-//////////////////////////////////////////////////////////
+//- JQuery Form Styler
+//-//////////////////////////////////////////////////////////
+// Чекбоксы
+.jq-checkbox
+	vertical-align middle
+	width 14px
+	height 14px
+	border 1px solid color3
+	cursor pointer
+	background: white
+	overflow(visible !important)
+
+	&.checked
+		.jq-checkbox__div
+			width 14px
+			height 14px
+			&:before
+				position absolute
+				bottom: 4px
+				left: 1px
+				content ''
+				display block
+				border-left 3px solid color4
+				border-bottom 3px solid color4
+				width 11px
+				height 6px
+				transform rotate(-45deg)
+
+	&.focused
+		border: 1px solid #08C
+
+	&.disabled
+		opacity .55
+
+
+// Радио кнопки
+.jq-radio
+	vertical-align middle
+	width 20px
+	height 20px
+	border 1px solid #C3C3C3
+	border-radius 50%
+	cursor pointer
+
+	&.checked
+		.jq-radio__div
+			width 8px
+			height 8px
+			margin 6px 0 0 6px
+			border-radius 50%
+			background #08C
+
+	&.focused
+		border 1px solid #08C
+
+	&.disabled
+		opacity .55
+
+
+// Файл
+.jq-file
+	width 100%
+	border-radius 4px
+	input
+		height auto
+		line-height 1em
+		cursor pointer
+
+	&__name
+		overflow hidden
+		box-sizing border-box
+		width 100%
+		height 40px
+		line-height 40px
+		padding 0 80px 0 10px
+		border 1px solid #CCC
+		border-radius 4px
+		background #FFF
+		box-shadow inset 1px 1px #F1F1F1
+		font-size 14px
+		color #333
+		white-space nowrap
+		text-overflow ellipsis
+
+	&__browse
+		position absolute
+		top 1px
+		right 1px
+		padding 0 10px
+		border-left 1px solid #CCC
+		border-radius 0 4px 4px 0
+		font-size 14px
+		background #fff - 2%
+		line-height 38px
+		color #333
+		text-shadow 1px 1px #FFF
+
+	&:hover
+		.jq-file__browse
+			background #fff - 5%
+
+	&:active
+		.jq-file__browse
+			background #F5F5F5
+
+	&.focused
+		.jq-file__name
+			border 1px solid #5794BF
+
+	&.disabled
+		.jq-file__name
+		.jq-file__browse
+			border-color #CCC
+			background #F5F5F5
+			box-shadow none
+			color #888
+
+
+// Spinner
+.jq-number
+	position relative
+	display inline-block
+	vertical-align middle
+	padding 0 36px 0 0
+	&.focused
+		.jq-number__field
+			// border 1px solid #5794BF
+	&.disabled
+		.jq-number__spin
+			&:after
+				// border-bottom-color #AAA
+			&.minus
+				&:after
+					// border-top-color #AAA
+
+	&__field
+		width 100px
+		&:hover
+			border-color #B3B3B3
+		input
+			padding 8px 9px
+			outline none
+			background none
+			font-size 14px
+			text-align left
+			-moz-appearance textfield
+
+	&__field
+		input::-webkit-inner-spin-button
+		input::-webkit-outer-spin-button
+			margin 0
+			-webkit-appearance none
+
+	&__spin
+		position absolute
+		right 0
+		width 32px
+		height 19px
+		border 1px solid #cdcdcd
+		border-radius 3px
+		// background #F5F5F5
+		// background -webkit-linear-gradient(#FFF, #E6E6E6)
+		// background linear-gradient(#FFF, #E6E6E6)
+		// box-shadow 0 1px 2px rgba(0,0,0,.1)
+		// box-shadow inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0,0,0,.1)
+		-webkit-user-select none
+		-moz-user-select none
+		-ms-user-select none
+		user-select none
+		text-shadow 1px 1px #FFF
+		cursor pointer
+		&:hover
+			background #E6E6E6
+			// background -webkit-linear-gradient(#F6F6F6, #E6E6E6)
+			// background linear-gradient(#F6F6F6, #E6E6E6)
+		&:active
+			background #F5F5F5
+			// box-shadow inset 1px 1px 3px #DDD
+		&:after
+			content ''
+			position absolute
+			left 12px
+
+		&.plus
+			top 0
+			right 0
+			&:after
+				top 3px
+				triangle(up, 4px, #999)
+			&:hover
+				&:after
+					border-bottom-color #000
+		&.minus
+			bottom 0
+			right 0
+			&:after
+				top 8px
+				triangle(down, 4px, #999)
+			&:hover
+				&:after
+					border-top-color #000
+
+	&.disabled &__field,
+	&.disabled &__spin
+		border-color #CCC
+		background #F5F5F5
+		box-shadow none
+		color #888
+
+
+// Селект
+.jq-selectbox
+	width 100%
+	vertical-align middle
+	cursor pointer
+	.placeholder
+		color color11
+		font-style: italic
+
+	ul
+		margin 0
+		padding 0
+
+	li
+		min-height 18px
+		padding 5px 12px 6px
+		-webkit-user-select none
+		-moz-user-select none
+		-ms-user-select none
+		user-select none
+		white-space nowrap
+		color #231F20
+
+		.selected
+			background-color #A3ABB1
+			color #FFF
+
+		&:hover
+			background-color: color10
+			color #FFF
+
+		.disabled
+			color #AAA
+			&:hover
+				background none
+
+		.optgroup
+			font-weight bold
+			&:hover
+				background none
+				color #231F20
+				cursor default
+
+		.option
+			padding-left 25px
+
+	&__select
+		height 29px
+		padding 0 28px 0 12px
+		border 1px solid color3
+		background #fff
+		font-size 16px
+		line-height 29px
+		color color9
+		text-shadow 1px 1px #FFF
+
+		&:hover
+			background #fff - 2%
+
+		&:active
+			background #F5F5F5
+			box-shadow inset 1px 1px 3px #DDD
+
+	.focused
+		.jq-selectbox__select
+			border 1px solid #5794BF
+
+	.disabled
+		.jq-selectbox__select
+			border-color #CCC
+			background #F5F5F5
+			box-shadow none
+			color #888
+
+		.jq-selectbox__trigger-arrow
+			border-top-color #AAA
+
+	&__select-text
+		display block
+		overflow hidden
+		width 100%
+		white-space nowrap
+		text-overflow ellipsis
+
+	&__trigger
+		position absolute
+		top 0
+		right 0
+		width 34px
+		height 100%
+
+	&__trigger-arrow
+		position absolute
+		top 42%
+		right 13px
+		width 0
+		height 0
+		border: 4px solid transparent
+		border-top: 7px solid color10
+
+	&:hover
+		.jq-selectbox__trigger-arrow
+			border-top-color #000
+
+	&__dropdown
+		box-sizing border-box
+		width 100%
+		padding 0
+		border 1px solid color3
+		background #FFF
+		font-size 16px
+		margin-top: -1px
+
+	&__search
+		margin 5px
+		input
+			box-sizing border-box
+			width 100%
+			margin 0
+			padding 5px 27px 6px 8px
+			border 1px solid #CCC
+			border-radius 3px
+			outline none
+			background url("data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAO1JREFUeNqU078LAXEYx/FzYfNzk5TJaFNKYjFYSQZ/hvwBsvg1UCY2xT9gM8hukQGThWRjkcFw3pdnujhfT736Xn2fPvfc3fd07V0OFDDFAnM0ENYsZRiGLSc9OpqIYIA9fMhhjCrW2h9VlMlcH/aymMGtOqEugX08PwQucUZKdTozMIqdTc9WepQD7wjY9ARx+ydwhfyXfS+S0qMcOEQJGcueB3VccFINdMgal6NzkmPjRwJXxDBB7/2RDdtAp6wb+dpphHDASG5QQ0V6u2aoSqBZD/lDrNWRJynLK2qpBn4rc6K2XB9/Nb8EGABtf1thzY6X2AAAAABJRU5ErkJggg==") no-repeat 100% 50%
+			box-shadow inset 1px 1px #F1F1F1
+			color #333
+			-webkit-appearance textfield
+
+	&__search
+		input
+			&::-webkit-search-cancel-button
+			&::-webkit-search-decoration
+				-webkit-appearance none
+
+	&__not-found
+		margin 5px
+		padding 5px 8px 6px
+		background #F0F0F0
+		font-size 13px
+
+
+// Мультиселект
+.jq-select-multiple
+	width 100%
+	box-sizing border-box
+	padding 1px
+	border 1px solid #CCC
+	border-bottom-color #B3B3B3
+	border-radius 4px
+	background #FFF
+	box-shadow inset 1px 1px #F1F1F1, 0 1px 2px rgba(0,0,0,.1)
+	font-size 14px
+	line-height 18px
+	color #333
+	cursor default
+	ul
+		margin 0
+		padding 0
+
+	li
+		padding 3px 9px 4px
+		list-style none
+		-webkit-user-select none
+		-moz-user-select none
+		-ms-user-select none
+		user-select none
+		white-space nowrap
+
+		&:first-child
+			border-radius 3px 3px 0 0
+
+		&:last-child
+			border-radius 0 0 3px 3px
+
+		&.selected
+			background #08C
+			color #FFF
+
+		&.disabled
+			color #AAA
+
+		&.optgroup
+			font-weight bold
+
+		&.option
+			padding-left 25px
+
+	&.focused
+		border 1px solid #5794BF
+
+	&.disabled
+		border-color #CCC
+		background #F5F5F5
+		box-shadow none
+		color #888
+
+		li.selected
+		li.selected.disabled
+			background #CCC
+			color #FFF
+
+
+// Другие
+input[type='email']
+input[type='password']
+input[type='search']
+input[type='tel']
+input[type='text']
+input[type='url']
+textarea
+	&.styler
+		padding 8px 9px
+		border 1px solid #CCC
+		border-bottom-color #B3B3B3
+		border-radius 4px
+		box-shadow inset 1px 1px #F1F1F1, 0 1px 2px rgba(0,0,0,.1)
+		font-size 14px
+		color #333
+		&:hover
+			border-color #B3B3B3
+
+		&:focus
+			border-color #CCC
+			border-top-color #B3B3B3
+			outline none
+			box-shadow inset 0 1px 2px rgba(0,0,0,.1)
+
+input[type='search'].styler
+	-webkit-appearance none
+
+textarea.styler
+	overflow auto
+
+
+
+button
+input[type='button']
+input[type='submit']
+input[type='reset']
+	.styler
+		overflow visible
+		padding 8px 11px
+		border 1px solid #CCC
+		border-bottom-color #B3B3B3
+		border-radius 4px
+		outline none
+		background #F5F5F5
+		background linear-gradient(#FFF, #E6E6E6)
+		box-shadow inset 1px -1px #F1F1F1, inset -1px 0 #F1F1F1, 0 1px 2px rgba(0,0,0,.1)
+		font-size 14px
+		color #333
+		text-shadow 1px 1px #FFF
+		cursor pointer
+		&::-moz-focus-inner
+			padding 0
+			border 0
+		&:not([disabled]):hover
+			background #E6E6E6
+			background linear-gradient(#F6F6F6, #E6E6E6)
+		&:not([disabled]):active
+			background #F5F5F5
+			box-shadow inset 1px 1px 3px #DDD
+		&[disabled]
+			border-color #CCC
+			background #F5F5F5
+			box-shadow none
+			color #888
+
+.github-button
+	&
+	&:visited
+		padding 3px 10px
+		display inline-block
+		font-size 0
+		color #fff
+		text-decoration none
+		border 1px solid transparent
+		transition .3s background ease-in-out
+		text-decoration none
+		border-radius 2px
+
+	&:hover
+		text-decoration none
+		color #333
+		background #fff
+		svg
+			fill #333
+
+	&__text
+	&__icon
+		display inline-block
+		vertical-align middle
+
+	&__text
+		font-size 16px
+		font-family notoserif
+
+	&__icon
+		transition all 300ms ease-in-out 0s
+		margin-right 7px
+		svg
+			size 16px
+			fill #fff
+
+.header
+	background: url(../img/header/header-bg.png), radial-gradient(ellipse at center, #74094c 0%,#5f0236 100%)
+	position: relative
+
+	&__liked
+		position: absolute
+		right: 0
+		top: -12px
+
+	&__metro
+		float: left
+		margin-top: 15px
+		margin-left: 105px
+
+	&__login
+		float: right
+		margin-top: 15px
+		&_signed
+			margin-top: 30px
+
+	&__inner
+		max-width $content-width
+		margin 0 auto
+		position: relative
+
+	&__top
+		transition padding 0.5s ease 0s, background 0.5s ease 0s, box-shadow 0.5s ease 0s
+		width 100%
+		z-index 1000
+		box-sizing border-box
+		padding: 12px 0
+
+	&__logo
+	&__menu
+		float left
+
+	&__logo
+		//
+
+	&__menu
+		float: left
+	
+	&__add-profile-button
+		float: right
+		margin-top: 7px
+
+	&__mobile-menu-trigger
+		display none
+		+below(750px)
+			display block
+			float right
+
+	&__github
+		float right
+		width 110px
+		padding-top 5px
+
+	&__bottom
+		background: url(../img/header/header-bg.png), color16
+
+	&__menu
+	&__github
+		+below(750px)
+			display none
+
+	&_fixed &__top
+		box-shadow 0px 2px 3px rgba(#000, 0.04)
+
+.header-liked
+	padding: 0 56px
+	padding-bottom: 7px
+	display: inline-block
+	border-radius 0 0 14px 14px
+	background-color: color28
+	color: color6
+	&:hover
+		color: @color
+
+.header-login
+	.header-login__item
+		text-decoration: none
+		color: white
+		display: inline-block
+		margin-left: 45px
+		opacity-hover()
+		.icon
+			width: 26px
+			height: 20px
+			margin-right: 15px
+			vertical-align: top
+
+
+
+.header-presentation
+	font-family notoserif
+	text-align center
+
+	&__name
+		color #fff
+		font-size 60px
+		margin 0
+		font-weight normal
+		padding-bottom 20px
+		line-height normal
+		+below(375px)
+			font-size 40px
+
+	&__description
+		color #fff
+		font-size 18px
+		margin 0
+		font-weight normal
+		padding-bottom 8px
+		+below(375px)
+			// padding-bottom 12px
+			//
+
+	&__try-now
+		//
+
+	&__version
+		color #fff
+		font-size 18px
+		padding-bottom 8px
+
+	&__sub-description
+		color #fff
+		font-size 14px
+		padding-bottom 60px
+
+	&__download
+		width 230px
+		margin auto
+
+.input-group
+	padding-bottom $form-item-padding
+	&__label
+		padding-bottom 8px
+		display block
+		font-size 14px
+		font-weight bold
+		user-select-none()
+
+	&__body
+		max-width 800px
+
+	&__item
+		padding-bottom $form-item-padding
+
+	& .jq-checkbox
+	& .jq-radio
+		margin 0px 10px 0 0
+
+.login-modal
+	width: 360px
+	&__title
+		font-size: 30px
+		font-style: italic
+		font-family: ptserif
+		font-weight: 400
+		text-align: center
+		margin-bottom: 19px
+	&__form-item
+		margin-top: 18px
+	&__bottom
+		margin-top: 13px
+		position: relative
+	&__link
+		float: left
+		margin-top: 7px
+	&__button
+		float: right
+
+.logo
+	&
+	&:visited
+		display: block
+
+
+	&:hover
+		//
+
+
+.main-content
+	padding-top: 13px
+	&__catalog-header
+		&_product-page
+			margin-top: 5px
+	&__catalog
+		margin-top: 17px
+	&__pagination
+		margin-top: 30px
+	&__product-slider
+		margin-top: 20px
+
+.main-menu
+	ul-reset()
+
+	&__item
+		list-style none
+		font-size 18px
+		font-weight: 700
+		float left
+		position relative
+		&:after
+		&:before
+			content: ''
+			position: absolute
+			width: 1px
+			height: 15px
+			margin-top: -7px
+			top: 50%
+			background-color: color7
+		&:after
+			left: 0
+		&:before
+			right: 0
+			display: none
+		&:last-child:before
+			display: block
+
+	&__link
+		&
+		&:visited
+			display block
+			text-decoration none
+			color #fff
+			padding 12px 63px
+			main-transition()
+
+		&:hover
+			color: color6
+
+	&__submenu
+		visibility hidden
+		opacity 0
+		transition all 300ms ease-in-out 0s
+		position absolute
+		top 38px
+		left 0
+		background #fff
+		width 250px
+		z-index 1
+		border-radius 0 2px 2px 2px
+		overflow hidden
+
+	&__item:hover &__submenu
+		visibility visible
+		opacity 1
+
+	&__item_dropdown &__link:after
+		content ''
+		display inline-block
+		margin-left 6px
+		triangle( down, 3px, #fff)
+		vertical-align middle
+
+	&__item_dropdown:hover &__link
+		&
+		&:visited
+			border-radius 2px 2px 0 0
+			background #fff
+			color #111
+		&:after
+			triangle( up, 3px, #111)
+			margin-bottom 4px
+
+	.header_fixed &__submenu
+		border 1px solid #ddd
+		border-top none
+		box-shadow 0px 2px 3px rgba(#000, 0.04)
+
+
+
+.main-menu-submenu
+	ul
+		margin 0
+		padding 0
+
+	&__item
+		list-style none
+		background none
+		padding 0
+		font-family notosans
+		a
+			&
+			&:visited
+				display block
+				padding 7px 10px
+				color #111
+				text-decoration none
+
+			&:hover
+				background #2d3e60 + 20%
+				color #fff
+
+	&__item_active
+		a
+			&
+			&:visited
+				color #fff
+				background #2d3e60 + 20%
+
+.mobile-menu
+	padding 20px 0
+	ul-reset()
+
+	&__item
+		padding 0 0 20px 0
+		list-style none
+
+	&__icon
+	&__text
+		display inline-block
+		vertical-align middle
+
+	&__icon
+		padding-right 6px
+		svg
+			display block
+			size 16px
+			fill #222
+
+	&__link
+		&
+		&:visited
+			vertical-align middle
+			text-decoration none
+			color #222
+			display block
+			padding 12px 20px
+			line-height normal
+			font-size 18px
+
+		&:hover
+			color #222
+
+	&__submenu &__item
+		padding-bottom 0
+
+	&__submenu &__item:last-child &__submenu-link
+		border-bottom none
+
+	&__submenu-link
+		&
+		&:visited
+			font-size 14px
+			display block
+			padding 10px 20px
+			margin 0 20px 0 30px
+			text-decoration none
+			color #505050
+			border-bottom 1px solid #e2e3e4
+
+		&:hover
+			color #2d3e60
+
+.mobile-menu-trigger
+	padding 23px 20px
+	background transparent
+	border none
+	cursor pointer
+	svg
+		svgSize($hamburger)
+		fill #fff
+		display block
+
+/*
+ *  Remodal - v1.0.6
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+ Remodal's necessary styles
+ ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked
+	overflow hidden
+	touch-action none
+
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id]
+	display none
+
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay
+	position fixed
+	z-index 9999
+	top -5000px
+	right -5000px
+	bottom -5000px
+	left -5000px
+	display none
+
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper
+	position fixed
+	z-index 10000
+	top 0
+	right 0
+	bottom 0
+	left 0
+	display none
+	overflow auto
+	text-align center
+	-webkit-overflow-scrolling touch
+
+
+.remodal-wrapper:after
+	display inline-block
+	height 100%
+	margin-left -0.05em
+	content ""
+
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper
+	backface-visibility hidden
+
+
+/* Necessary styles of the modal dialog */
+
+.remodal
+	position relative
+	outline none
+	text-size-adjust 100%
+	text-align left
+	border 3px solid color18
+	padding: 15px 40px
+	padding-bottom: 25px
+
+
+.remodal-is-initialized
+	/* Disable Anti-FOUC */
+	display inline-block
+
+
+
+// Modal styles
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened
+	//filter blur(3px)
+
+.remodal-overlay
+	background rgba(43, 46, 56, 0.9)
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing
+	animation-duration 0.3s
+	animation-fill-mode forwards
+
+.remodal-overlay.remodal-is-opening
+	animation-name remodal-overlay-opening-keyframes
+
+.remodal-overlay.remodal-is-closing
+	animation-name remodal-overlay-closing-keyframes
+
+.remodal-wrapper
+	padding 10px 10px 0
+
+.remodal
+	box-sizing border-box
+	// width 100%
+	// padding 20px
+	transform translate3d(0, 0, 0)
+	color #2b2e38
+	background #fff
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing
+	animation-duration 0.3s
+	animation-fill-mode forwards
+
+.remodal.remodal-is-opening
+	animation-name remodal-opening-keyframes
+
+.remodal.remodal-is-closing
+	animation-name remodal-closing-keyframes
+
+.remodal,
+.remodal-wrapper:after
+	vertical-align middle
+
+.modal
+	&__close
+		position absolute
+		display block
+		overflow visible
+		margin 0
+		padding: 0
+		cursor pointer
+		transition color 0.2s
+		text-decoration none
+		border 0
+		outline 0
+		background transparent
+		z-index 1000
+		top: 11px
+		right: 13px
+		font-size 15px
+		svg
+			fill color23
+			size 19px
+			display block
+
+	&_type_alert &__content
+		width 556px
+
+@keyframes remodal-opening-keyframes
+	from
+		transform scale(1.05)
+		opacity 0
+	to
+		transform none
+		opacity 1
+
+@keyframes remodal-closing-keyframes
+	from
+		transform none
+		opacity 1
+	to
+		transform scale(0.95)
+		opacity 0
+
+@keyframes remodal-overlay-opening-keyframes
+	from
+		opacity 0
+	to
+		opacity 1
+
+@keyframes remodal-overlay-closing-keyframes
+	from
+		opacity 1
+	to
+		opacity 0
+
+@media only screen and (min-width 641px)
+	.remodal
+		max-width 1396px
+
+.lt-ie9 .remodal-overlay
+	background #2b2e38
+
+.lt-ie9 .remodal
+	width 700px
+
+.page-title
+	padding 0 0 8px 0
+	margin 0
+	border-bottom 1px solid #dadada
+
+.pager
+	font-size 0
+	display inline-block
+	&__arrow
+		display inline-block
+		padding 8px
+		size 14px
+		fill #d2d2d2
+		line-height 1
+		vertical-align middle
+		text-align center
+		transition 125ms all ease-in-out
+		&:hover
+			background-color #d2d2d2
+			fill #fff
+		svg
+			svgSize($chevron-right)
+
+	&__arrow_left
+		margin-right 5px
+
+	&__arrow_right
+		margin-left 5px
+
+	&__counter
+		color #717171
+		font-size 18px
+		font-weight 400
+		display inline-block
+		vertical-align middle
+		//
+	&__total
+		//
+
+.pagination
+	m-cf()
+	text-align center
+	+ul-reset()
+		font-size 0
+
+	&__item
+		list-style none
+		padding 0
+		display inline-block
+		vertical-align middle
+		font-size 16px
+		font-weight 700
+
+	&__link
+		&
+		&:visited
+			color color9
+			width: 25px
+			height: 25px
+			display block
+			text-decoration none
+			line-height: 25px
+			text-align: center
+
+		&:hover
+			color #9d9d9d
+			text-decoration none
+
+	&__arrow
+		display inline-block
+		vertical-align middle
+		text-align center
+		transition 125ms all ease-in-out
+		&_prev
+			margin-right: 5px
+			a:before
+				content: '<'
+		&_next
+			margin-left: 5px
+			a:before
+				content: '>'
+
+	&_spacer &__link
+		width: 15px
+
+	&__item_active &__link
+		&
+		&:visited
+			color white
+			box-shadow: 0px 1px 0px 0px rgba(105, 10, 65, 0.75)
+			border-radius 2px
+			background-color: color15
+
+.product-info
+	margin-top: 30px
+	&__left
+		float: left
+		width: 284px
+	&__right
+		margin-left: 312px
+	&__offers
+		margin-top: 86px
+
+.product-info-stats
+	&__main-info
+		padding: 14px 17px
+		padding-bottom: 1px
+		border 1px solid color18
+	&__content-title
+		margin-top: 15px
+	&__price
+		margin-top: 15px
+	&__date
+		margin-top: 17px
+
+.product-info-stats-price
+	&__title
+		padding: 9px 18px
+		background-image: url(../img/catalog/bottom-pattern.png)
+		* + &
+			margin-top: 7px
+		&:before
+			display: inline-block
+			content: ''
+			vertical-align: bottom
+		&_building
+			&:before
+				sprite($building)
+				margin-right: 14px
+		&_auto
+			&:before
+				sprite($auto)
+				margin-left: -7px
+				margin-right: 7px
+				margin-bottom: 3px
+	&__table
+		margin-top: 1px
+		padding: 6px 18px
+		background-image: url(../img/catalog/bottom-pattern.png)
+	&__text
+		font-weight: 700
+	&__optional
+		margin-top: 7px
+		background-image: url(../img/catalog/bottom-pattern.png)
+		padding: 13px 18px
+
+.product-info-stats-optional
+	text-align: center
+	&__text
+		display: inline-block
+		margin-right: 25px
+	&__price
+		display: inline-block
+		b
+			font-size: 18px
+			font-weight: 700
+			color: color15
+			font-style: italic
+
+.product-info-stats-date
+	font-size: 14px
+	color: color9
+	&__item
+		& + &
+			margin-top: 6px
+		b
+			color: color8
+
+.product-info-content
+	&__title
+		* + &
+			margin-top: 51px
+	&__text
+		margin-top: 17px
+	&__tags
+		margin-top: 15px
+		margin-left: 6px
+	&__authorization
+		margin-top: 17px
+
+.product-info-content-tags
+	&__title
+		font-size: 18px
+		font-weight: 700
+		margin-bottom: 8px
+		* + &
+			margin-top: 18px
+	&__item
+		color: color9
+		display: inline-block
+		padding: 2px 14px
+		padding-left: 37px
+		background-color: color26
+		background-image: url(../img/product-page/checked.png)
+		background-repeat: no-repeat
+		background-position: 12px center
+		margin: 2px 0
+
+.product-info-content-authorization
+	text-align: center
+	background-image: url(../img/catalog/bottom-pattern.png)
+	padding: 30px 12px
+	&__text
+		width: 100%
+		max-width: 300px
+		margin: 0 auto
+		line-height: 1.4
+	&__buttons
+		margin-top: 25px
+
+.product-offers
+	&__title
+		//
+	&__list
+		margin-top: 24px
+
+.product-offers-list
+	font-size: 0
+	margin: -1%
+	&__item
+		font-size: 16px
+		display: inline-block
+		width: 23%
+		margin: 1%
+
+.product-offers-list-item
+	display: block
+	position: relative
+	text-decoration: none
+	color: white
+	font-weight: 700
+	font-size: 17px
+	opacity-hover(.87)
+	&:hover
+		color: white
+	&__image
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			height: 127px
+			background: linear-gradient(0deg, #ffffff 0%, rgba(0, 0, 0, 0.99) 1%, rgba(0, 0, 0, 0) 100%)
+		img
+			width: 100%
+			display: block
+	&__bottom
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 12px 15px
+	&__tel
+		color: color6
+	&__name
+		margin-bottom: 5px
+
+.product-info-content-comment
+	&__list
+		//
+	&__leave
+		margin-top: 8px
+
+.product-info-comment-list
+	&__item
+		& + &
+			margin-top: 8px
+
+.product-info-comment-list-item
+	padding: 10px
+	padding-left: 65px
+	position: relative
+	background-color: color12
+	&:before
+		content: '‘‘'
+		position: absolute
+		font-size: 87px
+		left: 17px
+		top: 7px
+		line-height: 1
+		color: color27
+	&__bottom
+		position: relative
+		margin-top: 2px
+	&__text
+		//
+	&__name
+		font-size: 14px
+		text-decoration: none
+		color: color25
+		&:before
+			content: ''
+			display: inline-block
+			sprite($user)
+			margin-right: 10px
+			margin-bottom: -2px
+	&__date
+		font-size: 14px
+		position: absolute
+		right: 20px
+		top: 2px
+		&:before
+			content: ''
+			display: inline-block
+			sprite($calendar)
+			margin-right: 10px
+			margin-bottom: -1px
+
+.product-info-comment-leave
+	padding: 10px 15px
+	background-color: color12
+	&__input
+		//
+	&__bottom
+		margin-top: 10px
+		text-align: right
+
+
+.product-slider
+	margin: 0 -5px
+	&__item
+		margin: 0 5px
+		position: relative
+		background-color: black
+		&:hover
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				sprite($zoom)
+				margin-left: -32px
+				margin-top: -33px
+		img
+			display: block
+			width: 100%
+		&:hover img
+			opacity .5
+
+.pseudo-dropdown
+	font-size 13px
+	position relative
+	&__trigger
+		cursor pointer
+		padding 3px 8px
+		display inline-block
+		background #F9F9F9
+		box-shadow 0 1px 5px rgba(22,20,17,.16)
+
+		&:after
+			content ''
+			display inline-block
+			vertical-align middle
+			width 0
+			height 0
+			border 3px solid transparent
+			border-top-color #333
+			margin-left 4px
+			border-bottom none
+	&__list
+		min-width 265px
+		// max-width 300px
+
+		position absolute
+		left 0
+		top 100%
+		z-index 101
+		overflow hidden
+		background #fff
+		opacity 0
+		visibility hidden
+		transition all 0.2s ease-in-out 0s
+		border 1px solid color3
+		margin-top: -1px
+		box-sizing border-box
+		&_checkbox
+			left: -19px
+			margin-top: 4px
+		&_select
+			left: 0
+			margin-top: -1px
+			width 100%
+			min-width 0
+			max-width none
+		&_services
+			margin-top: 8px
+			overflow: visible
+			background-color: color12
+			left: -453px
+			max-width: none
+			width: 902px
+			&:before
+				position: absolute
+				top: -6px
+				left: 50%
+				margin-left: 142px
+				width: 10px
+				height: 10px
+				content: ""
+				border: 1px solid #e2e2e2
+				border-right: none
+				border-bottom: none
+				transform: rotate(45deg)
+				background-color: color12
+				transition all 0.2s ease-in-out 0s
+
+	&__top
+		color: white
+		font-size: 16px
+		cursor: pointer
+		position: relative
+		user-select none
+		&:after
+			content: ''
+			position: absolute
+			top: 9px
+			margin-left: 7px
+			left: 100%
+			border: 4px solid transparent
+			border-top: 7px solid white
+		&_select
+			height: 29px
+			padding: 0 28px 0 12px
+			color: #666
+			border: 1px solid #e2e2e2
+			background: #fff
+			text-shadow: 1px 1px #fff
+			font-size: 16px
+			line-height: 29px
+			&:active
+				background #F5F5F5
+				box-shadow inset 1px 1px 3px #DDD
+			&:after
+				top: 42%
+				right: 13px
+				margin-left: 0
+				left: auto
+				border-top-color color10
+			&:hover
+				background #fff - 2%
+			.pseudo-dropdown__trigger-checkbox
+				text-decoration: none
+		&_services
+			&:after
+				content '+'
+				border none
+				top: 0
+				color: color10
+				font-size: 21px
+				right: 11px
+		.header-metro &
+			opacity-hover()
+	&__title
+		color: color2
+		display: inline-block
+	&__trigger-checkbox
+		display: inline-block
+		text-decoration: underline
+		margin-left: 5px
+
+	&_dropdown_open &__list
+		opacity 1
+		visibility visible
+
+	&_select:hover
+		.pseudo-dropdown__top_select:after
+			border-top-color #000
+			color #000
+
+	&_services-checked &__list
+		border-color color20
+		&:before
+			border-color color20
+
+	&_services-checked &__top_select
+		border-color color20
+
+
+		
+
+.pseudo-dropdown-list
+	max-height: 245px
+	margin: 5px 10px
+	overflow hidden
+
+	ul-reset()
+	&_services
+		max-height: none
+		position: relative
+		margin: 15px 25px
+
+
+	&__item
+		padding 5px 12px
+		list-style none
+		//cursor pointer
+	&__item:hover
+	&__item_active
+		/*background #0074D9
+		color #fff*/
+
+	&_checkbox &__item
+		padding: 5px 9px
+
+.scroll-top
+	background #2d3e60
+	border none
+	padding 25px 20px
+	border-radius 50%
+	box-shadow 0 2px 5px 0 rgba(#000, .26)
+	position fixed
+	right 40px
+	bottom 50px
+	outline none
+	svg
+		width 20px
+		height 10px
+		fill #fff
+		display block
+
+
+.search-widget
+	position relative
+	&__input
+		border none
+		background #717171
+		font-size 16px
+		font-weight 300
+		height 30px
+		line-height 30px
+		padding 0 40px 0 10px
+		box-sizing border-box
+		width 100%
+		color #a3a3a3
+		transition 125ms all ease-in-out
+		+placeholder()
+			color #a3a3a3
+		&:focus
+			background #fff
+			color #505050
+			outline none
+
+	&__submit
+		position absolute
+		right 0
+		top 0
+		size 30px
+		border transparent
+		background none
+		padding 6px
+		line-height 1
+		fill #d4d4d4
+		transition 125ms all ease-in-out
+
+		&:focus
+		&:hover
+			outline none
+			fill #d4d4d4 - 10%
+
+		svg
+			display inline-block
+			vertical-align middle
+			svgSize($maginifer)
+			visibility visible
+
+.services-list
+	&__col
+		display: inline-block
+		vertical-align: top
+		& + &
+			margin-left: 40px
+	&__item
+		margin 10px 0
+		&_title
+			font-weight: 700
+			font-size: 18px
+			margin-bottom: 16px
+			margin-top: 31px
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+
+.sidebar
+	padding-top 24px
+	&__section
+		margin-top: 20px
+		&:first-child
+			margin-top: 0
+		&_banner
+			display: block
+			img
+				display: block
+				width: 100%
+
+.sidebar-menu
+	background #fff
+	border 1px solid #dadada
+
+	ul-reset()
+
+	&__title
+		margin 0
+		padding 10px 20px
+		font-size 18px
+		border-bottom 1px solid #dadada
+
+	&__item
+		font-size 14px
+		padding 0 0 4px 0
+		list-style none
+
+	&__link
+		&
+		&:visited
+			font-weight bold
+			display block
+			padding 6px 20px 8px
+			text-decoration none
+		&:hover
+			text-decoration underline
+
+	&__submenu
+		padding 0 20px 0 40px
+
+.small-girls
+	font-size: 0
+	margin-bottom: -10%
+	.small-girls__item
+		width: 46%
+		display: inline-block
+		font-size: 16px
+		margin-bottom: 10%
+		&:nth-child(2n)
+			margin-left: 8%
+
+
+.small-girls-item
+	&
+	&:visited
+		text-align: center
+		text-decoration: none
+		color: color14
+		font-size: 16px
+		opacity-hover(.87)
+		display: block
+	&__image
+		img
+			width: 100%
+	&__name
+		text-decoration: underline
+		font-style: italic
+		margin-top: 8px
+	&__price
+		margin-top: 2px
+		b
+			color: color15
+			font-size: 18px
+
+.social-icons
+	display inline-block
+
+	&__title
+		color #505050
+		font-size 20px
+		font-weight 500
+		margin 0
+		padding-bottom 14px
+
+	&__list
+		+ul-reset()
+			font-size 0
+
+	&__item
+		list-style none
+		padding 0
+		display inline-block
+		margin-right 20px
+		&:last-child
+			margin-right 0
+		a
+			&
+			&:visited
+			&:hover
+				display block
+				text-decoration none
+
+		svg
+			transition 125ms all ease
+			fill #b0b0b0
+			size 34px
+
+	&__item_vk:hover
+		svg
+			fill #45668e
+
+	&__item_ok:hover
+		svg
+			fill #ed812b
+
+	&__item_tw:hover
+		svg
+			fill #55acee
+
+	&__item_fb:hover
+		svg
+			fill #3b5998
+
+	&__item_gp:hover
+		svg
+			fill #dc4e41
+
+	&__item_mr:hover
+		svg
+			fill #168de2
+.pseudo-dropdown_mobile
+	display none
+.toggle-menu.active
+	background: color7
+	.main-menu
+		display none
+.search__button
+	retinaSprite($sprite_search_group)
+	cursor pointer
+.search__button-wrapper,
+.log__button-wrapper
+	display none
+	float left
+	border-left: 1px solid color7;
+	padding 7px 10px
+.log__button
+	retinaSprite($sprite_ac_group)
+	cursor pointer	
+.log__button-wrapper
+	border-right: 1px solid color7;
+.search__button-wrapper.active
+	background: color7
+	.search__button
+		retinaSprite($sprite_shover_group)
+.filters.active
+	display none
+.catalog-item-middle__parameters_reset
+	display none
+	padding-top 10px
+	margin-bottom 15px
+	.catalog-item-parameters__item 
+		display block
+	.catalog-item-parameters__icon
+		width 26px
+.footer__inner:after 
+	retinaSprite($sprite_footer_group)
+	display none
+input 
+	appearance: none;
+	border-radius 0px
+.add__favorite
+	cursor pointer
+	retinaSprite($sprite_star_group)
+	display none
+	float right
+	position relative 
+	top -3px
+.catalog-item-info__name
+	display inline-block
+.catalog__star-wrapper
+	display inline-block 
+	width 100%
+// popup 
+.b-popup-wrapper.jsActive
+	display block
+	.b-popup__content
+		display block
+.b-popup-wrapper
+	position fixed 
+	width 100%
+	height 100%
+	top 0px 
+	left 0px
+	background: rgba(0,0,0, 0.6)
+	z-index 11
+	display none
+.b-popup__content
+	display none
+	background: white
+	border 3px solid color30
+	margin 10% auto 0 auto
+	position relative
+.popup__h2 
+	text-align: center
+	font-family notoserif
+	font-style italic
+	font-weight normal
+	font-size 30px
+	margin 0 0 30px 0
+.form__input 
+	border 1px solid #e4e4e4
+	font-family ptsans
+	padding 8px 14px
+	display block
+	width 100%
+	box-sizing border-box
+	outline none
+	margin-bottom 15px
+.button__pink 
+	background color29
+	color white
+	width 140px
+	&:hover 
+		color white
+		background: color1
+.recover__password
+	color color14
+	font-size 16px
+	text-decoration: underline
+.b-popup__content_login
+	max-width 450px
+	padding 20px 40px 30px 40px
+	box-sizing border-box
+.popup__close
+	retinaSprite($sprite_close_group)
+	position absolute
+	cursor: pointer;
+	right 10px 
+	top 10px
+.catalog-header_reset
+	padding-top 60px
+.catalog-header__tabs 
+	background: #fef7d5
+	padding 20px 20px
+	margin 15px 0 30px 0
+.catalog-header__link
+	text-transform: uppercase
+	text-decoration none
+	font-size 16px 
+	color black
+	padding: 5px 20px;
+	transition ease-in-out .3s
+	text-align: center
+.catalog-header__salons
+	padding 0 20px 30px 20px
+	border-bottom 1px solid #cccccc
+.catalog-header__slink
+	color color9
+	text-decoration: none
+	font-size 18px
+	&:first-child:after
+		width 1px 
+		height 20px
+		background: rgba(102, 102, 102, 0.33);
+		margin 0 6px
+		content ''
+		display inline-block
+		position relative 
+		top 4px
+.catalog-header__slink.active
+	color color29
+.catalog-header__link.active,
+.catalog-header__link:hover
+	border-radius 20px
+	color: #333
+	background: yellow
+	border-radius(20px)
+	transition ease-in-out .3s
+.catalog_rev_col2-img
+	color color14
+	font-size 16px
+	text-decoration: underline
+	text-align: center
+	display inline-block
+	width 100%
+	img 
+		display block
+		margin 0 0 10px 0
+		width 100%
+		max-width 100%
+		height auto
+.catalog_rev_col1
+	width 76.4%
+	display inline-block
+	border 1px solid color32
+	border-radius 5px
+	padding 20px 20px 15px 20px
+	margin 0 6.4% 0 0
+	vertical-align: top
+	position relative
+	box-sizing border-box
+	&:after 
+		content ''
+		background: url(../img/arrow.png) no-repeat center 
+		width 20px 
+		height 20px 
+		position absolute
+		right -13px 
+		top 40%
+.catalog_rev_col2
+	width 14%
+	display inline-block
+	vertical-align: top
+.catalog_rev_date
+	color color33
+	font-size 14px 
+	font-style italic
+	display block
+	width 100% 
+	text-align: right
+	margin 20px 0 0 0
+.catalog_rev_p
+	color color8
+	font-size 16px
+.catalog_tiles_rev
+	margin-bottom 40px
+body .layout__content_reset
+	width 855px
+.header-login__text.active
+	color yellow
+.header-login_fav 
+	color yellow 
+	text-decoration: underline
+	font-size 16px
+	background: color28
+	position absolute
+	padding 5px 0px
+	width 17.5%
+	text-align: center
+	border-radius 0 0 7px 7px
+	right 0px
+	top -12px
+	&:hover 
+		color white
+.header__login_reset
+	position: relative;
+	top: 20px;
+	left: -44px;
+body .layout__content_75
+	width 75.5%
+.slick-arrow.slick-next:before, 
+.slick-arrow.slick-prev:before
+	width: 11px;
+	height: 20px;
+	background-image: url(sprite.png);
+	background-position: -148px -28px;
+.slick-arrow:before
+	display: inline-block;
+	content: ''
+.slick-arrow.slick-next:before
+	background-position: -148px -56px;
+.product-slider__item:hover:after
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 64px;
+	height: 66px;
+	margin-top: -33px;
+	margin-left: -32px;
+	content: '';
+	background-image: url(sprite.png);
+	background-position: 0 0;
+.product-info-content-authorization__buttons
+	a 
+		margin 0 2px
+.toggle-menu,
+.log__button-wrapper,
+.search__button-wrapper
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-o-box-flex: 1;
+	box-flex: 1;
+	-webkit-flex: 0 0 auto;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+.catalog-item-only-photo__phone a
+	color yellow
+.main-content__articles-col1
+	display inline-block 
+	width 34%
+	vertical-align top 
+	a 
+		display block
+		width 100% 
+		img 
+			width 100% 
+			height auto
+.main-content__articles-col2
+	width: 63%;
+	margin-left: 2%;
+	display inline-block 
+	vertical-align top
+	a 
+		color color14
+		font-size 22px
+		text-decoration: none
+	p 
+		color color9
+		font-size 16px
+		margin 10px 0
+		text-align: justify
+	span 
+		color color15
+		font-size 16px 
+.main-content__articles-item
+	margin-bottom 20px
+	padding-bottom 20px
+	border-bottom 1px solid #efefef
+.main-content__articles
+	border-top 1px solid #efefef
+	padding 20px 0 0 0 
+	margin 20px 0 0 0

@@ -1,0 +1,92 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header.jade
+      include filters.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_75
+            .main-content
+              .main-content__bread-crumbs
+                .bread-crumbs
+                  ul
+                    li.bread-crumbs__item
+                      a(href="").bread-crumbs__link Проститутки Москвы
+                      .bread-crumbs__separator -
+                    li.bread-crumbs__item Статьи
+              .main-content__catalog-header.main-content__catalog-header_product-page
+                .catalog-header
+                  h1.catalog-header__title Статьи
+              .main-content__articles
+                .main-content__articles-item
+                  .main-content__articles-col1
+                    a(href="").main-content__articles-link
+                      img(src="img/articles/01.jpg", alt="")
+                  .main-content__articles-col2
+                    a(href="") Можно ли считать секс с путаной за измену
+                    p Салон `КРАСОТКИ`. В нашем салоне Вашему вниманию предоставляется богатый выбор девушек всех возрастных категорий, которые с удовольствием исполнят все Ваши заветные сексуальные фантазии. Салон `КРАСОТКИ`. В нашем салоне Вашему вниманию предоставляется богатый выбор девушек всех возрастных категорий, которые с удовольствием исполнят все Ваши за
+                    span 17.05.2016
+                .main-content__articles-item
+                  .main-content__articles-col1
+                    a(href="").main-content__articles-link
+                      img(src="img/articles/02.jpg", alt="")
+                  .main-content__articles-col2
+                    a(href="") Что могут предложить девушки по вызову Киева?
+                    p Салон `КРАСОТКИ`. В нашем салоне Вашему вниманию предоставляется богатый выбор девушек всех возрастных категорий, которые с удовольствием исполнят все Ваши заветные сексуальные фантазии. Салон `КРАСОТКИ`. В нашем салоне Вашему вниманию предоставляется богатый выбор девушек всех возрастных категорий, которые с удовольствием исполнят все Ваши за
+                    span 17.05.2016
+                .main-content__articles-item
+                  .main-content__articles-col1
+                    a(href="").main-content__articles-link
+                      img(src="img/articles/03.jpg", alt="")
+                  .main-content__articles-col2
+                    a(href="") Можно ли считать секс с путаной за измену
+                    p Салон `КРАСОТКИ`. В нашем салоне Вашему вниманию предоставляется богатый выбор девушек всех возрастных категорий, которые с удовольствием исполнят все Ваши заветные сексуальные фантазии. Салон `КРАСОТКИ`. В нашем салоне Вашему вниманию предоставляется богатый выбор девушек всех возрастных категорий, которые с удовольствием исполнят все Ваши за
+                    span 17.05.2016
+              .main-content__pagination
+                nav.pagination
+                  ul
+                    li.pagination__item.pagination__item_first.pagination__item_active
+                      a(href="#").pagination__link 1
+                    li.pagination__item
+                      a(href="#").pagination__link 2
+                    li.pagination__item
+                      a(href="#").pagination__link 3
+                    li.pagination__item
+                      a(href="#").pagination__link 4
+                    li.pagination__item
+                      a(href="#").pagination__link 5
+                    li.pagination__item.pagination__item_spacer
+                      .pagination__link ...
+                    li.pagination__item
+                      a(href="#", aria-label="Last").pagination__link 24
+                    li.pagination__item.pagination__arrow.pagination__arrow_next
+                      a(href="#", aria-label="Next").pagination__link
+          include sidebar.jade
+      include footer.jade
+    include popup.jade
+    script(src="js/plugins.min.js")
+    script(src="js/main.min.js")
+    script(src="js/all.js")
