@@ -190,6 +190,12 @@
   .catalog_rev_col1
     width 78.4%
 @media (max-width: 1020px)
+  .pseudo-dropdown-list_services
+    height 454px 
+    overflow-y scroll
+  .catalog-item-info__name
+    width 83%
+    float left
   body .layout__content_75
     width 100%
   .catalog_rev_col1
@@ -199,8 +205,8 @@
   .catalog-header__salons
     margin-right 0px
   .catalog_salons .catalog__item
-    margin: 0 1% 20px 0;
-    width: 49.4%;
+    margin: 0 3% 20px 0;
+    width: 48.4%;
   .catalog_salons .catalog__item:nth-child(even)
     margin 0 0 20px 0
   .pseudo-dropdown__list_services
@@ -282,6 +288,10 @@
   .add__favorite
     display inline-block
 @media (max-width: 767px)
+  .pseudo-dropdown_dropdown_open:after
+    display none
+  .catalog-item-info__name
+    width 100%
   .header-login_fav
     display none
   .header__menu 
@@ -522,6 +532,19 @@
   .catalog_rev_col2
     width 32%
 @media (max-width: 574px)
+  .catalog-header__tabs.active
+    .column-r-wrapper
+      display flex
+      border-top 1px solid #650233
+      border-bottom 1px solid #650233
+      padding-top 15px
+      padding-bottom 15px
+  .column-r-wrapper
+    display none
+    margin-top 15px
+  .button__sub
+    padding 0px
+    display block
   .main-content__articles-col2 a
     font-size 19px
   .main-content__articles-col1
@@ -530,7 +553,7 @@
   .main-content__articles-col2
     width 100%
     margin 0px
-  .catalog-header__tabs.column-r
+  .column-r-wrapper.column-r
     flex-direction column
   .catalog-header__link:hover
     border-radius 2px
@@ -588,6 +611,9 @@
     position relative 
     .catalog-header-controls__button
       margin-left 0px !important
+@media (max-width: 420px)
+  .catalog-item-only-photo__phone
+    font-size 15px
 @media (max-width: 415px)
   .pseudo-dropdown_mobile
     width 100%
@@ -596,7 +622,17 @@
     margin-bottom 0px
   .catalog-item__middle
     display none
+@media only screen and (max-width : 364px)
+  .product-offers .product-offers-list-item__tel
+    font-size 14px
+  .product-info-content-authorization__buttons a
+    display block 
+    margin-bottom 5px
 @media(max-width: 320px)
+  .catalog-item-only-photo__phone
+    font-size 20px
+  .pseudo-dropdown_dropdown_open:after
+    display block
   .catalog_only-photo .catalog__item
     margin: 1.5%;
     width: 100%;

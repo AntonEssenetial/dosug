@@ -447,7 +447,7 @@ button-size(padding, font-size, line-height)
 			margin-top: 23px
 	&__text
 		margin-top: 13px
-		min-height: 104px
+		height: 104px
 		overflow: hidden
 		text-align: justify
 
@@ -2674,7 +2674,6 @@ html.remodal-is-locked
 		
 
 .pseudo-dropdown-list
-	max-height: 245px
 	margin: 5px 10px
 	overflow hidden
 
@@ -2956,7 +2955,7 @@ input
 	position relative 
 	top -3px
 .catalog-item-info__name
-	display inline-block
+	display block
 .catalog__star-wrapper
 	display inline-block 
 	width 100%
@@ -3018,7 +3017,7 @@ input
 	right 10px 
 	top 10px
 .catalog-header_reset
-	padding-top 60px
+	padding-top 0px
 .catalog-header__tabs 
 	background: #fef7d5
 	padding 20px 20px
@@ -3108,6 +3107,7 @@ body .layout__content_reset
 	width 855px
 .header-login__text.active
 	color yellow
+	font-weight bold
 .header-login_fav 
 	color yellow 
 	text-decoration: underline
@@ -3200,3 +3200,31 @@ body .layout__content_75
 	border-top 1px solid #efefef
 	padding 20px 0 0 0 
 	margin 20px 0 0 0
+.small-girls-item__name
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+.pswp__button--arrow--left:before 
+	height: 38px;
+	width: 50px;
+	background url(../img/photoswipe/left.png) no-repeat center
+.pswp__button--arrow--right:before 
+	height: 38px;
+	width: 50px;
+	background url(../img/photoswipe/right.png) no-repeat center
+.button__sub
+	display none
+	border none 
+	background: none
+	outline none
+	.sandwitch 
+		display inline-block
+		vertical-align: middle
+	&:after
+		content 'Меню'
+		display inline-block
+		vertical-align: middle
+		margin-left 10px
+		font-size 18px
+	span 
+		background: black !important

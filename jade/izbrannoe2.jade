@@ -33,10 +33,16 @@ html(lang="ru", class="no-js")
               .main-content__catalog-header
                 .catalog-header.catalog-header_reset
                   h1.catalog-header__title Личный кабинет
-                  .catalog-header__tabs.row.between.column-r
-                    a(href="izbrannoe.html").catalog-header__link Избранное
-                    a(href="izbrannoe2.html").catalog-header__link.active Мои отзывы
-                    a(href="izbrannoe3.html").catalog-header__link Настройки профиля
+                  .catalog-header__tabs
+                    button.button__sub
+                      .sandwitch
+                        span.sw-topper
+                        span.sw-bottom
+                        span.sw-footer
+                    .row.between.column-r.column-r-wrapper.animated.fadeIn
+                      a(href="izbrannoe.html").catalog-header__link Избранное
+                      a(href="izbrannoe2.html").catalog-header__link.active Мои отзывы
+                      a(href="izbrannoe3.html").catalog-header__link Настройки профиля
                   .catalog-header__salons
                     a(href="").catalog-header__slink.active Анкеты
                     a(href="").catalog-header__slink Салоны
