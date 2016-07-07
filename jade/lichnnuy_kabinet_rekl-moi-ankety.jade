@@ -1,0 +1,320 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header2.jade
+      include filters.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_reset
+            .main-content.main-content_17
+              .main-content__catalog-header
+                .catalog-header.catalog-header_reset
+                  .row.between.header__title-wrap
+                    h1.catalog-header__title Личный кабинет
+                    .balance-block
+                      span.balance__link Баланс: 250p
+                      span.balance__link Расход в день: 112p
+                      a(href="").balance__add.button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Пополнить счет
+                  .catalog-header__tabs.catalog-header__tabs_reset
+                    button.button__sub
+                      .sandwitch
+                        span.sw-topper
+                        span.sw-bottom
+                        span.sw-footer
+                    .row.between.column-r.column-r-wrapper.animated.fadeIn
+                      a(href="tarif.html").catalog-header__link.active Мои анкеты
+                      a(href="salon3.html").catalog-header__link Салоны
+                      a(href="banners.html").catalog-header__link Баннеры
+                      a(href="settings.html").catalog-header__link Настройки профиля
+                      a(href="help.html").catalog-header__link Помощь
+              .main-content__catalog.catalog__acord-wrap
+                .catalog.catalog__acord
+                  .catalog__help
+                    .b__baner-wrapper.row.between.center
+                      a(href="").b__banner.add__color + Добавить анкету
+                      span.all__banner Всего 6 анкет
+                    .worksheet-form.row.between.center
+                      .salon__col.row
+                        input(type="text",placeholder='Введите имя').form__input.worksheet__input
+                        .row.center.banner__row
+                          span.banner__b.span__col_100.italic-st Сортировака:
+                          .filters__item.auto.auto__width
+                            .filter__item-wrapper.filter__item-wrapper_127
+                              .form-item.form-item_type_select.form-item_style_default
+                                .form-item__input
+                                  select(name="select" , data-placeholder="По дате")#select
+                                    option
+                                    option(value="0" , label="По тарифу") По тарифу
+                                    option(value="1" , label="Vip сверху") Vip сверху
+                      .salon__col.ta-right
+                        span.ban__stat.italic-st Показывать:
+                        label(for="").label__checkbox.radio.label__checkbox_worksheet
+                          input(type="checkbox")
+                          | Только VIP
+                        label(for="").label__checkbox.radio.label__checkbox_worksheet
+                          input(type="checkbox")
+                          | Только включенные
+                    .worksheet-stat.row.between.center
+                      .worksheet__col.row.center
+                        label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                          input(type="checkbox" checked)
+                        span.ban__stat.italic-st Выделено анкет: 2
+                      .worksheet__buttons.auto__width.row.between
+                        a(href="").button.button_color_orange.button_style_rounded.button_vip VIP статус
+                        a(href="").button.button_color_yellow.button_style_rounded Включить
+                        a(href="").button.button_color_grey.button_style_rounded Отключить
+                        a(href="").button.button_color_soft.button_style_rounded Изменить тариф
+                        a(href="").button.button_color_grey2.button_style_rounded Удалить
+                    .worksheet-wrap.row.between.wrap
+                      .worksheet-item.worksheet-item_vip
+                        .row.worksheet-item__col.between
+                          .worksheet_50
+                            .worksheet__img
+                              label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                                input(type="checkbox" checked)
+                              img(src="img/worksheet/1.jpg", alt="")
+                          .worksheet_50
+                            a(href="").worksheet__name Стелла
+                            .catalog-item-info__phone +7 908-659-65-95
+                            .tarif__place
+                              ul
+                                li
+                                  span.tarif__pl1 Тариф:    
+                                  span.tarif__pl2 50 руб./час
+                                li
+                                  span.tarif__pl1 Места:    
+                                  span.tarif__pl2 25-80
+                            a(href="").change__tarif Изменить тариф
+                            a(href="").button.button_color_orange.button_style_rounded.button_vip-big VIP статус
+                            a(href="").disable__vip Отключить VIP
+                        .row.salon__bottom.between
+                          .salon__col2.between
+                            a(href="").button_banner.button_color_pink.button_style_rounded Редактировать <span class='b-hid'> анкету </span>
+                            a(href="").button_banner.button_color_grey.button_style_rounded Удалить <span class='b-hid'> анкету </span>
+                          .salon__col2.salon__col2_40
+                            .b-status
+                              span.ban__stat Статус:
+                              span.ban__stat2 Включена
+                            a(href="").button_banner.button_color_grey2.button_style_rounded Отключить
+                      .worksheet-item.worksheet-item_disabled
+                        .row.worksheet-item__col.between
+                          .worksheet_50
+                            .worksheet__img
+                              label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                                input(type="checkbox" checked)
+                              img(src="img/worksheet/2.jpg", alt="")
+                          .worksheet_50
+                            a(href="").worksheet__name Дельфина
+                            .catalog-item-info__phone +7 908-659-65-95
+                            .tarif__place
+                              ul
+                                li
+                                  span.tarif__pl1 Тариф:    
+                                  span.tarif__pl2 50 руб./час
+                                li
+                                  span.tarif__pl1 Места:    
+                                  span.tarif__pl2 25-80
+                            a(href="").change__tarif Изменить тариф
+                            a(href="").button.button_color_transparent.button_style_rounded.button_vip-stat
+                              span.vip__icon
+                              .vip__st 
+                                span.vip__span1 перейти на 
+                                span.vip__span2 VIP статус
+                        .row.salon__bottom.between
+                          .salon__col2.between
+                            a(href="").button_banner.button_color_pink.button_style_rounded Редактировать <span class='b-hid'> анкету </span>
+                            a(href="").button_banner.button_color_grey.button_style_rounded Удалить <span class='b-hid'> анкету </span>
+                          .salon__col2.salon__col2_40
+                            .b-status
+                              span.ban__stat Статус:
+                              span.ban__stat2 Отключена
+                            a(href="").button_banner.button_color_yellow.button_style_rounded Включить
+                      .worksheet-item.worksheet-item_vip
+                        .row.worksheet-item__col.between
+                          .worksheet_50
+                            .worksheet__img
+                              label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                                input(type="checkbox")
+                              img(src="img/worksheet/3.jpg", alt="")
+                          .worksheet_50
+                            a(href="").worksheet__name Стелла
+                            .catalog-item-info__phone +7 908-659-65-95
+                            .tarif__place
+                              ul
+                                li
+                                  span.tarif__pl1 Тариф:    
+                                  span.tarif__pl2 50 руб./час
+                                li
+                                  span.tarif__pl1 Места:    
+                                  span.tarif__pl2 25-80
+                            a(href="").change__tarif Изменить тариф
+                            a(href="").button.button_color_orange.button_style_rounded.button_vip-big VIP статус
+                            a(href="").disable__vip Отключить VIP
+                        .row.salon__bottom.between
+                          .salon__col2.between
+                            a(href="").button_banner.button_color_pink.button_style_rounded Редактировать <span class='b-hid'> анкету </span>
+                            a(href="").button_banner.button_color_grey.button_style_rounded Удалить <span class='b-hid'> анкету </span>
+                          .salon__col2.salon__col2_40
+                            .b-status
+                              span.ban__stat Статус:
+                              span.ban__stat2 Включена
+                            a(href="").button_banner.button_color_grey2.button_style_rounded Отключить
+                      .worksheet-item.worksheet-item_vip
+                        .row.worksheet-item__col.between
+                          .worksheet_50
+                            .worksheet__img
+                              label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                                input(type="checkbox")
+                              img(src="img/worksheet/4.jpg", alt="")
+                          .worksheet_50
+                            a(href="").worksheet__name Стелла
+                            .catalog-item-info__phone +7 908-659-65-95
+                            .tarif__place
+                              ul
+                                li
+                                  span.tarif__pl1 Тариф:    
+                                  span.tarif__pl2 50 руб./час
+                                li
+                                  span.tarif__pl1 Места:    
+                                  span.tarif__pl2 25-80
+                            a(href="").change__tarif Изменить тариф
+                            a(href="").button.button_color_orange.button_style_rounded.button_vip-big VIP статус
+                            a(href="").disable__vip Отключить VIP
+                        .row.salon__bottom.between
+                          .salon__col2.between
+                            a(href="").button_banner.button_color_pink.button_style_rounded Редактировать <span class='b-hid'> анкету </span>
+                            a(href="").button_banner.button_color_grey.button_style_rounded Удалить <span class='b-hid'> анкету </span>
+                          .salon__col2.salon__col2_40
+                            .b-status
+                              span.ban__stat Статус:
+                              span.ban__stat2 Включена
+                            a(href="").button_banner.button_color_grey2.button_style_rounded Отключить
+                      .worksheet-item.worksheet-item_disabled
+                        .row.worksheet-item__col.between
+                          .worksheet_50
+                            .worksheet__img
+                              label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                                input(type="checkbox")
+                              img(src="img/worksheet/5.jpg", alt="")
+                          .worksheet_50
+                            a(href="").worksheet__name Дельфина
+                            .catalog-item-info__phone +7 908-659-65-95
+                            .tarif__place
+                              ul
+                                li
+                                  span.tarif__pl1 Тариф:    
+                                  span.tarif__pl2 50 руб./час
+                                li
+                                  span.tarif__pl1 Места:    
+                                  span.tarif__pl2 25-80
+                            a(href="").change__tarif Изменить тариф
+                            a(href="").button.button_color_transparent.button_style_rounded.button_vip-stat
+                              span.vip__icon
+                              .vip__st 
+                                span.vip__span1 перейти на 
+                                span.vip__span2 VIP статус
+                        .row.salon__bottom.between
+                          .salon__col2.between
+                            a(href="").button_banner.button_color_pink.button_style_rounded Редактировать <span class='b-hid'> анкету </span>
+                            a(href="").button_banner.button_color_grey.button_style_rounded Удалить <span class='b-hid'> анкету </span>
+                          .salon__col2.salon__col2_40
+                            .b-status
+                              span.ban__stat Статус:
+                              span.ban__stat2 Отключена
+                            a(href="").button_banner.button_color_yellow.button_style_rounded Включить
+                      .worksheet-item
+                        .row.worksheet-item__col.between
+                          .worksheet_50
+                            .worksheet__img
+                              label(for="").label__checkbox.radio.label__checkbox_big.label__big
+                                input(type="checkbox")
+                              img(src="img/worksheet/6.jpg", alt="")
+                          .worksheet_50
+                            a(href="").worksheet__name Дельфина
+                            .catalog-item-info__phone +7 908-659-65-95
+                            .tarif__place
+                              ul
+                                li
+                                  span.tarif__pl1 Тариф:    
+                                  span.tarif__pl2 50 руб./час
+                                li
+                                  span.tarif__pl1 Места:    
+                                  span.tarif__pl2 25-80
+                            a(href="").change__tarif Изменить тариф
+                            a(href="").button.button_color_transparent.button_style_rounded.button_vip-stat
+                              span.vip__icon
+                              .vip__st 
+                                span.vip__span1 перейти на 
+                                span.vip__span2 VIP статус
+                        .row.salon__bottom.between
+                          .salon__col2.between
+                            a(href="").button_banner.button_color_pink.button_style_rounded Редактировать <span class='b-hid'> анкету </span>
+                            a(href="").button_banner.button_color_grey.button_style_rounded Удалить <span class='b-hid'> анкету </span>
+                          .salon__col2.salon__col2_40
+                            .b-status
+                              span.ban__stat Статус:
+                              span.ban__stat2 Отключена
+                            a(href="").button_banner.button_color_yellow.button_style_rounded Включить
+                    .main-content__pagination
+                      nav.pagination
+                        ul
+                          li.pagination__item.pagination__item_first.pagination__item_active
+                            a(href="#").pagination__link 1
+                          li.pagination__item
+                            a(href="#").pagination__link 2
+                          li.pagination__item
+                            a(href="#").pagination__link 3
+                          li.pagination__item
+                            a(href="#").pagination__link 4
+                          li.pagination__item
+                            a(href="#").pagination__link 5
+                          li.pagination__item.pagination__item_spacer
+                            .pagination__link ...
+                          li.pagination__item
+                            a(href="#", aria-label="Last").pagination__link 24
+                          li.pagination__item.pagination__arrow.pagination__arrow_next
+                            a(href="#", aria-label="Next").pagination__link
+          include sidebar.jade
+      .page__footer
+        footer.footer
+          .footer__inner
+            .footer__menu
+              .footer-menu
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Индивидуалки
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Массажистки
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Салоны
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Интим-карта
+            .footer__button
+              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
+            .clear
+    include popup.jade
+    include scripts.jade

@@ -2,7 +2,7 @@
 $(document).ready(function($) {
   // Mobile menu toggle function
   $('.toggle-menu').click(function(event) {
-    $('.filters, .search__button-wrapper').removeClass('active');
+    $('.page__filters, .search__button-wrapper').removeClass('active');
     $(this).toggleClass('active');
     $('.main-menu').toggleClass('active animated fadeIn');
   });
@@ -11,20 +11,23 @@ $(document).ready(function($) {
     $('.catalog-header__tabs').toggleClass('active')
   });
   $('.pseudo-dropdown_mobile .pseudo-dropdown__top').click(function(event) {
-    $('.filters, .search__button-wrapper').removeClass('active');
+    $('.page__filters, .search__button-wrapper').removeClass('active');
     $('.main-menu').removeClass('active animated fadeIn');
     $('.toggle-menu').removeClass('active');
   });
   // Search toggle class 
   $('.search__button-wrapper').click(function(event) {
-    $('.toggle-menu, .main-menu')
+    $('.toggle-menu, .main-menu').removeClass('active');
     $(this).toggleClass('active');
     if($(this).hasClass('active')){
-      $('.filters').addClass('active');
+      $('.page__filters').addClass('active');
     }else {
-      $('.filters').removeClass('active');
+      $('.page__filters').removeClass('active');
     }
   });
+  if($('.page__filters').hasClass('active')) {
+    $('.search__button-wrapper').addClass('active')
+  }
   // width detect 
   function widthDetect(){
     $('.pseudo-dropdown_mobile .pseudo-dropdown__list').css( 
@@ -32,7 +35,7 @@ $(document).ready(function($) {
     );
   };
   function heightDetect(){
-    $('.pseudo-dropdown_mobile .pseudo-dropdown__list').css( 
+    $('.pseudo-dropdown_mobile .pseudo-dropdown__list, .pseudo-dropdown_mobile .pseudo-dropdown-list').css( 
       'height', $(window).height()
     );
   };
@@ -55,5 +58,14 @@ $(document).ready(function($) {
   $('.header-login__item, .log__button').click(function(event) {
     $('.b-popup-wrapper').addClass('jsActive')
     return false
+  });
+
+  // acordion 
+  $(".acord").navgoco({accordion: true});
+  // Filter toggle
+  $('.filters__global-hide-button').click(function(event) {
+    $('.page__filters').toggleClass('active')
+    $('.search__button-wrapper').toggleClass('active');
+    return false;
   });
 });

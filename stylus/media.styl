@@ -46,6 +46,15 @@
 // 				content 'min-width: $media-screen-lg'
 
 @media (max-width: 1180px)
+  .header-login__text
+    font-size: 18px;
+    font-weight: bold;
+  .catalog__acord-wrap
+  .header__title-wrap 
+    margin: 0px 10px 0px 0;
+  .serv__row 
+    .services-list__col + .services-list__col
+      margin-top 0px
   .header-login_fav 
     width 20%
   .header__login_reset
@@ -82,7 +91,7 @@
     margin-left: 26.3%;
     width auto
   .filters 
-    padding-bottom: 1px;
+    padding-bottom: 15px;
     padding-top: 15px;
   .catalog-item-info__phone
     font-size 21px
@@ -154,6 +163,13 @@
       padding-top: 9px;
   .header-login .header-login__item
     display block
+  .logined 
+    .header__login_reset
+      top 35px
+    .header-login__item
+      display inline-block
+    .header-login__item
+      margin-left 28px
   .header-login__item:first-child
     margin-bottom 15px
   .header__login
@@ -189,7 +205,65 @@
     width 100%
   .catalog_rev_col1
     width 78.4%
+  .label__checkbox_top
+    margin-left 19px
+  .salon__items
+    .catalog__item 
+      width 48%
+      margin-right 0px
+@media (max-width: 1160px)
+  .worksheet-item
+    width 33%
+  .b-hid
+  .worksheet-item .ban__stat
+    display none
+  .worksheet__img
+    height: 206px;
+    overflow: hidden;
+  .worksheet-item__col
+    flex-wrap wrap
+  .worksheet_50
+    width 100%
+  .worksheet_50:nth-child(2)
+    padding-left 0px
+    margin-top 10px
+@media (max-width: 1150px)
+  .form__input_focus span
+  .form__input_error span
+    display none
+@media (max-width: 1124px)
+  .label__checkbox_worksheet
+    margin 0 6px 0 4px
+    .jq-checkbox
+      margin-right 6px
+@media (max-width: 1115px)
+  .worksheet-stat .button
+    padding 0 8px
 @media (max-width: 1020px)
+  .worksheet-item
+    width 48.5%
+  for $i in (1..5)
+    .worksheet__buttons .button:nth-child({$i})
+      flex-grow $i
+  .worksheet__buttons .button
+    margin 0 3px
+  .worksheet__img
+    height: auto;
+    overflow: visible;
+  .worksheet_50:nth-child(2)
+    padding-left 20px
+    margin-top 0px
+  .worksheet-item__col
+    flex-wrap wrap
+  .worksheet_50
+    width 48.5%
+  .catalog-item-only-photo__image:hover 
+    opacity 1
+  .catalog__acord-wrap
+    margin-right 0px
+  .header__title-wrap 
+  .catalog__acord
+    margin: 0px;
   .pseudo-dropdown-list_services
     height 454px 
     overflow-y scroll
@@ -244,9 +318,10 @@
         margin-bottom: 6%;
   .header-login
     position relative
-    right 27px
+    right 11px
   .header__metro
     margin-left 27px
+    margin-top 8px
   .pseudo-dropdown_desktop
     .pseudo-dropdown__title
       display block
@@ -287,7 +362,134 @@
     width 100%
   .add__favorite
     display inline-block
+  .serv__row .pseudo-dropdown-list_services
+    overflow-y hidden
+    height auto
+@media (max-width: 916px)
+  .worksheet-wrap .ban__stat
+    display none
+  .b-hid 
+    display none
+  .worksheet__img
+    height: 155px;
+    overflow: hidden;
+  .worksheet-item__col
+    flex-wrap wrap
+  .worksheet_50
+    width 100%
+  .worksheet_50:nth-child(2)
+    padding-left 0px
+    margin-top 10px
+  .worksheet-item
+    width: 33.3%;
+@media (max-width: 840px)
+  .worksheet-form
+    flex-wrap wrap
+    .salon__col
+      width 100%
+    .ta-right
+      text-align left
+    .salon__col.row
+      width 50% 
+      margin 0 0 10px 0
+    .label__checkbox_worksheet
+      margin 0 15px
+  .worksheet-form
+  .worksheet__col
+    .label__checkbox
+      margin-bottom 0px
+  .banner__col
+    padding 15px
+  .label__checkbox
+    margin-bottom 15px
+  .label__checkbox_top
+    margin-left: 8px;
+  .logined
+    .header-login .header-login__item
+      display inline-block
+@media (max-width: 800px)
+  .worksheet-form .salon__col.row
+    width 100%
+  .worksheet-form .span__col_100
+    width 100px
+  .worksheet-stat
+    flex-wrap wrap 
+    .worksheet__col 
+      width 100%
+      margin-bottom 10px
+  .worksheet-item
+    width 48.5%
+@media (max-width: 774px)
+  .form__input_success:after
+  .form__input_error:after
+    left: auto 
+    right: 8px
+  .form__input_268
+    width 100%
+  .col__48_r
+    width 100%
+    .add__photo
+      text-align: center
+    .salon__row
+      flex-direction row
+    .label__checkbox
+      width 30%
+      margin 0px
+      img 
+        width 100%
+  .row__48
+    flex-direction column
+  .serv__row .services-list__col
+    width 50%
+  .serv__row .services-list
+    flex-wrap: wrap;
+  .catalog-header__tabs.active
+    .column-r-wrapper
+      display flex
+      border-top 1px solid #650233
+      border-bottom 1px solid #650233
+      padding-top 15px
+      padding-bottom 15px
+  .column-r-wrapper
+    display none
+    margin-top 15px
+  .button__sub
+    padding 0px
+    display block
+  .column-r-wrapper.column-r
+    flex-direction column
+  .catalog-header__link:hover
+    border-radius 2px
+  .catalog-header__link.active
+    border-radius 2px 
+    margin-bottom 1px
+    box-shadow none
+  .filters__global-hide-button
+    left 34%
+  .header-login__text
+    font-size 18px 
+    font-weight bold
 @media (max-width: 767px)
+  .pseudo-dropdown__trigger-checkbox
+    position relative 
+    z-index 2 
+  .main-content
+    padding-top 22px
+  .filters__global-hide-button
+    display none
+  .tarif__row
+    flex-wrap wrap
+  .tarif__col 
+    width 50% 
+  .tarif__bold
+    display inline-block
+    margin-left 20px
+  .tarif__col
+    .button
+    .ac__icon  
+      margin 0px
+      position relative 
+      top -25px
   .pseudo-dropdown_dropdown_open:after
     display none
   .catalog-item-info__name
@@ -439,6 +641,16 @@
   .catalog-item-top__image img:hover
     opacity 1
   .pseudo-dropdown_mobile 
+    .pseudo-dropdown__top
+      display flex
+      flex-direction row
+    .pseudo-dropdown__title
+      width 54px 
+    .pseudo-dropdown__trigger-checkbox
+      flex-grow: 1;
+      flex-basis: 0;
+      max-width: 100%;
+      margin-left 0px
     float left
     display block
     width 213px
@@ -451,7 +663,7 @@
       top: 0;
       bottom: 0;
       right: 0;
-      width: 40px
+      width: 60px
       background: linear-gradient(-90deg, #610538 19%, #5f0236 58%, rgba(97, 5, 56, 0.06) 100%);
     .ps-container .ps-scrollbar-x, 
     .ps-container .ps-scrollbar-y
@@ -460,12 +672,15 @@
     .ps-container .ps-scrollbar-y-rail
       background: color30
     .pseudo-dropdown__top
-      padding-left 10px
+      .pseudo-dropdown__title
+        padding-left 6px
       &:after 
         background-image none
-        left 84%
+        left 86%
         top 17px
         z-index 1
+    .pseudo-dropdown-list_mobile ul
+      padding-bottom 120px
   .pseudo-dropdown_mobile.pseudo-dropdown_dropdown_open .form-item__label
     color white
   .pseudo-dropdown_mobile .pseudo-dropdown__list_checkbox
@@ -477,7 +692,7 @@
       border none 
     &:after 
       content: '';
-      background: linear-gradient(-90deg, #7D1E58 19%, #7D1E58 58%, rgba(97,5,56,0.06) 100%);
+      background: linear-gradient(-90deg, rgba(125, 30, 88, 1) 49%, rgba(125, 30, 88, 0) 88%, rgba(97, 5, 56, 0.06) 100%);
   .footer__menu
     margin-left 0px
     margin-top: 112px;
@@ -515,6 +730,18 @@
   .catalog-item-info__favorite
     display block
 @media (max-width: 753px)
+  .add__funds-row 
+    > .row 
+      flex-direction column
+    .button 
+      width 180px
+      margin 0 auto
+  .span__col_100
+    width 55px
+  .span__col_150
+    width 76px
+  .add__funds-col
+    width 100%
   .product-offers-list__item
     width 48%
   .product-info__left
@@ -526,19 +753,103 @@
     margin 20px 0 0 0
   .product-info__offers
     margin-top 30px
+@media (max-width: 740px)
+  .banner__but 
+  .banner__link 
+    justify-content: flex-start;
+  .button_banner
+      margin-right 10px
+  .banner__col-2
+    width 100%
+    &:first-child
+      margin-bottom 20px
+  .ban__row 
+    flex-direction column
+@media (max-width: 736px)
+  .balance-block
+    display none
+  .salon__row 
+    flex-direction column
+  .salon__col
+    width 100%
 @media (max-width: 700px)
   .catalog_rev_col1
     width: 60.4%;
   .catalog_rev_col2
     width 32%
+@media (max-width: 697px)
+  .salon__items .catalog__item
+    width 100%
+@media (max-width: 670px)
+  .same__col 
+    width 100%
+    margin 0 0 20px 0
+    border-bottom 1px solid border
+    padding 0 0 15px 0
+    display block
+  .article__img
+    float none 
+    width 100% 
+    margin 0 0 20px 0
+  .salon__col
+    width 100%
+  .banner-wrapper
+    padding 10px
+  .banner__col
+    width 100%
+    margin-bottom 20px
+  .banner__cols
+  .banner__column
+    flex-direction column
+  .banner__row:first-child
+    margin 0 0 10px 0
+  .banner__b_100
+    width 100%
+  .banner__b
+    margin 0 0 10px 0
+  .add__photo 
+    flex-direction column
+    .col__48
+      width 100%
+      &:first-child
+        margin 0 0 15px 0
+@media (max-width: 635px)
+  .worksheet__buttons
+    flex-wrap wrap 
+    .button
+      margin-bottom 10px
+  .prof__but
+    padding-top 10px
+  .catalog__form
+    padding 20px
+  .row_m-30 
+    flex-direction column
+    .catalog__form_filter
+      width 100%
+      margin 10px 0 0 0
+    .form__area 
+      margin 10px 0 0 0
+@media (max-width: 600px)
+  .header-login__balance
+    display none
+  .tarif__col
+    width 100%
+  .tarif__col
+    .button
+    .ac__icon  
+      margin 10px 0 0 0
+      position relative 
+      top 0px
+      left auto
 @media (max-width: 574px)
-  .catalog-header__tabs.active
-    .column-r-wrapper
-      display flex
-      border-top 1px solid #650233
-      border-bottom 1px solid #650233
-      padding-top 15px
-      padding-bottom 15px
+  .worksheet-item
+    width 100%
+  .worksheet_50
+    width: 48.5%
+  .worksheet_50:nth-child(2)
+    padding-left 20px
+  .worksheet__img
+    height auto
   .column-r-wrapper
     display none
     margin-top 15px
@@ -611,10 +922,35 @@
     position relative 
     .catalog-header-controls__button
       margin-left 0px !important
+  .serv__row .services-list__col
+    width 100%
+  .worksheet-form
+    .label__checkbox:nth-child(2)
+      margin-left 22px
+    .label__checkbox:last-child
+      margin: 10px 0 0 110px; 
+    .salon__col 
+      flex-direction column
+      flex-wrap wrap
+      .banner__row
+        margin-top 10px
+        span 
+          padding 0px
+@media (max-width: 465px)
+  .worksheet_50
+    width: 100%
+  .worksheet_50:nth-child(2)
+    padding-left 0px
+  .worksheet__img
+    height 150px
 @media (max-width: 420px)
   .catalog-item-only-photo__phone
     font-size 15px
 @media (max-width: 415px)
+  .button_banner
+    margin-right 0px
+  .banner__but
+    justify-content space-between
   .pseudo-dropdown_mobile
     width 100%
   .catalog-item-middle__parameters_reset
@@ -622,12 +958,38 @@
     margin-bottom 0px
   .catalog-item__middle
     display none
+  .all__banner
+    font-size 14px
+  .button_banner
+    padding 0 26px
+  .prof__but 
+    .catalog-header__link 
+      display block
+  .salon__col
+    label:last-child
+      margin-left 89px
 @media only screen and (max-width : 364px)
+  .worksheet-item .salon__bottom
+    flex-direction row
+  .form__input_142
+    display block
+    margin 20px 0 0 0
+    width 100%
+  .salon__bottom
+    flex-direction column
+  .salon__col2 
+    width 100%
+  .b-status
+    text-align: center
   .product-offers .product-offers-list-item__tel
     font-size 14px
   .product-info-content-authorization__buttons a
     display block 
     margin-bottom 5px
+  .span__col_200
+    width 115px
+  .salon__timeline
+    margin-left 115px
 @media(max-width: 320px)
   .catalog-item-only-photo__phone
     font-size 20px

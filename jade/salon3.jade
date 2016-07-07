@@ -1,0 +1,297 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header2.jade
+      include filters.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_reset
+            .main-content.main-content_17
+              .main-content__catalog-header
+                .catalog-header.catalog-header_reset
+                  .row.between.header__title-wrap
+                    h1.catalog-header__title Личный кабинет
+                    .balance-block
+                      span.balance__link Баланс: 250p
+                      span.balance__link Расход в день: 112p
+                      a(href="").balance__add.button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Пополнить счет
+                  .catalog-header__tabs.catalog-header__tabs_reset
+                    button.button__sub
+                      .sandwitch
+                        span.sw-topper
+                        span.sw-bottom
+                        span.sw-footer
+                    .row.between.column-r.column-r-wrapper.animated.fadeIn
+                      a(href="tarif.html").catalog-header__link Мои анкеты
+                      a(href="salon3.html").catalog-header__link.active Салоны
+                      a(href="banners.html").catalog-header__link Баннеры
+                      a(href="settings.html").catalog-header__link Настройки профиля
+                      a(href="help.html").catalog-header__link Помощь
+              .main-content__catalog.catalog__acord-wrap
+                .catalog.catalog__acord
+                  .catalog__help
+                    .add__baner-wrapper.add__baner-wrapper_reset
+                      a(href="").add__banner + Добавить салон
+                    .salon__row.row.between
+                      .salon__col
+                        .product-info-content__title
+                          .content-title.content-title_line Основная информация
+                        .salon-content
+                          .salon-content-wrapper
+                            .row.center.banner__row
+                              span.banner__b.span__col_200 Название:
+                              .auto.auto__width
+                                input.form__input(type="text", placeholder='Название салона')
+                            .row.center.banner__row
+                              span.banner__b.span__col_200 Название на английском:
+                              .auto.auto__width
+                                input.form__input(type="text", placeholder='Для иностранцев')
+                            .row.center.banner__row
+                              span.banner__b.span__col_200 Телефон:
+                              .auto.auto__width
+                                input.form__input(type="text", placeholder='+7(xxx) xxx-xx-xx')
+                            .row.center.banner__row
+                              span.banner__b.span__col_200 Адрес:
+                              .auto.auto__width
+                                input.form__input(type="text", placeholder='Введите адрес')
+                      .salon__col
+                        .product-info-content__title
+                          .content-title.content-title_line Метро
+                        .salon-content
+                          .salon-metro
+                            .pseudo-dropdown.pseudo-dropdown_checkbox.pseudo-dropdown_desktop
+                              .pseudo-dropdown__list.pseudo-dropdown__list_checkbox.pseudo-dropdown__list_salon
+                                .salon-metro-head Выберите ближайшую станцию метро
+                                .pseudo-dropdown-list.pseudo-dropdown-list_checkbox
+                                  ul
+                                    li(data-value="0").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Александровский
+                                    li(data-value="1").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Алтуфьево
+                                    li(data-value="2").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Анадырь
+                                    li(data-value="3").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Архангельск
+                                    li(data-value="4").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Астрахань
+                                    li(data-value="5").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Барнаул
+                                    li(data-value="6").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Белгород
+                                    li(data-value="7").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Биробиджан
+                                    li(data-value="8").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Благовещенск
+                                    li(data-value="9").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Брянск
+                                    li(data-value="10").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Великий Новгород
+                                    li(data-value="11").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Владивосток
+                                    li(data-value="12").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Владикавказ
+                                    li(data-value="13").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Владимир
+                                    li(data-value="14").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Волгоград
+                                    li(data-value="15").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Вологда
+                                    li(data-value="16").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Воронеж
+                                    li(data-value="17").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Горно-Алтайск
+                                    li(data-value="18").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Грозный
+                                    li(data-value="19").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Екатеринбург
+                                    li(data-value="20").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Иваново
+                                    li(data-value="21").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Ижевск
+                                    li(data-value="22").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Иркутск
+                                    li(data-value="23").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Йошкар-Ола
+                                    li(data-value="24").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Казань
+                                    li(data-value="25").pseudo-dropdown-list__item
+                                      label.form-item.form-item_type_checkbox.form-item_style_default
+                                        .form-item__input
+                                          input(type="checkbox", name="input-name")#input-name
+                                        span.form-item__label Калининград
+                    .salon__row.row.between
+                      .salon__col
+                        .product-info-content__title
+                          .content-title.content-title_line Тариф    
+                         .salon-content 
+                          .salon-time-wrapper
+                            .salon__timeline.row.between
+                              span.salon__time 1 час
+                              span.salon__time 2 часа
+                              span.salon__time Ноч
+                            .row.center.banner__row
+                              span.banner__b.span__col_200 Аппартаменты:
+                              .salon-input-wrapper.auto.auto__width.row.between.center
+                                input.form__input.form__input_tarif(type="text")
+                                input.form__input.form__input_tarif(type="text")
+                                input.form__input.form__input_tarif(type="text")
+                                span.rouble
+                            .row.center.banner__row
+                              span.banner__b.span__col_200 Выезд:
+                              .salon-input-wrapper.auto.auto__width.row.between.center
+                                input.form__input.form__input_tarif(type="text")
+                                input.form__input.form__input_tarif(type="text")
+                                input.form__input.form__input_tarif(type="text")
+                                span.rouble
+                      .salon__col
+                        .product-info-content__title
+                          .content-title.content-title_line О салоне
+                        .salon-content
+                          textarea(placeholder='Расскажите о салоне').form__area.form__area_salon
+                          textarea(placeholder='About us').form__area.form__area_salon
+                    .salon__row
+                      .product-info-content__title
+                        .content-title.content-title_line Фотографии
+                      .add__photo.row.between
+                        .col__48
+                          a(href="").button.button_color_yellow.button_style_rounded.button_size_lg Добавить фотографии
+                        .col__48
+                          span.catalog__span Максимальный размер 1 фотографии - 2 МБ! 
+                          span.catalog__span Необходимо добавить минимум 3 фотографии.
+                    .salon__row.salon__row_label
+                      label.label__checkbox.radio.radio-group__item.radio_inited
+                        img(src="img/checkbox/check1.jpg", alt="").label__img
+                        a(href="").label__a Удалить
+                        input(type="radio", name='photo').form__checkbox
+                        span Основное
+                      label.label__checkbox.radio.radio-group__item.radio_inited
+                        img(src="img/checkbox/check2.jpg", alt="").label__img
+                        a(href="").label__a Удалить
+                        input(type="radio", name='photo').form__checkbox
+                        span Основное
+                      label.label__checkbox.radio.radio-group__item.radio_inited
+                        img(src="img/checkbox/check3.jpg", alt="").label__img
+                        a(href="").label__a Удалить
+                        input(type="radio", name='photo').form__checkbox
+                        span Основное
+                    .row.center-c
+                      a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none.button_pad Сохранить салон
+          include sidebar.jade
+      .page__footer
+        footer.footer
+          .footer__inner
+            .footer__menu
+              .footer-menu
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Индивидуалки
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Массажистки
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Салоны
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Интим-карта
+            .footer__button
+              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
+            .clear
+    include popup.jade
+    include scripts.jade

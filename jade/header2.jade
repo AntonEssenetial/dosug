@@ -6,7 +6,7 @@
         .header__logo
           a(href="index.html").logo
             img(src="img/header/logo.png", alt="")
-        .header__metro
+        .header__metro.header__metro_450
           .header-metro
             .pseudo-dropdown.pseudo-dropdown_checkbox.pseudo-dropdown_desktop
               .pseudo-dropdown__top
@@ -145,8 +145,11 @@
                         .form-item__input
                           input(type="checkbox", name="input-name")#input-name
                         span.form-item__label Калининград
-        .header__login
-          a(href="").header-login_fav Избранное 0
+        .header__login.logined
+          //- a(href="").header-login_fav Избранное 0 раскоментировать для избранного
+          .header-login__balance
+            span Баланс 250р
+            a(href="") Пополнить счет
           .header-login.header__login_reset
             a(href="lk.html").header-login__item
               svg.icon.icon_user
@@ -155,7 +158,7 @@
             a(href="#" , data-remodal-target="modal1").header-login__item
               svg.icon.icon_enter
                 use(xlink:href="img/icons.svg#enter")
-              span.header-login__text Вход
+              span.header-login__text Выход
           .modal(data-remodal-id="modal1")
             .modal__wrapper
               button(data-remodal-action="close").modal__close

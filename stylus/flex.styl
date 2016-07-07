@@ -1,3 +1,6 @@
+.auto
+  box-flex: 1;
+  flex: 0 0 auto;
 .row 
   display flex
   box-sizing: border-box;
@@ -30,3 +33,17 @@
   align-self: flex-end;
 .bottom
   align-items: flex-end;
+.static
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+.wrap 
+  flex-wrap wrap
+.auto__width
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;

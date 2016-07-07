@@ -1,6 +1,6 @@
 //- jade/filters.jade
 .page__filters
-  .filters
+  .filters.filters__top
     .filters__inner
       .filters__row
         .filters__row__coll__left
@@ -484,5 +484,6 @@
             .filters__submit-button
               button(type="submit").button.button_color_green.button_style_rounded Показать
         .clear
-      <p></p>
-      a(href="#" , data-show="Развернуть поиск" data-hide="Скрыть поиск" ).filters__global-hide-button Развернуть поиск 
+  .filters__global-hide-button 
+    span.filter__sp1 Развернуть поиск 
+    span.filter__sp2 Свернуть поиск

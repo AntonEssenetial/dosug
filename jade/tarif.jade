@@ -1,0 +1,224 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header2.jade
+      include filters.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_reset
+            .main-content.main-content_17
+              .main-content__catalog-header
+                .catalog-header.catalog-header_reset
+                  .row.between.header__title-wrap
+                    h1.catalog-header__title Личный кабинет
+                    .balance-block
+                      span.balance__link Баланс: 250p
+                      span.balance__link Расход в день: 112p
+                      a(href="").balance__add.button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Пополнить счет
+                  .catalog-header__tabs.catalog-header__tabs_reset
+                    button.button__sub
+                      .sandwitch
+                        span.sw-topper
+                        span.sw-bottom
+                        span.sw-footer
+                    .row.between.column-r.column-r-wrapper.animated.fadeIn
+                      a(href="tarif.html").catalog-header__link.active Мои анкеты
+                      a(href="salon3.html").catalog-header__link Салоны
+                      a(href="banners.html").catalog-header__link Баннеры
+                      a(href="settings.html").catalog-header__link Настройки профиля
+                      a(href="help.html").catalog-header__link Помощь
+              .main-content__catalog.catalog__acord-wrap
+                .catalog.catalog__acord
+                  .catalog__help
+                    .b__baner-wrapper.row.between.center
+                      a(href="").b__banner.add__color + Добавить анкету
+                    .add__funds.add__funds_reset
+                      p.funds Ваша анкета успешно сохранена! Для того чтобы анкета появилась в выдаче, необходимо выбрать тарифный план и пополнить счет, если Вы этого еще не сделали.
+                    span.catalog__quest.catalog__quest_reset Выберете тарифный план
+                    .tarif__row.row.between.tarif__top
+                      .tarif__col
+                        .tarif__icon1
+                          img(src="img/tarif1.png", width='239' height='51' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 1-10
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 10
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 100 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_yellow.button_style_rounded.button_sizesm Выбрать
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon1
+                          img(src="img/tarif2.png", width='239' height='51' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 11-20
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 10
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 40 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать
+                    .tarif__row.row.between.active
+                      .tarif__col
+                        .tarif__icon1
+                          img(src="img/tarif3.png", width='239' height='51' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 21-30
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 10
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 45 руб./час
+                      .tarif__col
+                        span.ac__icon.row.center Выбрано
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon2
+                          img(src="img/tarif4.png", width='236' height='41' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 31-50
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 20
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 35 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon2
+                          img(src="img/tarif4.png", width='236' height='41' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 51-70
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 20
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 30 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon3
+                          img(src="img/tarif6.png", width='235' height='65' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 71-110
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 40
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 25 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon3
+                          img(src="img/tarif6.png", width='235' height='65' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 111-150
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 40
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 20 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon3
+                          img(src="img/tarif5.png", width='238' height='66' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 151-230
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 80
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 15 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon3
+                          img(src="img/tarif5.png", width='238' height='66' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 341-310
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 80
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 10 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    .tarif__row.row.between
+                      .tarif__col
+                        .tarif__icon3
+                          img(src="img/tarif5.png", width='238' height='66' alt="")
+                        span.tarif__span Занимаемые места:
+                        span.tarif__bold.tarif__bold_reset 311-470
+                      .tarif__col
+                        span.tarif__span Количество анкет:
+                        span.tarif__bold 160
+                      .tarif__col
+                        span.tarif__span Тфриф:
+                        span.tarif__bold 5 руб./час
+                      .tarif__col
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm Выбрать 
+                    span.catalog__quest.catalog__quest_reset Выбрано: 40 рублей/час
+                    .row.center-c.banner__show
+                      a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold Запустить показ анкеты
+          include sidebar.jade
+      .page__footer
+        footer.footer
+          .footer__inner
+            .footer__menu
+              .footer-menu
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Индивидуалки
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Массажистки
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Салоны
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Интим-карта
+            .footer__button
+              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
+            .clear
+    include popup.jade
+    include scripts.jade

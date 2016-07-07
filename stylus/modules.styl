@@ -348,12 +348,72 @@ button-size(padding, font-size, line-height)
 		border: #ccc,
 		border-hover: false
 	)
+	
+.button_style_rounded.button_color_soft
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: color31,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+	
+.button_style_rounded.button_color_orange
+	button-color(
+		color: #fff,
+		color-hover: false,
+		background: color41,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_transparent
+	button-color(
+		color: orange,
+		color-hover: false,
+		background: transparent,
+		background-hover: false,
+		border: orange,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_pink
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: #e9b7d4,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
 
 .button_style_rounded.button_color_grey
 	button-color(
 		color: #333,
 		color-hover: false,
 		background: #fff,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+
+.button_style_rounded.button_color_grey2
+	button-color(
+		color: #999999,
+		color-hover: false,
+		background: #d7d7d7,
+		background-hover: false,
+		border: #ccc,
+		border-hover: false
+	)
+	
+.button_style_rounded.button_color_grey
+	button-color(
+		color: #333,
+		color-hover: false,
+		background: #dedede,
 		background-hover: false,
 		border: #ccc,
 		border-hover: false
@@ -881,17 +941,16 @@ button-size(padding, font-size, line-height)
 		text-decoration: none
 		padding-top: 3px
 		z-index: 10
-		display none
-		opacity-hover()
 		&:hover
 			color: white
 		&:before
 			content: ''
-			sprite($filters_zoom)
+			retinaSprite($sprite_loop_group)
 			display: inline-block
 			margin-right: 8px
 			margin-bottom: -3px
-
+			position relative 
+			top 2px
 
 .footer
 
@@ -2994,7 +3053,9 @@ input
 	width 100%
 	box-sizing border-box
 	outline none
-	margin-bottom 15px
+.b-popup__content
+	.form__input 
+		margin-bottom 15px
 .button__pink 
 	background color29
 	color white
@@ -3108,7 +3169,18 @@ body .layout__content_reset
 .header-login__text.active
 	color yellow
 	font-weight bold
+.header-login__balance
+	a 
+		color yellow
+		padding 0 20px
+	span
+		color white 
+		padding 0 20px
+		font-size 16px
+		text-decoration: none
+		border none
 .header-login_fav 
+.header-login__balance
 	color yellow 
 	text-decoration: underline
 	font-size 16px
@@ -3122,10 +3194,13 @@ body .layout__content_reset
 	top -12px
 	&:hover 
 		color white
+.header-login__balance
+	text-decoration none
+	width auto
 .header__login_reset
 	position: relative;
 	top: 20px;
-	left: -44px;
+	// left: -44px;
 body .layout__content_75
 	width 75.5%
 .slick-arrow.slick-next:before, 
@@ -3228,3 +3303,933 @@ body .layout__content_75
 		font-size 18px
 	span 
 		background: black !important
+.acord 
+	a
+		font-size 18px
+		border-bottom 1px dashed color29
+		color color29
+		text-decoration none
+		display inline
+	p 
+		font-size 16px 
+		color color9
+	> li
+		padding 15px 0
+		border-bottom 1px solid border
+.catalog__span 
+	color color9
+	font-size 16px
+	display block
+.catalog__quest 
+	color color8
+	font-size 27px
+	display block
+	margin 15px 0
+.catalog__acord
+	width 100%
+.balance-block .button 
+	text-shadow none !important
+.file__pin
+	width 236px
+	margin 0 auto
+	position relative
+	.jq-file
+		opacity 0
+		position absolute !important
+		left 0px 
+		width 100%
+		top 0px
+.balance__link 
+	background: color31
+	color color8
+	text-decoration none
+	font-size 18px
+	padding 0px 12px
+	height 39px 
+	line-height @height
+	display inline-block
+	vertical-align: middle
+	&:first-child
+		border-radius 4px 0 0 4px
+		border-right 1px solid color34
+	&:nth-child(2)
+		border-radius 0 4px 4px 0
+		margin-right 10px
+.catalog-header__tabs_reset
+	margin-top 5px
+.catalog__acord
+	margin: 0px 10px 0px 0
+.catalog__acord_reset 
+	margin-top 20px
+.form__span 
+	font-size 16px 
+	color color8
+	vertical-align: middle
+.attache__file
+	font-size 16px 
+	color color8
+	margin 0 0 30px 0
+	display block
+	&:before
+		content ''
+		retinaSprite($sprite_pin_group)
+		vertical-align: middle
+		margin-right 10px
+		position relative 
+		top 0px
+		display inline-block
+.catalog__form 
+	background: color31
+	padding 30px 70px 40px 30px
+	margin 70px 0 0 0
+.catalog__form_filter 
+	width 300px
+	.placeholder
+		font-style normal
+.col__30 
+	width 200px
+.form__area 
+	resize none
+	border 1px solid color3
+	width 100%
+	height 150px
+	outline none
+	font-size 15px 
+	color color8
+	padding 10px 
+	box-sizing border-box
+	font-family ptsans
+.row_m-30 
+	margin 0 0 25px 0
+.b__banner 
+	font-size 22px
+	color color14
+	text-decoration none
+.b__baner-wrapper 
+	border-bottom 1px solid border
+	padding 0 0 20px 0	
+.form__input 
+	border 1px solid color3
+	padding 5px 10px
+	margin 0px
+	font-size 16px
+.banner__b
+	font-size 16px 
+	color color9
+.span__col_30 
+	width 320px
+.banner-wrapper 
+	background: color31
+	padding 20px 30px
+	margin 40px 0 0 0
+.banner__row 
+	&:first-child
+		margin-bottom 20px
+.banner__place 
+	font-size 22px
+	color color14
+	width 100% 
+	text-align: center
+	display inline-block
+	margin 40px 0 30px 0
+.banner__span1 
+	font-size 22px
+	color color14
+	display block
+.banner__col_title
+	color color14 
+	font-size 22px
+	text-align center
+.ac__icon 
+	font-size 18px 
+	color color29
+	font-weight bold
+	&:before
+		content ''
+		display inline-block
+		retinaSprite($sprite_active_group)
+		margin-right 10px
+.all__p 
+	font-size 16px
+.banner__img 
+	margin 15px 0
+	img 
+		width 100%
+.salon__col
+	width 48%
+.banner__col 
+	box-sizing border-box
+	padding 15px 60px
+	width 48%
+	border 2px solid border
+	.button 
+		padding-left 25px
+		padding-right 25px
+.banner__col.active
+	border 2px solid #f2aed5
+.banner__col:hover 
+	border 2px solid #f2aed5
+.pin__img 
+	background: color35
+	padding 20px 30px
+	margin 20px 0 40px 0
+	text-align: center
+.pin__title
+	color color29
+	font-weight bold 
+	font-size 18px
+	margin 0 0 10px 0
+	text-decoration: none
+	&:before 
+		content ''
+		retinaSprite($sprite_bigpin_group)
+		margin-right 10px
+.banner__show .button 
+	padding-left 30px
+	padding-right 30px
+.add__baner-wrapper_reset
+	border none
+.salon-content
+	.banner__row 
+		margin 0 0 15px 0
+		input
+			font-style italic
+.salon-content-wrapper 
+	padding 30px 0 0 0
+.pseudo-dropdown__list_salon
+	opacity 1 
+	visibility visible
+	left 0px
+	position relative
+	margin-top 10px
+	margin-bottom 0px
+	.pseudo-dropdown-list
+		height 300px
+.salon-metro-head
+	font-size 18px 
+	font-weight bold
+	background: color36
+	padding 12px 20px
+.form__area_salon 
+	font-style italic
+	height 90px
+	margin-top 15px
+.span__col_200
+	width 150px
+.form__input_tarif 
+	margin-right 5px
+.salon__time 
+	font-size 16px 
+	font-weight bold
+	width 100%
+.salon__timeline
+	margin-left 150px
+	padding-right 10px
+	margin-bottom 10px
+.salon-time-wrapper 
+	margin 15px 0 0 0
+.salon-content 
+	padding 0 0 40px 0
+.add__photo 
+	background: color31
+	padding 20px
+	margin 20px 0 20px 0
+	.button 
+		padding-left 15px
+		padding-right 15px
+	.catalog__span
+		font-style italic
+.col__48 
+	width 48%
+.button_pad 
+	padding-left 25px
+	padding-right 25px
+.label__a 
+	font-size 16px 
+	color color9
+	font-size italic
+	display block
+.label__img 
+	display block
+	margin 0 0 5px 0
+.label__checkbox 
+	display inline-block
+	margin-right 15px
+	span 
+		color color9
+		font-size 16px
+		margin 5px 0 0 5px
+		position relative 
+		top 5px
+	.jq-radio
+		width 14px
+		height @width
+	.jq-radio.checked .jq-radio__div
+		width 6px 
+		height @width
+		background: color29
+		margin 4px 0 0 4px
+.salon__row_label
+	margin 0px 0 40px 0 
+.all__banner 
+	color color8
+	font-size 18px
+.banner__img-wrap 
+	text-algin center
+	padding 50px 15px
+	box-sizing border-box
+	border 1px solid #cccccc
+	img 
+		display block 
+		margin 0 auto
+		max-width 100%
+		height auto
+.banner-wrap 
+	padding-top 50px
+.banner__col-2
+	width 48%
+.banner__bg
+	width 100%
+	display block
+	padding 4px
+	margin 4px 0
+	text-align: center
+	background: color31
+	box-sizing border-box
+.ban__stat2
+	color color8
+	font-size 16px
+	display inline-block
+	margin-left 5px
+.ban__stat
+	color color11
+	font-size 16px
+.banner__status 
+	margin 10px 0 10px 0
+.ban__link-wrap 
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size 16px 
+	margin-left 5px
+	a 
+		color black
+.button_banner 
+	text-transform: uppercase
+	font-size 14px
+	text-decoration: none
+	color black
+	height 25px 
+	line-height @height 
+	padding 0 35px
+	display inline-block
+.banner__but
+	margin 0px 0 10px 0
+.ban__row 
+	margin-bottom 50px
+.ban__stat2.active
+	color color29
+.ban__stat3
+	color #999999
+	font-style italic
+	font-size 16px
+	margin-left 5px
+.anket__type 
+	background: #f7f7f7
+	padding 13px 
+	box-sizing border-box
+	margin 0 0 20px 0
+.label__checkbox_top 
+	font-size 16px
+	margin-right 0px 
+	margin-left 20px
+	.jq-radio
+		margin-right 5px
+		background: white
+.salon__col_name
+	margin 10px 0 40px 0
+.salon__col input 
+	font-style italic
+.form__plus
+	font-weight bold
+	font-size 18px
+.ban__stat_reset 
+	font-style italic
+	font-size 15px
+.salon__timeline_reset 
+	padding 0px
+	position relative 
+	top -9px
+	margin-bottom 0px
+.ban__stat_italic 
+	font-style italic
+	display block
+.form__input_150 
+	width 150px
+.banner__add_plus
+	position relative
+	&:after
+		content '+'
+		color black
+		font-weight bold
+		font-family ptsans
+		font-size 18px
+		position absolute
+		right 10px
+.serv__row
+	.pseudo-dropdown-list_services
+		margin 20px 0 50px 0
+	.services-list__col
+		width 25%
+		margin-left 0px
+.add__photo_b-wrap
+	margin 0 0 15px 0
+.add__photo-link
+	font-size 18px
+	color color14
+	margin 0px 0 20px 0
+	display block
+.icon__plus
+	retinaSprite($sprite_newp_group)
+	display inline-block
+	margin-right 10px 
+	position relative 
+	top 7px
+.width__90
+	width 90px
+	margin-right 15px
+	position relative 
+	top 2px
+.filter__item-wrapper
+	width 90px
+.filter__item-wrapper_100 
+	width 100%
+	.jq-selectbox__select-text
+		width 100% !important
+		box-sizing border-box
+	.jq-selectbox__select
+		box-sizing border-box
+.rouble_m 
+	margin 0 10px
+.col__48_r
+	.label__checkbox
+		width 30%
+		margin 0px
+		img 
+			width 100%
+.salon__row
+	.catalog__item
+		margin: 1.5% 1.5% 4% 1.5%;
+.salon__items
+	.catalog__item 
+		width 48%
+		margin 0px
+		margin-bottom 50px
+.salon__col2 
+	width 50%
+.catalog__item.active 
+	.catalog-item-only-photo
+		opacity 0.6
+	.ban__stat2
+		color black 
+.catalog__item
+	.ban__stat2 
+		color color29
+.salon__col2
+	.button_banner 
+		width 100%
+		box-sizing border-box
+		margin 0 0 15px 0
+		text-align: center
+		padding 0px
+.salon__bottom 
+	padding 15px 0 0 0
+	.b-status 
+		height 25px 
+		line-height 25px
+		margin 0 0 15px 0
+.salon__col2_40
+	width 40%
+	.button_banner
+		width 100%
+		box-sizing border-box
+.ch__pass
+	color black 
+	font-size 16px
+	margin 10px 0 30px 0 
+	display inline-block
+.catalog__form_reset
+	padding 30px
+	margin 0px
+.form__input_268
+	width 298px
+.add__funds
+	background color37
+	padding 15px 30px
+	box-sizing border-box
+.funds 
+	font-size 17px
+	font-weight 100
+	color color8
+	line-height 26px
+.add__funds-col
+	width 50%
+.add__funds-row
+	background: color38
+	padding 40px 30px 30px 30px
+	margin 20px 0 0 0
+	.button 
+		padding 5px 30px
+.min-sum 
+	font-size 16px 
+	font-style italic
+	color  color9
+	width 100% 
+	text-align: center
+	display inline-block
+	margin 0 0 20px 0
+.span__col_150
+	width 100px
+.span__col_100
+	width 100px
+	padding-left 15px
+.button_border_none
+	text-shadow 1px 1px 1px rgba(17, 17, 17, 0.79);
+.catalog-header__link 
+	cursor pointer
+.captcha 
+	width 135px
+	display inline-block 
+	vertical-align: middle
+.form__input_142
+	display: inline-block
+	vertical-align: middle
+	width: 142px;
+	margin-left: 20px
+.form__input_focus
+	position relative
+	display block
+	input
+		border 1px solid #f6c5e3
+	span
+		display block
+		background: color40
+		display inline-block
+		font-family ptsans
+		width 250px 
+		top -5px
+		color #666666
+		font-size 16px 
+		font-style italic
+		border-radius (5px)
+		height 40px 
+		line-height @height
+		padding 0 20px
+		box-sizing border-box
+		position absolute
+		right 0px
+		&:before
+			position absolute
+			left -6px
+			top 15px
+			content ''
+			border-right 6px solid color39
+			border-bottom 4px solid transparent
+			border-top 4px solid transparent
+.reg-b 
+	.button 
+		width 198px
+.form__tooltip 
+	display none
+.form__input_success
+	position relative
+	display block
+	input 
+		border 1px solid #c7eeb9
+	&:after
+		content ''
+		retinaSprite($sprite_gok_group)
+		display inline-block
+		position absolute
+		left 310px
+		top 8px
+.form__input_error
+	&:after
+		content ''
+		retinaSprite($sprite_bclose_group)
+		display inline-block
+		position absolute
+		left 310px
+		top 9px
+	position relative
+	display block
+	input 
+		border 1px solid #dd0000
+	span
+		display block
+		background: color39
+		display inline-block
+		font-family ptsans
+		width 250px 
+		top -5px
+		color #dd0000
+		font-size 16px 
+		font-style italic
+		border-radius (5px)
+		height 40px 
+		line-height @height
+		padding 0 20px
+		box-sizing border-box
+		position absolute
+		right 0px
+		&:before
+			position absolute
+			left -6px
+			top 15px
+			content ''
+			border-right 6px solid color39
+			border-bottom 4px solid transparent
+			border-top 4px solid transparent
+.header__date 
+	font-size 16px 
+	color color15
+	display block
+	margin-top 5px
+.article-wrapper
+	border-top 1px solid border
+	margin-top 20px
+	padding-top 25px
+	ul 
+		padding-left 2px
+		margin 20px 0
+		li 
+			color color29
+			line-height 25px
+		span 
+			color color9
+	h1, h2, h3, h4, h5, h6 
+		margin 30px 0 25px 0
+		font-family: ptserif
+		font-weight 300
+		font-style italic
+	h3 
+		font-size 24px
+	h4 
+		font-size 22px 
+	p 
+		font-size 16px
+		color color9
+		margin 0px
+		line-height 22px
+.article__img 
+	float left
+	margin-right 20px
+	margin-bottom 20px
+	position relative 
+	top 4px
+	max-width 100%
+.same-articles__title
+	font-family ptserif
+	font-weight 300
+	font-style italic
+	font-size 30px
+	margin 30px 0 20px 0
+.attache__input
+	position relative
+	&:hover a
+		color color29 
+	.jq-file 
+		position absolute !important
+		z-index 11
+		opacity 0
+		top 0px
+		left 0px
+.same__col
+	width 31.8%
+	display inline-block
+	vertical-align: top
+	margin-right 2.3%
+	&:last-child
+		margin-right 0
+	&:hover img 
+		transform scale(1.1)
+		transition ease-in-out .3s
+	img
+		width 100%
+		display block
+		height auto
+		transition ease-in-out .3s
+	.img__link-wrapper 
+		margin 0 0 10px 0
+	a 
+		display block
+		overflow hidden
+		font-size 20px 
+		color color14
+		text-decoration: none
+		font-weight bold
+		line-height 18px
+		line-height value 
+.jsResponsive
+	overflow hidden
+	body 
+		overflow hidden
+.add__funds_reset 
+	margin-top 30px
+	padding 5px 30px
+.catalog__quest_reset 
+	font-size 24px
+	margin 30px 0
+.tarif__span
+	font-size 18px 
+	font-style italic
+	color color9
+.tarif__bold 
+	font-size 18px 
+	font-weight bold 
+	color color8
+	display block
+	margin 10px 0 0 0
+.tarif__bold_reset
+	display inline-block
+	margin 0px 0px 0 20px
+.tarif__col
+	.button
+		padding-left 25px
+		padding-right 25px
+		box-shadow none
+		margin 25px 0 0 0
+.tarif__row 
+	border 1px solid #e495c2
+	border-radius (3px)
+	padding 15px 20px 10px 20px
+	position relative
+	margin-bottom 20px
+	.ac__icon 
+		margin 30px 0 0 0
+		position relative 
+		left -10px
+.tarif__icon3
+	margin 0 0 5px 0
+.tarif__icon2
+	margin 0 0px 25px 0
+.tarif__row.active
+	background #ffeff8
+.tarif__icon1 
+	margin 0 0px 15px 0
+.tarif__top
+	border 2px solid yellow
+	margin-top 60px
+	&:after 
+		content 'ТОП-тариф'
+		background: yellow
+		font-size 16px 
+		position absolute
+		left 10px
+		top -38px
+		font-weight bold
+		padding 8px 25px
+		border-radius 4px 4px 0 0
+.filters__top
+	display none
+.page__filters
+	position relative
+.filters__global-hide-button
+	width 177px
+	left 42%
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.19);
+	border-top 1px solid #5d043b
+	cursor pointer
+.filter__sp2
+	display none
+.page__filters.active 
+	.filters__top
+		display block
+	.filter__sp2
+		display inline-block
+	.filter__sp1 
+		display none
+.main-content
+	padding-top 48px
+.bread-crumbs__separator
+	margin 0 5px
+.header__metro_450
+	.pseudo-dropdown-list
+		height 450px
+.add__color 
+	color color29
+// .main-content_17
+// 	padding-top 17px
+.worksheet-form
+	border-bottom 1px solid border
+	padding 15px 0
+.worksheet__input
+	margin-right 9px
+.filter__item-wrapper_127
+	width: 127px;
+	margin-left 10px
+.italic-st 
+	font-style italic
+	color color11
+.label__checkbox_worksheet
+	font-size 16px
+	margin 0 15px
+	&:last-child
+		margin-right 0px
+  .jq-checkbox
+		margin-right 10px
+.ta-right 
+	text-align right
+.label__checkbox_big
+	font-size 16px
+	margin 0px		
+.label__big
+	.jq-checkbox
+		width 20px 
+		height @width
+	.jq-checkbox.checked .jq-checkbox__div:before
+		border-left: 4px solid #b0377d;
+		border-bottom: 4px solid #b0377d;
+		bottom: 8px;
+		left: 2px;
+		width: 13px;
+		height: 6px;
+	.checked
+		border 1px solid color29
+.worksheet-stat
+	padding 20px 0
+	.button 
+		box-shadow none
+		padding: 0px 15px;
+		height 35px 
+		line-height @height
+.button_vip 
+	&:before
+		content ''
+		retinaSprite($sprite_crown_group)
+		display inline-block
+		margin-right 10px
+		position relative 
+		top 5px
+.worksheet__col
+	margin-right 20px
+	width 163px
+.worksheet__img
+	position relative 
+	img 
+		width 100% 
+		height auto
+	label 
+		position absolute
+		left 5px 
+		top @left
+		z-index 1
+.worksheet-item
+	padding 15px
+	width 48.5%
+	box-sizing border-box
+	border 2px solid transparent
+	margin-bottom 25px
+	.salon__bottom
+		border-top 1px solid border
+		margin-top 17px
+	.salon__col2 .button_banner:nth-child(2)
+		margin 0px
+	.catalog-item-info__phone
+		margin-top 10px
+		margin-bottom 13px
+	.salon__col2
+		width 50%
+		&:nth-child(2)
+			padding-left 20px
+			box-sizing border-box
+.worksheet-item_vip
+	border 2px solid orange
+	.ban__stat2 
+		color color24
+.worksheet_50
+	width 50%
+	&:nth-child(2)
+		box-sizing border-box
+		padding-left 20px
+		height 286px
+.worksheet__name
+	font-size 22px
+	color color14
+	text-decoration: none
+.tarif__place
+	background: color31
+	padding 10px 15px 
+	box-sizing border-box
+	border-radius (4px)
+	li 
+		margin-bottom 8px
+		&:last-child
+			margin-bottom 0
+.tarif__pl1
+	font-size 16px
+	color color9
+	width 60px
+	display inline-block
+.tarif__pl2
+	font-size 16px
+	font-weight bold
+.change__tarif 
+	font-size 16px
+	color black
+	margin 17px 0
+	display inline-block
+.button_vip-big
+	box-shadow none
+	font-size 22px
+	height 60px 
+	line-height @height
+	padding 0px 8px
+	width 100%
+	text-align center
+	box-sizing border-box
+	margin-bottom 7px
+	display inline-block
+	&:before 
+		content ''
+		retinaSprite($sprite_bigcrown_group)
+		display inline-block
+		margin-right 10px
+		position relative
+		top 7px
+.button_vip-stat
+	box-shadow none
+	border 2px solid orange
+	padding 0px 
+	width 100%
+	display block
+	height 60px 
+	line-height @height
+.vip__icon 
+	retinaSprite($sprite_orange_group)
+	display inline-block
+	margin-right 0px
+	vertical-align: middle
+	position relative 
+	top -4px
+.vip__st 
+	display inline-block
+	vertical-align: middle
+	line-height 22px
+	position relative
+	top -4px
+.disable__vip
+	color color9
+	font-size 16px
+.vip__span
+	display block
+	font-size 22px
+.vip__span1
+.vip__span2
+	display block
+	text-align left
+.vip__span2 
+	font-size 22px
+.worksheet-item_disabled
+	.worksheet__img img 
+		opacity 0.1

@@ -26,7 +26,7 @@
           <div class="header__top">
             <div class="header__inner">
               <div class="header__logo"><a href="index.html" class="logo"><img src="img/header/logo.png" alt=""></a></div>
-              <div class="header__metro">
+              <div class="header__metro header__metro_450">
                 <div class="header-metro">
                   <div class="pseudo-dropdown pseudo-dropdown_checkbox pseudo-dropdown_desktop">
                     <div class="pseudo-dropdown__top">
@@ -224,14 +224,14 @@
                   </div>
                 </div>
               </div>
-              <div class="header__login"><a href="" class="header-login_fav">Избранное 0</a>
+              <div class="header__login logined"><a href="" class="header-login_fav">Избранное 0</a>
                 <div class="header-login header__login_reset"><a href="lk.html" class="header-login__item">
                     <svg class="icon icon_user">
                       <use xlink:href="img/icons.svg#user"></use>
                     </svg><span class="header-login__text active">Личный кабинет</span></a><a href="#" data-remodal-target="modal1" class="header-login__item">
                     <svg class="icon icon_enter">
                       <use xlink:href="img/icons.svg#enter"></use>
-                    </svg><span class="header-login__text">Вход</span></a></div>
+                    </svg><span class="header-login__text">Выход</span></a></div>
                 <div data-remodal-id="modal1" class="modal">
                   <div class="modal__wrapper">
                     <button data-remodal-action="close" class="modal__close">
@@ -492,7 +492,7 @@
         </header>
       </div>
       <div class="page__filters">
-        <div class="filters">
+        <div class="filters filters__top">
           <div class="filters__inner">
             <div class="filters__row">
               <div class="filters__row__coll__left">
@@ -1177,14 +1177,15 @@
                 </div>
               </div>
               <div class="clear"></div>
-            </div><p></p><a href="#" data-show="Развернуть поиск" data-hide="Скрыть поиск" class="filters__global-hide-button">Развернуть поиск </a>
+            </div>
           </div>
         </div>
+        <div class="filters__global-hide-button"> <span class="filter__sp1">Развернуть поиск </span><span class="filter__sp2">Свернуть поиск</span></div>
       </div>
       <div class="page__main">
         <div class="layout layout_sidebar_right">
           <div class="layout__content layout__content_reset">
-            <div class="main-content">
+            <div class="main-content main-content_17">
               <div class="main-content__catalog-header">
                 <div class="catalog-header catalog-header_reset">
                   <h1 class="catalog-header__title">Личный кабинет</h1>
@@ -1192,7 +1193,7 @@
                     <button class="button__sub">
                       <div class="sandwitch"><span class="sw-topper"></span><span class="sw-bottom"></span><span class="sw-footer"></span></div>
                     </button>
-                    <div class="row between column-r column-r-wrapper animated fadeIn"><a href="izbrannoe.html" class="catalog-header__link">Избранное</a><a href="izbrannoe2.html" class="catalog-header__link active">Мои отзывы</a><a href="izbrannoe3.html" class="catalog-header__link">Настройки профиля</a></div>
+                    <div class="row between column-r column-r-wrapper animated fadeIn"><a href="izbrannoe.html" class="catalog-header__link">Избранное</a><a href="izbrannoe2.html" class="catalog-header__link active">Мои отзывы</a><a href="settings.html" class="catalog-header__link">Настройки профиля</a></div>
                   </div>
                   <div class="catalog-header__salons"><a href="" class="catalog-header__slink active">Анкеты</a><a href="" class="catalog-header__slink">Салоны</a></div>
                 </div>
@@ -1334,6 +1335,7 @@
     </div>
     <script src="js/plugins.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="js/jquery.navgoco.min.js"></script>
     <script src="js/all.js"></script>
   </body>
 </html>

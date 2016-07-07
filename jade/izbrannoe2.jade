@@ -24,12 +24,12 @@ html(lang="ru", class="no-js")
     p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
     <![endif]-->
     .page__content
-      include header2.jade
+      include header3.jade
       include filters.jade
       .page__main
         .layout.layout_sidebar_right
           .layout__content.layout__content_reset
-            .main-content
+            .main-content.main-content_17
               .main-content__catalog-header
                 .catalog-header.catalog-header_reset
                   h1.catalog-header__title Личный кабинет
@@ -42,7 +42,7 @@ html(lang="ru", class="no-js")
                     .row.between.column-r.column-r-wrapper.animated.fadeIn
                       a(href="izbrannoe.html").catalog-header__link Избранное
                       a(href="izbrannoe2.html").catalog-header__link.active Мои отзывы
-                      a(href="izbrannoe3.html").catalog-header__link Настройки профиля
+                      a(href="settings.html").catalog-header__link Настройки профиля
                   .catalog-header__salons
                     a(href="").catalog-header__slink.active Анкеты
                     a(href="").catalog-header__slink Салоны
@@ -128,6 +128,4 @@ html(lang="ru", class="no-js")
               a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
             .clear
     include popup.jade
-    script(src="js/plugins.min.js")
-    script(src="js/main.min.js")
-    script(src="js/all.js")
+    include scripts.jade
