@@ -1,0 +1,94 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header2.jade
+      include filters2.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_reset
+            .main-content
+              .main-content__catalog-header
+                .catalog-header.catalog-header_reset
+                  h1.catalog-header__title Регистрация
+              .main-content__catalog.catalog__acord-wrap
+                .catalog.catalog__acord.catalog__acord_reset
+                  .catalog__form.catalog__form_reset
+                    form(action="")
+                      .row.row_m-30
+                        .col__30
+                          span.form__span Тип аккаунта
+                        .col__70.auto__width.prof__but
+                          span.catalog-header__link.active Рекламодатель
+                          span.catalog-header__link Пользователь
+                      .row.row_m-30
+                        .col__30
+                          span.form__span Ник на сайте:
+                        .col__70.auto__width
+                          label().reg__label.form__input_focus
+                            span.form__tooltip.animated.fadeInUp Имя отображаемое на сайте
+                            input(type="text").form__input.form__input_268
+                      .row.row_m-30
+                        .col__30
+                          span.form__span Пароль:
+                        .col__70.auto__width
+                          label().reg__label.form__input_success
+                            input(type="text").form__input.form__input_268
+                      .row.row_m-30
+                        .col__30
+                          span.form__span E-mail:
+                        .col__70.auto__width
+                          label().reg__label.form__input_error
+                            span.form__tooltip.animated.fadeInUp Пожалуйста заполните поле! 
+                            input(type="text").form__input.form__input_268
+                      .row.row_m-30
+                        .col__30
+                          span.form__span Введите символы:
+                        .col__70.auto__width
+                          img(src="img/captcha.jpg", alt="").captcha
+                          input(type="text").form__input.form__input_142
+                      .row.center-c.reg-b
+                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Зарегистрироваться
+          include sidebar.jade
+      .page__footer
+        footer.footer
+          .footer__inner
+            .footer__menu
+              .footer-menu
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Индивидуалки
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Массажистки
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Салоны
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Интим-карта
+            .footer__button
+              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
+            .clear
+    include popup.jade
+    include scripts.jade

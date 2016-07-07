@@ -1,0 +1,116 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header2.jade
+      include filters.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_reset
+            .main-content.main-content_17
+              .main-content__catalog-header
+                .catalog-header.catalog-header_reset
+                  .row.between.header__title-wrap
+                    h1.catalog-header__title Личный кабинет
+                    .balance-block
+                      span.balance__link Баланс: 250p
+                      span.balance__link Расход в день: 112p
+                      a(href="").balance__add.button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Пополнить счет
+                  .catalog-header__tabs.catalog-header__tabs_reset
+                    button.button__sub
+                      .sandwitch
+                        span.sw-topper
+                        span.sw-bottom
+                        span.sw-footer
+                    .row.between.column-r.column-r-wrapper.animated.fadeIn
+                      a(href="tarif.html").catalog-header__link Мои анкеты
+                      a(href="salon3.html").catalog-header__link Салоны
+                      a(href="banners.html").catalog-header__link.active Баннеры
+                      a(href="settings.html").catalog-header__link Настройки профиля
+                      a(href="help.html").catalog-header__link Помощь
+              .main-content__catalog.catalog__acord-wrap
+                .catalog.catalog__acord
+                  .catalog__help
+                    .b__baner-wrapper
+                      a(href="").b__banner + Добавить баннер
+                    .banner-wrapper
+                      .row.center.banner__row.banner__column
+                        span.banner__b.span__col_30.banner__b_100 Название баннера:
+                        input.form__input(type="text")
+                      .row.center.banner__row.banner__column
+                        span.banner__b.span__col_30.banner__b_100 Ссылка куда ведёт баннер:
+                        input.form__input(type="text")
+                    span.banner__place Выберите место расположение баннера
+                    .banner__cols.row.between
+                      .banner__col.active
+                        .banner__col_title Подвал сайта в ротации
+                          span.banner__span1 (728x90)
+                        .banner__img
+                          img(src="img/commercial/banner1.png", alt="")
+                        .banner__footer.row.between.center
+                          .banner__left
+                            span.banner__span1 300 руб/сутки
+                            span.all__p (все стрнацы)
+                          .banner__right
+                            span.ac__icon.row.center Выбрано
+                      .banner__col
+                        .banner__col_title Правая колонка в ротации
+                          span.banner__span1 (250x250)
+                        .banner__img
+                          img(src="img/commercial/banner2.png", alt="")
+                        .banner__footer.row.between.center
+                          .banner__left
+                            span.banner__span1 300 руб/сутки
+                            span.all__p (все стрнацы)
+                          .banner__right
+                            a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Выбрать
+                    .pin__img
+                      .file__pin
+                        input(type="file")
+                        a(href="").pin__title.row.center-c Прикрепить картинку 
+                      .pin__text.catalog__span Принимаются файлы форматов  GIF и JPG размером до 50 кБ, размером, который соответствует выбраному месторасположению. 
+                    .row.center-c.banner__show
+                      a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Запустить показы банера
+          include sidebar.jade
+      .page__footer
+        footer.footer
+          .footer__inner
+            .footer__menu
+              .footer-menu
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Индивидуалки
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Массажистки
+                .footer-menu__tab
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Салоны
+                  .footer-menu__item
+                    a(href="#").footer-menu__link Интим-карта
+            .footer__button
+              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
+            .clear
+    include popup.jade
+    include scripts.jade
