@@ -264,6 +264,9 @@
   }
 }
 @media (max-width: 1020px) {
+  .main-content__banner-wrapper {
+    margin-right: 0px;
+  }
   .worksheet-item {
     width: 48.5%;
   }
@@ -491,9 +494,6 @@
   .banner__col {
     padding: 15px;
   }
-  .label__checkbox {
-    margin-bottom: 15px;
-  }
   .label__checkbox_top {
     margin-left: 8px;
   }
@@ -520,6 +520,15 @@
   }
 }
 @media (max-width: 774px) {
+  .photo__check {
+    margin: 0px;
+  }
+  .check__column {
+    flex-direction: column !important;
+  }
+  .check__column .label__a {
+    text-align: center;
+  }
   .form__input_success:after,
   .form__input_error:after {
     left: auto;
@@ -975,6 +984,13 @@
   }
 }
 @media (max-width: 736px) {
+  .map-content {
+    height: 350px;
+    overflow: scroll;
+  }
+  .label__checkbox {
+    margin-bottom: 15px;
+  }
   .balance-block {
     display: none;
   }
@@ -999,6 +1015,15 @@
   }
 }
 @media (max-width: 670px) {
+  .pin__img {
+    flex-direction: column;
+  }
+  .actual-baner {
+    text-align: center;
+  }
+  .file__pin-banner {
+    margin-bottom: 15px;
+  }
   .same__col {
     width: 100%;
     margin: 0 0 20px 0;
@@ -1042,6 +1067,15 @@
   }
   .add__photo .col__48:first-child {
     margin: 0 0 15px 0;
+  }
+}
+@media (max-width: 640px) {
+  .header-login__balance {
+    display: none;
+  }
+  .header__lang-selector {
+    right: -10px;
+    z-index: 1;
   }
 }
 @media (max-width: 635px) {
@@ -1170,7 +1204,6 @@
   .catalog-item_list {
     padding: 0px;
   }
-  .header__login,
   .catalog-view__title,
   .catalog-view__item_list {
     display: none;

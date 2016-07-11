@@ -146,6 +146,9 @@
                           input(type="checkbox", name="input-name")#input-name
                         span.form-item__label Калининград
         .header__login.logined
+          .header__lang-selector
+            span.span__ru ru
+            span.span__eng.lhidden eng
           //- a(href="").header-login_fav Избранное 0 раскоментировать для избранного
           .header-login__balance
             span Баланс 250р
@@ -155,7 +158,7 @@
               svg.icon.icon_user
                 use(xlink:href="img/icons.svg#user")
               span.header-login__text.active Личный кабинет
-            a(href="#" , data-remodal-target="modal1").header-login__item
+            a(href="#").header-login__item
               svg.icon.icon_enter
                 use(xlink:href="img/icons.svg#enter")
               span.header-login__text Выход

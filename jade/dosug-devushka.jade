@@ -193,13 +193,17 @@ html(lang="ru", class="no-js")
                           .product-info-content-tags__item Расслабляющий
                           .product-info-content-tags__item Эротический
                       .product-info-content__title 
+                        .content-title.content-title_line Расположение
+                      .product-info-content__map-wrapper
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=T3L_pfto0HdGvcZFGsmA2MxUwGBQNIKc&width=100%&height=350&lang=ru_RU&sourceType=constructor&scroll=true"></script>
+                      .product-info-content__title 
                         .content-title.content-title_line Отзывы
                       .product-info-content__authorization 
                         .product-info-content-authorization 
                           .product-info-content-authorization__text Оставлять отзывы могут только авторизированые пользователи
                           .product-info-content-authorization__buttons 
                             a(href="").button.button_color_violet.button_style_rounded.button_size_sm.button_style_bold Зарегистрироваться
-                            a(href="").button.button_color_violet.button_style_rounded.button_size_sm.button_style_bold Авторизироваться
+                            a(href="").button.button_color_violet.button_style_rounded.button_size_sm.button_style_bold.jsAuth Авторизироваться
                   .clear
                   .product-info__offers
                     .product-offers
@@ -235,6 +239,7 @@ html(lang="ru", class="no-js")
                               .product-offers-list-item__bottom
                                 .product-offers-list-item__name Альбина
                                 .product-offers-list-item__tel +7 956-158-87-24
+                  include banner.jade
           include sidebar.jade
       include footer.jade
     include popup.jade

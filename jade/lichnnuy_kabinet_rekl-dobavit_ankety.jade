@@ -55,7 +55,7 @@ html(lang="ru", class="no-js")
                   .catalog__help
                     .b__baner-wrapper.add__baner-wrapper_reset
                       a(href="").b__banner.add__color + Добавить анкету
-                    .salon__row.row.between.anket__type
+                    .salon__row.row.between.anket__type.center
                       .salon__col
                         span.ban__stat Тип анкеты:
                         label.label__checkbox.radio.label__checkbox_top
@@ -64,9 +64,16 @@ html(lang="ru", class="no-js")
                         label.label__checkbox.radio.label__checkbox_top
                           input(type="radio")
                           | Массажистка
-                      .salon__col
-                        span.ban__stat Привязать к салону:
-                        span.ban__stat3 У Вас нет добавленных салонов
+                      .salon__col.row.between.center
+                        span.ban__stat.salon__target Привязать к салону:
+                        .filters__item.auto.auto__width
+                          .filter__item-wrapper.filter__item-wrapper_100
+                            .form-item.form-item_type_select.form-item_style_default
+                              .form-item__input
+                                select(name="select" , data-placeholder="Выберите салон")#select
+                                  option
+                                  option(value="0" , label="Вопрос1") Вопрос1
+                                  option(value="1" , label="Вопрос2") Вопрос2
                     .salon__row.row.between
                       .salon__col.salon__col_name
                         .row.center.banner__row
@@ -275,6 +282,11 @@ html(lang="ru", class="no-js")
                                         .form-item__input
                                           input(type="checkbox", name="input-name")#input-name
                                         span.form-item__label Калининград
+                    .salon__row.salon__row_margin
+                      .product-info-content__title 
+                        .content-title.content-title_line Расположение
+                      .product-info-content__map-wrapper
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=T3L_pfto0HdGvcZFGsmA2MxUwGBQNIKc&width=100%&height=350&lang=ru_RU&sourceType=constructor&scroll=true"></script>
                     .salon__row.row.between
                       .salon__col
                         .product-info-content__title
@@ -582,8 +594,14 @@ html(lang="ru", class="no-js")
                               span.icon__plus
                               | Добавить проверочное фото
                             span.catalog__span Фотография девушки из анкеты с листком бумаги, на котором от руки написана свежая дата.
+                          .salon__row.salon__row_label.row.center.check__column
+                            span.photo__check Ваше проверочное фото
+                            .label__checkbox.radio
+                              img(src="img/checkbox/check1.jpg", alt="").label__img
+                              a(href="").label__a Удалить
                     .row.center-c
                       a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none.button_pad Сохранить анкету
+                include banner.jade
           include sidebar.jade
       .page__footer
         footer.footer

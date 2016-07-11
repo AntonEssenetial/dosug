@@ -47,7 +47,7 @@ html(lang="ru", class="no-js")
                     a(href="").catalog-header__slink.active Анкеты
                     a(href="").catalog-header__slink Салоны
               .main-content__catalog
-                .catalog.catalog_tiles
+                .catalog.catalog_tiles.catalog_izb
                   .catalog__item
                     .catalog-item.catalog-item_tiles
                       .catalog-item__top
@@ -70,7 +70,7 @@ html(lang="ru", class="no-js")
                             .catalog-item-info
                               .catalog__star-wrapper
                                 a(href="#").catalog-item-info__name Елизаветочка
-                                span.add__favorite
+                                span.remove__favorite
                               .catalog-item-info__phone +7 908-659-65-95
                               a(href="#").catalog-item-info__metro Проспект Генерала Ушакова
                               .catalog-item-info__attributes
@@ -687,6 +687,8 @@ html(lang="ru", class="no-js")
                       a(href="#", aria-label="Last").pagination__link 24
                     li.pagination__item.pagination__arrow.pagination__arrow_next
                       a(href="#", aria-label="Next").pagination__link
+              .main-content__banner-wrapper
+                include banner.jade
           include sidebar.jade
       .page__footer
         footer.footer

@@ -49,13 +49,19 @@ $(document).ready(function($) {
   $('.b-popup-wrapper').mouseup(function (e) {
     var container = $(".b-popup-wrapper");
     if (container.has(e.target).length === 0){
-        container.removeClass('jsActive')();
+        container.removeClass('jsActive')
+        $('.form__mail').removeClass('jsHidden');
+        $('.recover__password').removeClass('jsHidden');
+        $('.rec-log').removeClass('jsVisible')();
     }
   });
   $('.popup__close').click(function(event) {
     $('.b-popup-wrapper').removeClass('jsActive')
+    $('.form__mail').removeClass('jsHidden');
+    $('.recover__password').removeClass('jsHidden');
+    $('.rec-log').removeClass('jsVisible')
   });
-  $('.header-login__item, .log__button').click(function(event) {
+  $('.log__button, .jsAuth').click(function(event) {
     $('.b-popup-wrapper').addClass('jsActive')
     return false
   });
@@ -68,4 +74,12 @@ $(document).ready(function($) {
     $('.search__button-wrapper').toggleClass('active');
     return false;
   });
+
+  $('.recover__password').click(function(event) {
+    $('.form__mail').addClass('jsHidden');
+    $(this).addClass('jsHidden');
+    $('.rec-log').addClass('jsVisible')
+    return false;
+  });
+
 });

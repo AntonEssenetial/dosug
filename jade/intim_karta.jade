@@ -1,0 +1,69 @@
+doctype
+html(lang="ru", class="no-js")
+  head 
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="icon", type='image/x-icon', href="favicon.ico")
+    link(href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+    title Dosug97.com
+    script.
+      (function(H)
+      {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    <!--[if lt IE 9]>
+    script(src="js/jquery-1.11.3.min.js")
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    script(src="js/jquery-2.1.4.min.js")
+    <!--<![endif]-->
+  body.page
+    <!--[if lt IE 8]>
+    p.browsehappy Вы используете<strong>устаревший</strong> браузер. Пожалуйста<a href="http://browsehappy.com" target="_blank">обновите браузер</a> для лучшего отображения сайта.</p>
+    <![endif]-->
+    .page__content
+      include header.jade
+      include filters2.jade
+      .page__main
+        .layout.layout_sidebar_right
+          .layout__content.layout__content_75
+            .main-content
+              .main-content__catalog-header.main-content__catalog-header_product-page
+                .catalog-header
+                  h1.catalog-header__title Все проститутки Москвы
+                  span.catalog__span.catalog__span_intim Чтобы узнать подробную информацию о девушке, кликните на метку на карте.
+              .main-content__articles
+                .map-wrapper
+                  .map-content
+                    .ya-map-wrap
+                      img(src="img/map/map.jpg", alt="").map-img
+                      .marker-content.marker1
+                        .icon
+                        .intim-item.animated.zoomIn.jsVisible
+                          a(href="").intim-title
+                            img(src="img/map/girl4.jpg", alt="")
+                            | Елизаветочка
+                          .small-girls-item__price
+                            <b>3500</b>
+                            .rouble 
+                            | /час
+                          .close-item Закрыть
+                      .marker-content.marker2
+                        .icon
+                        .intim-item.intim-item_salon.animated.zoomIn.jsVisible
+                          a(href="").intim-title
+                            img(src="img/salon/salon1.jpg", alt="")
+                            | Cалон Very beautiful <br> girls
+                          .row.between.center
+                            .small-girls-item__price
+                              <b>3500</b>
+                              .rouble 
+                              | /час
+                            .close-item Закрыть
+                include banner.jade
+          include sidebar.jade
+      include footer.jade
+    include popup.jade
+    include scripts.jade

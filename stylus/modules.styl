@@ -3013,6 +3013,14 @@ input
 	float right
 	position relative 
 	top -3px
+.remove__favorite
+	cursor pointer
+	retinaSprite($sprite_remove_group)
+	display none
+	float right
+	position relative 
+	top -3px
+	display inline-block
 .catalog-item-info__name
 	display block
 .catalog__star-wrapper
@@ -3945,7 +3953,7 @@ body .layout__content_75
 		top 0px
 		left 0px
 .same__col
-	width 31.8%
+	width 31.3%
 	display inline-block
 	vertical-align: top
 	margin-right 2.3%
@@ -4233,3 +4241,190 @@ body .layout__content_75
 .worksheet-item_disabled
 	.worksheet__img img 
 		opacity 0.1
+body 
+	min-width 300px
+.jsHidden
+	display none
+.button
+	.str-log
+		display block
+		font-size 14px
+		text-transform: uppercase
+		color white
+	.str-rec 
+		display none
+		font-size 14px
+		text-transform: uppercase
+		color white
+.button.jsVisible 
+	.str-log 
+		display none 
+	.str-rec 
+		display block
+.salon__target
+	margin-right 10px
+.catalog_izb
+	.add__favorite
+		display inline-block
+	.catalog-item-info__name
+		width: 82%;
+		float: left;
+.main-content__banner-wrapper
+	margin 0 10px 0 0
+.main-content__banner
+	border 1px solid border
+	text-align: center
+	max-width 100%
+	padding 20px
+	margin 50px 0px 0 0
+	a 
+		display block
+		img 
+			max-width 100%
+			width 100% 
+			height auto
+.actual-baner 
+	font-size 22px
+	color color29
+	text-align left
+	margin-bottom 10px
+	display inline-block
+	width 100%
+.file__pin-banner 
+	display none
+.pin__img.banner__added 
+	.file__pin-banner 
+		display block
+.photo__check
+	font-size 16px 
+	color color9
+	margin-right 40px
+	display block
+	position relative 
+	top -10px
+.header__lang-selector
+	position: absolute;
+	right: 290px;
+	width: 68px;
+	top: -13px;
+	.filters__input_large
+		width: 100%;
+		margin: 0px;
+	.jq-selectbox__select
+		border-radius: 0 0 5px 5px;
+	.jq-selectbox.dropdown.opened
+		.jq-selectbox__select
+			border-radius: 0px
+.header__lang-selector
+	background: #940d59;
+	padding: 5px 3px 5px 10px;
+	border-radius: 0 0 7px 7px;
+.span__ru
+.span__eng 
+	font-size 16px 
+	text-transform: uppercase
+	color white 
+	display block
+	cursor pointer
+.span__ru
+	&:before
+		content ''
+		display inline-block
+		position relative 
+		top 2px
+		margin-right 10px
+		retinaSprite($sprite_ru_group)
+.span__eng
+	&:before
+		content ''
+		display inline-block
+		position relative 
+		top 2px
+		margin-right 10px
+		retinaSprite($sprite_eng_group)
+.lhidden 
+	display none
+.catalog__span_intim
+	margin-top 10px
+.map-wrapper
+	padding 20px 
+	border 1px solid border
+	position relative
+.marker1
+	.icon
+		retinaSprite($sprite_marker_group)
+		display block
+	position absolute
+	top 50% 
+	left 300px
+	cursor pointer
+.marker2
+	.icon
+		retinaSprite($sprite_home_group)
+		display block
+	position absolute
+	top 45% 
+	left 350px
+	cursor pointer
+.intim-item 
+	background: white 
+	padding 15px 15px 5px 15px
+	border 1px solid color42
+	position: absolute;
+	top: -88px;
+	left: -172px;
+	display none
+	img 
+		display block
+	&:after 
+		content ''
+		background: url(../img/tr.png) no-repeat center 
+		position absolute
+		width 15px 
+		height 20px 
+		right -13px
+		top 35%
+		display block
+.close-item
+	color color11
+	font-size 12px
+	text-transform lowercase
+	text-decoration: underline
+	cursor pointer
+.intim-title 
+	text-decoration: none 
+	color color14
+	img 
+		margin-bottom 5px
+		display block
+.intim-item_salon
+	right -225px
+	top -60px
+	left auto
+	&:after 
+		content ''
+		background: url(../img/tr.png) no-repeat center 
+		position absolute
+		width 15px 
+		height 20px 
+		left -13px
+		top 35%
+		display block
+		transform: rotateZ(180deg);
+	img 
+		width 170px
+		height auto
+	a 
+		display block
+.jsVisible.intim-item
+	display block
+.map-content
+	overflow hidden
+	position relative
+.ya-map-wrap
+	width 840px
+.product-info-content__map-wrapper
+	margin-top 15px
+.salon__row_margin
+	margin-bottom 40px
+	

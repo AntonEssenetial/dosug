@@ -396,85 +396,9 @@ html(lang="ru", class="no-js")
                       a(href="#", aria-label="Last").pagination__link 24
                     li.pagination__item.pagination__arrow.pagination__arrow_next
                       a(href="#", aria-label="Next").pagination__link
-          .layout__sidebar
-            aside.sidebar
-              .sidebar__section
-                .small-girls
-                  .small-girls__item
-                    a(href="#").small-girls-item
-                      .small-girls-item__image
-                        img(src="img/sidebar/girl1.jpg" alt="Елизавета")
-                      .small-girls-item__name Елизавета
-                      .small-girls-item__price
-                        <b>3000</b>
-                        .rouble 
-                        | /час
-                  .small-girls__item
-                    a(href="#").small-girls-item
-                      .small-girls-item__image
-                        img(src="img/sidebar/girl2.jpg" alt="Наташа")
-                      .small-girls-item__name Наташа
-                      .small-girls-item__price
-                        <b>3500</b>
-                        .rouble 
-                        | /час
-                  .small-girls__item
-                    a(href="#").small-girls-item
-                      .small-girls-item__image
-                        img(src="img/sidebar/girl3.jpg" alt="Стэлла")
-                      .small-girls-item__name Стэлла
-                      .small-girls-item__price
-                        <b>5000</b>
-                        .rouble 
-                        | /час
-                  .small-girls__item
-                    a(href="#").small-girls-item
-                      .small-girls-item__image
-                        img(src="img/sidebar/girl4.jpg" alt="Кристина")
-                      .small-girls-item__name Кристина
-                      .small-girls-item__price
-                        <b>2000</b>
-                        .rouble 
-                        | /час
-                  .small-girls__item
-                    a(href="#").small-girls-item
-                      .small-girls-item__image
-                        img(src="img/sidebar/girl5.jpg" alt="Карина")
-                      .small-girls-item__name Карина
-                      .small-girls-item__price
-                        <b>3000</b>
-                        .rouble 
-                        | /час
-                  .small-girls__item
-                    a(href="#").small-girls-item
-                     .small-girls-item__image
-                        img(src="img/sidebar/girl6.jpg" alt="Марго")
-                     .small-girls-item__name Марго
-                     .small-girls-item__price
-                        <b>4500</b>
-                        .rouble 
-                        | /час
-              a(href="#").sidebar__section.sidebar__section_banner
-                img(src="img/sidebar/banner1.jpg" alt="Баннер")
-              a(href="#").sidebar__section.sidebar__section_banner
-                img(src="img/sidebar/banner2.jpg" alt="Баннер")
-      .page__footer
-        footer.footer
-          .footer__inner
-            .footer__menu
-              .footer-menu
-                .footer-menu__tab
-                  .footer-menu__item
-                    a(href="#").footer-menu__link Индивидуалки
-                  .footer-menu__item
-                    a(href="#").footer-menu__link Массажистки
-                .footer-menu__tab
-                  .footer-menu__item
-                    a(href="#").footer-menu__link Салоны
-                  .footer-menu__item
-                    a(href="#").footer-menu__link Интим-карта
-            .footer__button
-              a(href="#").button.button_color_yellow.button_style_rounded.button_size_lg Добавить анкету
-            .clear
+              .main-content__banner-wrapper
+                include banner.jade
+          include sidebar.jade
+      include footer.jade
     include popup.jade
     include scripts.jade

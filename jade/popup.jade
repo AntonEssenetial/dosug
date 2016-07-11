@@ -5,7 +5,9 @@
     h2.popup__h2 Вход в кабинет
     form(action="")
       input(type="text",placeholder='E-mail').form__input
-      input(type="text",placeholder='Пароль').form__input
+      input(type="text",placeholder='Пароль').form__input.form__mail
       .row.between.center
         a(href="").recover__password Восстоновить пароль
-        a(href="").button.button_style_rounded.button__pink Войти
+        a(href="").button.button_style_rounded.button__pink.rec-log
+          span.str-log Войти
+          span.str-rec Восстоновить

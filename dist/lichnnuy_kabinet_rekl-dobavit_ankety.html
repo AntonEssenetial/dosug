@@ -225,11 +225,12 @@
                 </div>
               </div>
               <div class="header__login logined">
+                <div class="header__lang-selector"><span class="span__ru">ru</span><span class="span__eng lhidden">eng</span></div>
                 <div class="header-login__balance"><span>Баланс 250р</span><a href="">Пополнить счет</a></div>
                 <div class="header-login header__login_reset"><a href="lk.html" class="header-login__item">
                     <svg class="icon icon_user">
                       <use xlink:href="img/icons.svg#user"></use>
-                    </svg><span class="header-login__text active">Личный кабинет</span></a><a href="#" data-remodal-target="modal1" class="header-login__item">
+                    </svg><span class="header-login__text active">Личный кабинет</span></a><a href="#" class="header-login__item">
                     <svg class="icon icon_enter">
                       <use xlink:href="img/icons.svg#enter"></use>
                     </svg><span class="header-login__text">Выход</span></a></div>
@@ -1205,7 +1206,7 @@
                 <div class="catalog catalog__acord">
                   <div class="catalog__help">
                     <div class="b__baner-wrapper add__baner-wrapper_reset"><a href="" class="b__banner add__color">+ Добавить анкету</a></div>
-                    <div class="salon__row row between anket__type">
+                    <div class="salon__row row between anket__type center">
                       <div class="salon__col"><span class="ban__stat">Тип анкеты:</span>
                         <label class="label__checkbox radio label__checkbox_top">
                           <input type="radio">Индивидуалка
@@ -1214,7 +1215,21 @@
                           <input type="radio">Массажистка
                         </label>
                       </div>
-                      <div class="salon__col"><span class="ban__stat">Привязать к салону:</span><span class="ban__stat3">У Вас нет добавленных салонов</span></div>
+                      <div class="salon__col row between center"><span class="ban__stat salon__target">Привязать к салону:</span>
+                        <div class="filters__item auto auto__width">
+                          <div class="filter__item-wrapper filter__item-wrapper_100">
+                            <div class="form-item form-item_type_select form-item_style_default">
+                              <div class="form-item__input">
+                                <select name="select" data-placeholder="Выберите салон" id="select">
+                                  <option></option>
+                                  <option value="0" label="Вопрос1">Вопрос1</option>
+                                  <option value="1" label="Вопрос2">Вопрос2</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="salon__row row between">
                       <div class="salon__col salon__col_name">
@@ -1509,6 +1524,12 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="salon__row salon__row_margin">
+                      <div class="product-info-content__title"> 
+                        <div class="content-title content-title_line">Расположение</div>
+                      </div>
+                      <div class="product-info-content__map-wrapper"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=T3L_pfto0HdGvcZFGsmA2MxUwGBQNIKc&width=100%&height=350&lang=ru_RU&sourceType=constructor&scroll=true"></script></div>
                     </div>
                     <div class="salon__row row between">
                       <div class="salon__col">
@@ -1909,12 +1930,16 @@
                         </div>
                         <div class="col__48 col__48_r">
                           <div class="add__photo"><a href="" class="add__photo-link"> <span class="icon__plus"></span>Добавить проверочное фото</a><span class="catalog__span">Фотография девушки из анкеты с листком бумаги, на котором от руки написана свежая дата.</span></div>
+                          <div class="salon__row salon__row_label row center check__column"><span class="photo__check">Ваше проверочное фото</span>
+                            <div class="label__checkbox radio"><img src="img/checkbox/check1.jpg" alt="" class="label__img"><a href="" class="label__a">Удалить</a></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="row center-c"><a href="" class="button button_color_violet button_style_rounded button_sizesm button_style_bold button_border_none button_pad">Сохранить анкету</a></div>
                   </div>
                 </div>
+                <div class="main-content__banner"><a href=""><img src="img/commercial/banner4.png" alt=""></a></div>
               </div>
             </div>
           </div>
@@ -1991,8 +2016,8 @@
         <h2 class="popup__h2">Вход в кабинет</h2>
         <form action="">
           <input type="text" placeholder="E-mail" class="form__input">
-          <input type="text" placeholder="Пароль" class="form__input">
-          <div class="row between center"><a href="" class="recover__password">Восстоновить пароль</a><a href="" class="button button_style_rounded button__pink">Войти</a></div>
+          <input type="text" placeholder="Пароль" class="form__input form__mail">
+          <div class="row between center"><a href="" class="recover__password">Восстоновить пароль</a><a href="" class="button button_style_rounded button__pink rec-log"><span class="str-log">Войти</span><span class="str-rec">Восстоновить</span></a></div>
         </form>
       </div>
     </div>

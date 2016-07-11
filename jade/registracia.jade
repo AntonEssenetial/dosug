@@ -36,7 +36,7 @@ html(lang="ru", class="no-js")
               .main-content__catalog.catalog__acord-wrap
                 .catalog.catalog__acord.catalog__acord_reset
                   .catalog__form.catalog__form_reset
-                    form(action="")
+                    form(action="")#registration-form
                       .row.row_m-30
                         .col__30
                           span.form__span Тип аккаунта
@@ -49,20 +49,27 @@ html(lang="ru", class="no-js")
                         .col__70.auto__width
                           label().reg__label.form__input_focus
                             span.form__tooltip.animated.fadeInUp Имя отображаемое на сайте
-                            input(type="text").form__input.form__input_268
+                            input(type="text", 
+                                  data-validation="length alphanumeric" ,
+                                  data-validation-length="3-12",
+                                  data-validation-error-msg="User name has to be an alphanumeric value (3-12 chars)" 
+                                  ).form__input.form__input_268
                       .row.row_m-30
                         .col__30
                           span.form__span Пароль:
                         .col__70.auto__width
                           label().reg__label.form__input_success
-                            input(type="text").form__input.form__input_268
+                            input(type="text",
+                                  data-validation="strength",
+                                  data-validation-strength="2" 
+                                  ).form__input.form__input_268
                       .row.row_m-30
                         .col__30
                           span.form__span E-mail:
                         .col__70.auto__width
                           label().reg__label.form__input_error
                             span.form__tooltip.animated.fadeInUp Пожалуйста заполните поле! 
-                            input(type="text").form__input.form__input_268
+                            input(type="text",data-validation="email").form__input.form__input_268
                       .row.row_m-30
                         .col__30
                           span.form__span Введите символы:
@@ -70,7 +77,8 @@ html(lang="ru", class="no-js")
                           img(src="img/captcha.jpg", alt="").captcha
                           input(type="text").form__input.form__input_142
                       .row.center-c.reg-b
-                        a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Зарегистрироваться
+                        input(type='submit', value='Зарегистрироваться').button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none
+                include banner.jade
           include sidebar.jade
       .page__footer
         footer.footer

@@ -146,12 +146,15 @@
                           input(type="checkbox", name="input-name")#input-name
                         span.form-item__label Калининград
         .header__login
+          .header__lang-selector
+            span.span__ru ru
+            span.span__eng.lhidden eng
           .header-login
             a(href="#").header-login__item
               svg.icon.icon_user
                 use(xlink:href="img/icons.svg#user")
               span.header-login__text Регистрация
-            a(href="#" , data-remodal-target="modal1").header-login__item
+            a(href="#").header-login__item.jsAuth
               svg.icon.icon_enter
                 use(xlink:href="img/icons.svg#enter")
               span.header-login__text Вход

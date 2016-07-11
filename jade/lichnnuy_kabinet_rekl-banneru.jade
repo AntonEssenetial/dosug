@@ -86,13 +86,18 @@ html(lang="ru", class="no-js")
                             span.all__p (все стрнацы)
                           .banner__right
                             a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Выбрать
-                    .pin__img
-                      .file__pin
-                        input(type="file")
-                        a(href="").pin__title.row.center-c Прикрепить картинку 
-                      .pin__text.catalog__span Принимаются файлы форматов  GIF и JPG размером до 50 кБ, размером, который соответствует выбраному месторасположению. 
+                    .pin__img.row.between.center.banner__added
+                      .file__pin-banner.animated.fadeIn
+                        span.actual-baner Текущий баннер
+                        img(src="img/sidebar/banner1.jpg", alt="")
+                      .file__pin-wrapper
+                        .file__pin
+                          input(type="file")
+                          a(href="").pin__title.row.center-c Прикрепить картинку 
+                        .pin__text.catalog__span Принимаются файлы форматов  GIF и JPG размером до 50 кБ, размером, который соответствует выбраному месторасположению. 
                     .row.center-c.banner__show
                       a(href="").button.button_color_violet.button_style_rounded.button_sizesm.button_style_bold.button_border_none Запустить показы банера
+                include banner.jade
           include sidebar.jade
       .page__footer
         footer.footer
